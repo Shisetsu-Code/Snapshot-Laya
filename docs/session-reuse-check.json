@@ -1,0 +1,25 @@
+{
+  "version": "0.3.1",
+  "result": "verified_same_session",
+  "parent_status": "expanded",
+  "child_status": "verified",
+  "actions": [
+    {
+      "control": {
+        "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+        "role": "buy_bonus"
+      },
+      "effect_verified": true
+    },
+    {
+      "control": {
+        "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+        "role": "cancel"
+      },
+      "effect_verified": true
+    }
+  ],
+  "same_session_report": true,
+  "pending_branches": 2,
+  "scope": "session_reuse_smoke_check_not_full_game_validation"
+}
