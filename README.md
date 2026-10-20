@@ -32,9 +32,11 @@ separada del efecto comprobado.
 
 ## Recorrer ramas
 
-El descubrimiento inicial guarda compras y ante bet. Cada camino pendiente abre
-una sesión demo nueva, vuelve a localizar los controles por ruta y función y
-reproduce su prefijo con snapshots nuevos. Un menú con cuatro compras genera
+El descubrimiento inicial guarda compras y ante bet y sigue una opción en la
+sesión actual. Al descubrir un menú, guarda todas las opciones y continúa por
+una sin cerrar el juego. Las opciones restantes quedan pendientes; para volver
+a ellas abre una sesión demo nueva y reproduce su prefijo con snapshots nuevos.
+Un menú con cuatro compras genera
 cuatro caminos; las confirmaciones y cancelaciones descubiertas agregan ramas.
 Los menús se consideran explorados cuando sus siguientes decisiones se guardan;
 las ramas de confirmación exigen terminar la compra y el bonus.
@@ -49,8 +51,10 @@ cuando el extractor devuelve un collider con ese texto y contexto. Un bloqueador
 genérico no equivale a una continuación. Los controles nuevos con interacción
 verificada se agregan al árbol. Si abren otro menú se guardan sus siguientes
 ramas; si inician una operación se espera su protocolo y bonus. Si aparecen
-varias opciones dentro del bonus, se abren sesiones nuevas y se reproduce el
-prefijo para probar cada opción. Un nodo `expanded` solo cuenta en la cobertura
+varias opciones dentro del bonus, prueba una en la sesión actual y reproduce el
+prefijo en sesiones nuevas para las restantes. Los nodos que compartieron sesión
+comparten el informe y HAR crudo, guardado al cerrar esa sesión.
+Un nodo `expanded` solo cuenta en la cobertura
 completa cuando sus descendientes también están comprobados.
 
 No se exploran controles de la interfaz común, coordenadas sin collider, ni

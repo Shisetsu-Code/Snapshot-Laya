@@ -1,4 +1,4 @@
-"""Persistent semantic paths; every branch gets a newly owned demo session."""
+"""Persistent semantic paths; continue one child before replaying siblings."""
 import copy
 import hashlib
 import json
@@ -114,6 +114,7 @@ class Explorer:
         self.wait_count = 0
         self.age_dismissed = False
         self.stable_snapshot = None
+        self.session_branches = []
 
     @property
     def running(self): return bool(self.tree.data and self.tree.data['running'])
@@ -125,12 +126,15 @@ class Explorer:
             archive = self.live.data_dir / ('branches-' + str(time.time_ns()) + '.json')
             archive.write_text(json.dumps(self.tree.data, ensure_ascii=False, indent=2), encoding='utf-8')
         self.tree.start(url, rounds)
+        self.current=None
+        self.evidence={}
         self.phase = 'discover'
         self.deadline = time.monotonic()+300
         self._open()
 
     def _open(self):
         self.live.enqueue([self.tree.data['game_url']], False)
+        self.session_branches = [self.current['id']] if self.current else []
         self.wait_count = 0
         self.age_dismissed = False
         self.stable_snapshot = None
@@ -161,10 +165,32 @@ class Explorer:
 
     def _close(self):
         report = self.live.finish(True, advance=False)
-        if self.current:
-            self.current['session_report'] = report['id']
-            self.current['har'] = (report.get('har') or {}).get('cleanup', {})
+        ids=set(self.session_branches)
+        if self.current: ids.add(self.current['id'])
+        for branch in self.tree.data['branches']:
+            if branch['id'] in ids:
+                branch['session_report'] = report['id']
+                branch['har'] = (report.get('har') or {}).get('cleanup', {})
         self.tree.save()
+
+    def _continue_child(self, prefix):
+        """Keep the current game and executed prefix; siblings remain pending."""
+        child=next((b for b in self.tree.data['branches'] if b['status']=='pending'
+                    and len(b['steps'])==len(prefix)+1 and b['steps'][:-1]==prefix),None)
+        if child is None: return False
+        child['status']='running'
+        self.current=child
+        self.session_branches.append(child['id'])
+        self.position=len(prefix)
+        self.evidence=copy.deepcopy(self.evidence) if prefix else {}
+        self.round_pending=None
+        self.wait_count=0
+        self.stable_snapshot=None
+        self.phase='replay'
+        self.deadline=time.monotonic()+300
+        self.tree.data['message']='Continuando una opción en la sesión actual; las demás quedan pendientes.'
+        self.tree.save()
+        return True
 
     def _execute(self, control):
         before = [identity(c) for c in self.live.session['snapshot']['controls']]
@@ -226,6 +252,7 @@ class Explorer:
         if self.phase == 'discover':
             if not controls: return
             self.tree.discover([], controls)
+            if self._continue_child([]): return
             self._close(); self.phase = 'next'; return
         if self.phase == 'replay':
             step = self.current['steps'][self.position]
@@ -279,6 +306,8 @@ class Explorer:
                 if not discovered:
                     raise ValueError('La rama no mostró nuevos controles verificables.')
                 self.evidence['children_discovered'] = discovered
+                self.current.update(status='expanded',evidence=copy.deepcopy(self.evidence))
+                if self._continue_child(self.current['steps']): return
                 self._done()
             return
         if self.phase in ('ante', 'purchase'):
@@ -302,8 +331,9 @@ class Explorer:
                 count=self.tree.discover(prefix,choices)
                 if not count:raise ValueError('Se repitió una decisión sin una transición comprobada.')
                 self.evidence['children_discovered']=count
-                self._close()
                 self.current.update(status='expanded',evidence=copy.deepcopy(self.evidence))
+                if self._continue_child(prefix): return
+                self._close()
                 self.tree.save();self.phase='next';self.deadline=time.monotonic()+300;return
             if not idle(view): return
             operation = view.get('operation', {})

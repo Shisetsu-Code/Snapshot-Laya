@@ -53,8 +53,10 @@ class ExplorerTests(unittest.TestCase):
             if not self.exp.running: break
         self.assertTrue(self.exp.tree.complete(),self.exp.state())
         self.assertEqual(len(self.exp.tree.data['branches']),6)
-        self.assertEqual(self.live.starts,7) # discovery + two menus + four terminal branches
-        self.assertEqual(self.live.closes,7)
+        self.assertEqual(self.live.starts,4) # only the four terminal paths need sessions
+        self.assertEqual(self.live.closes,4)
+        self.assertEqual(self.live.clicks[:2],[(1,'BuyA'),(1,'Yes')])
+        self.assertTrue(all(b.get('session_report') for b in self.exp.tree.data['branches']))
         confirms=[session for session,name in self.live.clicks if name=='Yes']
         self.assertEqual(len(set(confirms)),2)
     def test_unknown_semantics_are_still_traversed_as_drawn_branches(self):
@@ -98,7 +100,21 @@ class ExplorerTests(unittest.TestCase):
         picks=[(session,cid) for session,cid in self.live.clicks if cid.startswith('Pick')]
         self.assertEqual(len(picks),4)
         self.assertEqual(len({session for session,cid in picks}),4)
-        self.assertEqual(sum(b['status']=='expanded' for b in self.exp.tree.data['branches']),2)
+        self.assertEqual(sum(b['status']=='expanded' for b in self.exp.tree.data['branches']),4)
+        self.assertEqual(self.live.starts,6) # four bonus picks plus two cancellations
+    def test_new_siblings_remain_pending_while_first_child_uses_live_session(self):
+        self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
+        for _ in range(10):
+            self.exp.tick()
+            if self.exp.current and len(self.exp.current['steps'])==2:break
+        self.assertEqual(self.live.starts,1)
+        self.assertEqual(self.live.closes,0)
+        self.assertEqual(self.live.clicks,[(1,'BuyA')])
+        self.assertEqual(self.exp.position,1)
+        self.assertEqual(len(self.exp.evidence['actions']),1)
+        pending=[b['steps'][-1]['path'] for b in self.exp.tree.data['branches'] if b['status']=='pending']
+        self.assertCountEqual(pending,['BuyB','No'])
+        self.assertFalse(self.exp.tree.complete())
     def test_ante_runs_two_new_normal_operations(self):
         original=self.live.enqueue
         def enqueue(urls, auto): original(urls,auto); self.live._state('antebase')
@@ -123,10 +139,12 @@ class ExplorerTests(unittest.TestCase):
         self.assertEqual(len(self.live.clicks),before)
     def test_stability_wait_does_not_click_first_observation(self):
         self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
-        self.exp.tick(); self.exp.tick(); self.exp.tick()
-        self.assertEqual(self.live.starts,2)
+        self.exp.tick(); self.exp.tick()
+        self.assertEqual(self.live.starts,1)
         self.exp.tick()
         self.assertFalse(self.live.clicks)
+        self.exp.tick()
+        self.assertEqual(self.live.clicks,[(1,'BuyA')])
     def test_failed_effect_is_not_retried(self):
         self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
         original=self.live.act
