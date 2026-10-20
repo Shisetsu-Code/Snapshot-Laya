@@ -1,0 +1,703 @@
+{
+  "capture_id": "test-capture",
+  "image_size": {
+    "width": 1484,
+    "height": 813
+  },
+  "controls": [
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 946,
+        "y": 547,
+        "width": 100,
+        "height": 99
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": "Evt_DataToCode_Pressed_Spin",
+          "index": 9,
+          "kind": "XTButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 91,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 92,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 93,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 977,
+        "y": 576,
+        "width": 44,
+        "height": 43
+      },
+      "id": "button-1",
+      "labels": [],
+      "name": "StartSpin_Button",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+      "root": 1,
+      "sprite_names": [
+        "ananas",
+        "ananas_circle",
+        "generic_roundButtonBkg",
+        "spin"
+      ],
+      "ui_state": 4,
+      "center": {
+        "x": 0.6731805929919138,
+        "y": 0.7349323493234933
+      },
+      "fingerprint": "9749f45c61503169abc1"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 1052,
+        "y": 580,
+        "width": 37,
+        "height": 37
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": "Evt_DataToCode_SmartIncreaseBet",
+          "index": 12,
+          "kind": "XTButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 101,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 1062,
+        "y": 590,
+        "width": 17,
+        "height": 17
+      },
+      "id": "button-2",
+      "labels": [],
+      "name": "BetUp_Button",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+      "root": 1,
+      "sprite_names": [
+        "Increment"
+      ],
+      "ui_state": 0,
+      "center": {
+        "x": 0.7213611859838275,
+        "y": 0.7361623616236163
+      },
+      "fingerprint": "f5c13d20ce65f9de08b2"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 908,
+        "y": 580,
+        "width": 37,
+        "height": 37
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": "Evt_DataToCode_SmartDecreaseBet",
+          "index": 13,
+          "kind": "XTButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 102,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 918,
+        "y": 590,
+        "width": 17,
+        "height": 17
+      },
+      "id": "button-3",
+      "labels": [],
+      "name": "BetDown_Button",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+      "root": 1,
+      "sprite_names": [
+        "Decrement"
+      ],
+      "ui_state": 0,
+      "center": {
+        "x": 0.6243261455525606,
+        "y": 0.7361623616236163
+      },
+      "fingerprint": "36aa1fbbf4cbb1186e61"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 367,
+        "y": 619,
+        "width": 18,
+        "height": 18
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": "Evt_DataToCode_Pressed_SoundBtn",
+          "index": 18,
+          "kind": "XTButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 17,
+          "kind": "CATButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 120,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 367,
+        "y": 615,
+        "width": 19,
+        "height": 25
+      },
+      "id": "button-4",
+      "labels": [],
+      "name": "SoundOff",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/SoundButtons/SoundOff",
+      "root": 1,
+      "sprite_names": [
+        "SoundMute"
+      ],
+      "ui_state": 0,
+      "center": {
+        "x": 0.25370619946091644,
+        "y": 0.7718327183271833
+      },
+      "fingerprint": "f030a7b652f930e03a86"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "ANCESTOR_1",
+      "drawn_rect": {
+        "x": 365,
+        "y": 231,
+        "width": 134,
+        "height": 95
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 5,
+          "kind": "CATButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 373,
+        "y": 249,
+        "width": 118,
+        "height": 59
+      },
+      "id": "button-5",
+      "labels": [
+        "BUY FEATURE",
+        "$200"
+      ],
+      "name": "OptionButton",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/FreeSpinsPurchase/Content/Options/Option_0/OptionButton",
+      "root": 1,
+      "sprite_names": [
+        "button_buyfeature_normal"
+      ],
+      "ui_state": null,
+      "center": {
+        "x": 0.29110512129380056,
+        "y": 0.34255842558425587
+      },
+      "fingerprint": "5aecba3d97dc5148cbf1"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "ANCESTOR_1",
+      "drawn_rect": {
+        "x": 365,
+        "y": 329,
+        "width": 134,
+        "height": 185
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 6,
+          "kind": "CATButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 371,
+        "y": 332,
+        "width": 123,
+        "height": 170
+      },
+      "id": "button-6",
+      "labels": [
+        "BET",
+        "DOUBLE",
+        "CHANCE TO\nWIN FEATURE",
+        "$2.50",
+        "OFF"
+      ],
+      "name": "Level0Button",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/Game/BetLevel/Content/Levels/Level_0and1/Level0Button",
+      "root": 1,
+      "sprite_names": [
+        "button_betLevel_OFF",
+        "slider_holder",
+        "slider_pinkbtn"
+      ],
+      "ui_state": null,
+      "center": {
+        "x": 0.2914420485175202,
+        "y": 0.5129151291512916
+      },
+      "fingerprint": "44ca9c99714c4607c9ff"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "ANCESTOR_1",
+      "drawn_rect": {
+        "x": 424,
+        "y": 586,
+        "width": 181,
+        "height": 58
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 13,
+          "kind": "CATButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 457,
+        "y": 579,
+        "width": 133,
+        "height": 70
+      },
+      "id": "button-7",
+      "labels": [
+        "CREDIT",
+        "$100,000.00",
+        "BET",
+        "$2.00"
+      ],
+      "name": "MoneyAndCoinsSwitcher",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Information/MoneyAndCoinsSwitcher",
+      "root": 1,
+      "sprite_names": [
+        "DynamicCollider"
+      ],
+      "ui_state": null,
+      "center": {
+        "x": 0.3527628032345013,
+        "y": 0.7552275522755227
+      },
+      "fingerprint": "0975bf6008e6aa180be6"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 940,
+        "y": 627,
+        "width": 117,
+        "height": 22
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 22,
+          "kind": "CATButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 141,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 142,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 143,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 144,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 145,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 146,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 951,
+        "y": 627,
+        "width": 106,
+        "height": 22
+      },
+      "id": "button-8",
+      "labels": [],
+      "name": "AutoplayOpenButton",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton",
+      "root": 1,
+      "sprite_names": [
+        "CombinedMiddle",
+        "CombinedRightEmpty"
+      ],
+      "ui_state": 0,
+      "center": {
+        "x": 0.6765498652291105,
+        "y": 0.7847478474784748
+      },
+      "fingerprint": "287d3b827be66bf4e861"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 389,
+        "y": 597,
+        "width": 35,
+        "height": 35
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 85,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 86,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 397,
+        "y": 605,
+        "width": 19,
+        "height": 19
+      },
+      "id": "button-9",
+      "labels": [],
+      "name": "Paytable_Button_Open",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/Paytable/Paytable_Button_Open",
+      "root": 1,
+      "sprite_names": [
+        "Paytable"
+      ],
+      "ui_state": 4,
+      "center": {
+        "x": 0.27392183288409705,
+        "y": 0.7558425584255842
+      },
+      "fingerprint": "0fcbf3899a94a8f29279"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 367,
+        "y": 592,
+        "width": 19,
+        "height": 19
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 123,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 124,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 367,
+        "y": 589,
+        "width": 19,
+        "height": 25
+      },
+      "id": "button-10",
+      "labels": [],
+      "name": "ButtonOpen",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/LeftContent/Settings/ButtonOpen/ButtonOpen",
+      "root": 1,
+      "sprite_names": [
+        "Menu"
+      ],
+      "ui_state": 4,
+      "center": {
+        "x": 0.25370619946091644,
+        "y": 0.7398523985239852
+      },
+      "fingerprint": "efcfb96c13638137db73"
+    },
+    {
+      "clickable": "UNKNOWN",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 940,
+        "y": 627,
+        "width": 106,
+        "height": 22
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 147,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": null,
+      "id": "button-11",
+      "labels": [],
+      "name": "HiperPlayDisabled",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/AutoplayButtonsHolder/AutoplayButtons/AutoplayOpenContainer/AutoplayOpen/AutoplayOpenButton/HiperPlayDisabled",
+      "root": 1,
+      "sprite_names": [
+        "CombinedRightEmpty"
+      ],
+      "ui_state": 0,
+      "center": null,
+      "fingerprint": "3394ee8f0fe41a46b333"
+    },
+    {
+      "clickable": "UNKNOWN",
+      "drawing_association": "ANCESTOR_2",
+      "drawn_rect": {
+        "x": 367,
+        "y": 592,
+        "width": 691,
+        "height": 57
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 168,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": null,
+      "id": "button-12",
+      "labels": [
+        "AUTOPLAY"
+      ],
+      "name": "Disabled",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/HyperPlay/Disabled",
+      "root": 1,
+      "sprite_names": [
+        "CombinedLeft1",
+        "CombinedMiddle",
+        "CombinedMiddleLeftCut",
+        "CombinedRightEmpty",
+        "Menu",
+        "SoundMute"
+      ],
+      "ui_state": 4,
+      "center": null,
+      "fingerprint": "b5628d13edee75aa3344"
+    },
+    {
+      "clickable": "RUNTIME_COLLIDER",
+      "drawing_association": "DIRECT",
+      "drawn_rect": {
+        "x": 952,
+        "y": 627,
+        "width": 106,
+        "height": 22
+      },
+      "enabled": true,
+      "handlers": [
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 169,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 170,
+          "kind": "UIButton"
+        },
+        {
+          "catEventClick": null,
+          "catEventPress": null,
+          "catEventRelease": null,
+          "event": null,
+          "index": 171,
+          "kind": "UIButton"
+        }
+      ],
+      "hit_rect": {
+        "x": 951,
+        "y": 627,
+        "width": 22,
+        "height": 22
+      },
+      "id": "button-13",
+      "labels": [],
+      "name": "Normal",
+      "occlusion": "NOT_VERIFIED",
+      "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/BottomBar/Elements/GameSpeed/Normal",
+      "root": 1,
+      "sprite_names": [
+        "CombinedLeft1"
+      ],
+      "ui_state": 4,
+      "center": {
+        "x": 0.6482479784366577,
+        "y": 0.7847478474784748
+      },
+      "fingerprint": "7579627dfe8c93b8239b"
+    }
+  ],
+  "unresolved": []
+}

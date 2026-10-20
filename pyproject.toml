@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snapshot-laya"
+version = "0.1.0"
+description = "Live Pragmatic demo control snapshots classified by local Laya ONNX/DirectML"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "uvicorn>=0.30", "laya==0.4.12", "onnxruntime-directml>=1.24; platform_system == 'Windows'"]
+
+[project.scripts]
+snapshot-laya = "snapshot_laya.app:main"
+
+[tool.setuptools.package-data]
+snapshot_laya = ["index.html"]
+
+[tool.setuptools.packages.find]
+include = ["snapshot_laya*"]

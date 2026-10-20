@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-20",
+  "games": [
+    {
+      "game_url": "https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/",
+      "controls_extracted_baseline": 5,
+      "discarded_baseline": 8,
+      "purchase_protocol_completed": true,
+      "search_validation": "incomplete",
+      "validation_reasons": [
+        "Hay controles observados pendientes o no verificados."
+      ],
+      "events": [
+        {
+          "name": "BetUp_Button",
+          "operator_role": "bet_up",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "name": "CloseButton",
+          "operator_role": "cancel",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "name": "OptionButton",
+          "operator_role": "buy_bonus",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "name": "ButtonNo",
+          "operator_role": "cancel",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "name": "OptionButton",
+          "operator_role": "buy_bonus",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "name": "ButtonYes",
+          "operator_role": "confirm",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        },
+        {
+          "name": "ButtonContinue",
+          "operator_role": "continue",
+          "effect_verified": false,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        },
+        {
+          "name": "ButtonContinue",
+          "operator_role": "continue",
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        }
+      ],
+      "owned_demo_closed": true
+    },
+    {
+      "game_url": "https://www.pragmaticplay.com/en/games/gates-of-olympus-1000/",
+      "retained_controls": 5,
+      "discarded_controls": 8,
+      "classifications": [
+        {
+          "name": "StartSpin_Button",
+          "labels": [],
+          "role": "spin",
+          "confidence": 0.9983,
+          "needs_review": false
+        },
+        {
+          "name": "BetUp_Button",
+          "labels": [],
+          "role": "bet_up",
+          "confidence": 0.3937,
+          "needs_review": true
+        },
+        {
+          "name": "BetDown_Button",
+          "labels": [],
+          "role": "bet_down",
+          "confidence": 0.6126,
+          "needs_review": true
+        },
+        {
+          "name": "Button",
+          "labels": [
+            "BUY\nFREE SPINS",
+            "$200.00"
+          ],
+          "role": "buy_bonus",
+          "confidence": 0.9678,
+          "needs_review": false
+        },
+        {
+          "name": "Level_0",
+          "labels": [
+            "BET",
+            "$2.50",
+            "DOUBLE",
+            "CHANCE TO\nWIN FEATURE",
+            "OFF"
+          ],
+          "role": "bet_up",
+          "confidence": 0.1748,
+          "needs_review": true
+        }
+      ],
+      "actions_executed": 0,
+      "search_validation": "incomplete_observation_only",
+      "owned_demo_closed": true
+    }
+  ]
+}
