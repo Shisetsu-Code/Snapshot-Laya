@@ -82,7 +82,7 @@ def index(): return Path(__file__).with_name('index.html').read_text(encoding='u
 
 
 @app.get('/api/health')
-def health(): return {'app':'Snapshot-Laya','version':'0.2.0','model_loaded':manager.model.agent is not None}
+def health(): return {'app':'Snapshot-Laya','version':'0.3.0','model_loaded':manager.model.agent is not None}
 
 
 @app.post('/api/shutdown')

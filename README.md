@@ -24,8 +24,11 @@ Abrir **Iniciar Snapshot Laya.cmd**. La aplicación escucha únicamente en
    en la cola, se abre después de guardar y cerrar la sesión actual.
 
 El modo manual conserva la revisión visual. **Explorar ramas** usa la primera URL
-y ejecuta únicamente firmas del catálogo con una acción guiada vigente. La
-clasificación de Laya por sí sola no autoriza clics automáticos.
+y separa la interfaz común de las decisiones del juego. Las firmas conocidas
+reciben función directa; los botones nuevos pueden recorrerse como `probe`
+aunque Laya no conozca su nombre. Deben estar dibujados, dentro del juego y
+tener una acción guiada vigente. La propuesta semántica de Laya se conserva
+separada del efecto comprobado.
 
 ## Recorrer ramas
 
@@ -43,13 +46,21 @@ la apuesta regular quedan fuera del recorrido.
 
 Las continuaciones conocidas incluyen áreas de «click/tap anywhere to continue»
 cuando el extractor devuelve un collider con ese texto y contexto. Un bloqueador
-genérico no equivale a una continuación. Los controles desconocidos se muestran
-para revisión y mantienen el recorrido incompleto.
+genérico no equivale a una continuación. Los controles nuevos con interacción
+verificada se agregan al árbol. Si abren otro menú se guardan sus siguientes
+ramas; si inician una operación se espera su protocolo y bonus. Si aparecen
+varias opciones dentro del bonus, se abren sesiones nuevas y se reproduce el
+prefijo para probar cada opción. Un nodo `expanded` solo cuenta en la cobertura
+completa cuando sus descendientes también están comprobados.
+
+No se exploran controles de la interfaz común, coordenadas sin collider, ni
+controles sin acción guiada. Un clic sin efecto comprobado sigue deteniendo la
+rama; no hay reintentos silenciosos de compras.
 
 El panel permite pausar y continuar. Se guardan caminos y evidencias en
 `runs/branches.json`; al reiniciar, una rama que estaba ejecutándose queda
 interrumpida y no se repite silenciosamente. Una compra sin efecto comprobado,
-un cambio de identidad o una decisión ambigua detienen el recorrido.
+un cambio de identidad o una interacción no verificable detienen el recorrido.
 Se esperan dos observaciones con los mismos controles semánticos. Las animaciones
 pueden cambiar sus rectángulos: se resuelven geometría y token nuevos antes del
 clic y se exige que coincidan identidad y firma. La revisión manual conserva su
@@ -98,11 +109,17 @@ Las coordenadas y las imágenes se conservan como evidencia, no se inventan con
 Laya. Se descartan controles sin hit target, deshabilitados, fuera de pantalla,
 duplicados y elementos comunes de sonido, autoplay, velocidad y ajustes.
 
-Los avisos DOM bloquean la clasificación. Los menús modales conocidos eliminan
-los controles de fondo. **La oclusión genérica no está verificada**: la revisión
-visual sigue siendo necesaria para variantes nuevas. El recorrido automático se
-limita a las firmas conocidas; esto no certifica oclusión arbitraria. Se comprueban otra vez identidad, geometría y
+Los avisos DOM activos bloquean la clasificación. En la pantalla completa propia
+del proveedor se aísla el aviso de edad de la página que queda detrás, solo si
+el contenedor cubre el viewport, el juego ya puede girar y el aviso no está dentro
+de ese contenedor. Otros avisos siguen bloqueando. Los menús modales conocidos
+eliminan los controles de fondo. **La oclusión genérica no está verificada**.
+Se comprueban otra vez identidad, geometría y
 estado antes del clic, y se conservan los tokens de observación de HardFire.
+
+El giro normal se conserva en `support_controls` para ante bet y no se envía al
+modelo ni se presenta como una rama. La interfaz común queda en `ignored_controls`;
+solo los controles objetivo aparecen en `controls` y llegan a Laya si son nuevos.
 
 Durante un bonus se pueden diferir diagnósticos `NO_VERIFIED_VISIBLE_DRAWING`
 solo si su ruta corresponde exactamente a una compra ya descubierta en el

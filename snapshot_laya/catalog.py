@@ -1,7 +1,7 @@
 """Shared Pragmatic interface signatures. These are rules, not trained weights."""
 import re
 
-TARGET_ROLES = {'buy_bonus', 'ante_bet', 'confirm', 'cancel', 'choice', 'continue'}
+TARGET_ROLES = {'buy_bonus', 'ante_bet', 'confirm', 'cancel', 'choice', 'continue', 'probe'}
 
 
 def known(control):
@@ -28,7 +28,7 @@ def known(control):
         role, rule = 'other', 'regular-bet-out-of-scope'
     elif re.fullmatch(r'(ButtonContinue|ContinueButton|CollectButton)', name, re.I) and re.search(r'(FreeSpin|Bonus|Result|Win|Feature|FSWindows)', path, re.I):
         role, rule = 'continue', 'bonus-continue'
-    elif re.search(r'(click|tap|touch)\s+(anywhere|to continue)|press anywhere', labels, re.I) and re.search(r'(Continue|Intro|Outro|Result|FreeSpin|Bonus)', path, re.I) and name.lower() != 'blocker':
+    elif re.search(r'(click|tap|touch)\s+(anywhere|to continue)|press anywhere', labels, re.I) and re.search(r'(Continue|Intro|Outro|Result|FreeSpin|Bonus|FSWindows)', path, re.I) and name.lower() != 'blocker':
         role, rule = 'continue', 'explicit-continue-area'
     if role is None:
         return None
@@ -39,9 +39,30 @@ def known(control):
 
 def identity(control):
     path = control.get('path', '')
-    if control['classification']['role'] == 'ante_bet':
+    role=control.get('decision',{}).get('role',control['classification']['role'])
+    if role == 'ante_bet':
         path = re.sub(r'Level\d+Button|Level_\d+', 'AnteToggle', path)
-    return {'path': path, 'role': control['classification']['role']}
+    return {'path': path, 'role': role}
+
+
+def decision(control):
+    """Branch eligibility is independent of the model's semantic guess."""
+    signature=known(control)
+    if signature:
+        return {'role':signature['role'],'source':'catalog','rule':signature['rule'],
+                'eligible':bool(control.get('action_id')) and signature['role']!='other'}
+    path=control.get('path','')
+    eligible=bool(control.get('action_id') and control.get('clickable')=='RUNTIME_COLLIDER'
+                  and control.get('enabled') is True and control.get('visible') is not False
+                  and control.get('alpha')!=0 and '/Game/' in path and '/GUI/' not in path)
+    return {'role':'probe','source':'rendered_probe','eligible':eligible,
+            'reason':'current drawn game control with guided action' if eligible else 'no verified scoped guided action'}
+
+
+def common_interface(control):
+    signature=known(control)
+    if signature and signature['role'] in TARGET_ROLES:return False
+    return bool('/GUI/' in control.get('path','') or signature and signature['role']=='other')
 
 
 def match(control, step):
@@ -53,7 +74,7 @@ def modal_roots(controls):
     for c in controls:
         if c.get('enabled') is not True or c.get('visible') is False or c.get('alpha') == 0 or c.get('clickable') != 'RUNTIME_COLLIDER':
             continue
-        if not re.fullmatch(r'(ButtonYes|ButtonNo|ConfirmButton|CancelButton)', c.get('name', ''), re.I):
+        if not re.fullmatch(r'(ButtonYes|ButtonNo|ButtonOpt\d+|ConfirmButton|CancelButton)', c.get('name', ''), re.I):
             continue
         parts = c.get('path', '').split('/')
         for i, part in enumerate(parts):

@@ -57,6 +57,48 @@ class ExplorerTests(unittest.TestCase):
         self.assertEqual(self.live.closes,7)
         confirms=[session for session,name in self.live.clicks if name=='Yes']
         self.assertEqual(len(set(confirms)),2)
+    def test_unknown_semantics_are_still_traversed_as_drawn_branches(self):
+        original=self.live._state
+        def state(name):
+            original(name)
+            for c in self.live.session['snapshot']['controls']:
+                if c['classification']['role']=='continue':continue
+                c['classification'].update(source='laya',role='unknown',needs_review=True)
+                c['decision']={'role':'probe','source':'rendered_probe','eligible':True}
+        self.live._state=state
+        self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
+        for _ in range(90):
+            self.exp.tick()
+            if not self.exp.running:break
+        self.assertTrue(self.exp.tree.complete(),self.exp.state())
+        self.assertEqual(sum(name=='Yes' for _,name in self.live.clicks),2)
+        self.assertEqual(sum(name=='No' for _,name in self.live.clicks),2)
+    def test_every_bonus_pick_gets_a_new_session_and_replayed_prefix(self):
+        original_state=self.live._state;original_act=self.live.act
+        def state(name):
+            original_state(name)
+            if name=='bonus':
+                picks=[button('Pick1','unknown'),button('Pick2','unknown')]
+                for c in picks:
+                    c['classification'].update(source='laya',needs_review=True)
+                    c['decision']={'role':'probe','source':'rendered_probe','eligible':True}
+                self.live.session['snapshot']['controls']=picks
+        def act(snap,cid,automatic):
+            if cid in ('Pick1','Pick2'):
+                self.live.clicks.append((self.live.starts,cid))
+                original_state('bonus')
+                return {'effect_verified':True,'outcome':{'operationStarted':True,'reason':'OPERATION_STARTED'}}
+            return original_act(snap,cid,automatic)
+        self.live._state=state;self.live.act=act
+        self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
+        for _ in range(160):
+            self.exp.tick()
+            if not self.exp.running:break
+        self.assertTrue(self.exp.tree.complete(),self.exp.state())
+        picks=[(session,cid) for session,cid in self.live.clicks if cid.startswith('Pick')]
+        self.assertEqual(len(picks),4)
+        self.assertEqual(len({session for session,cid in picks}),4)
+        self.assertEqual(sum(b['status']=='expanded' for b in self.exp.tree.data['branches']),2)
     def test_ante_runs_two_new_normal_operations(self):
         original=self.live.enqueue
         def enqueue(urls, auto): original(urls,auto); self.live._state('antebase')

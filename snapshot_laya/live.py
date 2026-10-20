@@ -10,7 +10,7 @@ import uuid
 from .core import TARGETS, ROLES, clean_snapshot, completion, evidence_effect, valid_demo_url
 from .mcp import MCP
 from .laya import Laya
-from .catalog import known, modal_roots
+from .catalog import known, modal_roots, decision, common_interface
 
 
 class Live:
@@ -77,6 +77,20 @@ class Live:
         dom=self.source.call('hardfire_find',{'tab_id':s['tab_id'],'css':'[data-age-check-confirm], [role="dialog"]','visible':True,'limit':10,'max_bytes':8000})
         blockers=[{'ref':e['ref'],'name':(e.get('name') or e.get('text') or 'Aviso de la página').strip()[:160]} for e in dom.get('elements',[]) if e.get('visible') and e.get('ref')]
         raw=self.source.call('pragmatic_drawn_buttons',{'tab_id':s['tab_id'],'include_universal':True})
+        ignored_page=[]
+        age_name='Yes, I am 18 years or older'
+        if any(b['name']==age_name for b in blockers) and view.get('flags',{}).get('canSpin') is True:
+            full=self.source.call('hardfire_find',{'tab_id':s['tab_id'],'css':'.game-fullscreen.fullscreen[data-fullscreen]','visible':True,'limit':3,'max_bytes':5000})
+            active=full.get('elements',[])
+            if len(active)==1:
+                rect=active[0].get('rect',{});size=raw.get('image_size',{})
+                age_frames={e.get('frame_id') for e in dom.get('elements',[]) if (e.get('name') or '').strip()==age_name}
+                covering=(bool(active[0].get('frame_id')) and active[0].get('frame_id') in age_frames and -1<=rect.get('x',99)<=1 and -1<=rect.get('y',99)<=1 and rect.get('width',0)>=size.get('width',99999)-1 and rect.get('height',0)>=size.get('height',99999)-1)
+                if covering:
+                    inside=self.source.call('hardfire_find',{'tab_id':s['tab_id'],'css':'.game-fullscreen.fullscreen [data-age-check-confirm]','visible':True,'limit':3,'max_bytes':5000})
+                    if not inside.get('elements'):
+                        blockers=[b for b in blockers if b['name']!=age_name]
+                        ignored_page=[{'name':age_name,'reason':'outside_active_fullscreen_game'}]
         raw['state_key']=view.get('state_key')
         # Enabled confirmation controls establish a modal ancestor; base buttons behind it are excluded.
         modal=modal_roots(raw.get('controls',[]))
@@ -89,20 +103,32 @@ class Live:
                         if re.search(r'(Window|Dialog|Popup)',part,re.I): modal.append('/'.join(parts[:i+1])+'/')
         if modal: raw['modal_roots']=sorted(set(modal),key=len,reverse=True)[:1]
         snapshot=clean_snapshot(raw,blockers)
+        snapshot['ignored_page_controls']=ignored_page
         guided={a.get('fingerprint'):a for a in view.get('actions',[]) if a.get('fingerprint')}
         normal_spins=[a for a in view.get('actions',[]) if a.get('kind')=='spin' and a.get('action_id')=='spin_normal']
+        targets=[];support=[];ignored=[]
         for control in snapshot['controls']:
-            control['classification']=known(control) or dict(self.model.classify(control),source='laya')
+            signature=known(control)
+            if common_interface(control) and not (signature and signature.get('rule')=='normal-spin-support'):
+                ignored.append({'name':control.get('name'),'path':control.get('path'),'reason':'known_common_interface'})
+                continue
+            control['classification']=signature or dict(self.model.classify(control),source='laya')
             control['image_url']=self.image_key(control.get('crop_path'))
             control['action_id']=guided.get(control.get('fingerprint'),{}).get('action_id')
             if control['classification'].get('rule')=='normal-spin-support' and len(normal_spins)==1:
                 control['action_id']=normal_spins[0]['action_id']
             control['id']=control.get('fingerprint') or control['id']
-            role=control['classification']['role']
+            control['decision']=decision(control)
+            if control['classification'].get('rule')=='normal-spin-support':
+                support.append(control)
+                continue
+            targets.append(control)
+            role=control['decision']['role']
             if role in TARGETS:
                 key=self.control_key(control,role)
                 s['ledger'].setdefault(key,{'key':key,'name':control.get('name'),'labels':control.get('labels',[]),
                     'role':role,'status':'pending','evidence':None})
+        snapshot.update(controls=targets,support_controls=support,ignored_controls=ignored)
         snapshot['image_url']=self.image_key(raw.get('full_path'))
         # GUI bet label is stronger evidence for bet +/- than a generic state hash.
         bet=[c.get('labels',[]) for c in raw.get('controls',[]) if 'MoneyAndCoinsSwitcher' in c.get('path','')]
@@ -129,14 +155,15 @@ class Live:
             if not s or not s.get('snapshot'): raise ValueError('No hay snapshot activo.')
             if s['snapshot']['id']!=snapshot_id: raise ValueError('Snapshot vencido. Revisá los controles actuales.')
             if not visual_reviewed and not automatic: raise ValueError('Verificá primero el control en la captura actual.')
-            selected=next((c for c in s['snapshot']['controls'] if c['id']==control_id),None)
+            selected=next((c for c in s['snapshot']['controls']+s['snapshot'].get('support_controls',[]) if c['id']==control_id),None)
             if not selected: raise ValueError('El control ya no está presente.')
             selected=copy.deepcopy(selected)
-            if automatic and (not known(selected) or selected['classification'].get('source')!='catalog' or not selected.get('action_id')):
-                raise ValueError('La ejecución automática exige catálogo y acción guiada vigente.')
-            selected_role=role or selected['classification']['role']
-            if automatic and selected_role!=known(selected)['role']:
-                raise ValueError('La función automática debe coincidir con el catálogo.')
+            selected_decision=decision(selected)
+            if automatic and not selected_decision['eligible']:
+                raise ValueError('La exploración exige un control de juego dibujado y una acción guiada vigente.')
+            selected_role=role or (selected_decision['role'] if automatic else selected['classification']['role'])
+            if automatic and selected_role!=selected_decision['role']:
+                raise ValueError('La función automática debe coincidir con la decisión del snapshot.')
             if selected_role not in ROLES or selected_role=='unknown': raise ValueError('Elegí una función concreta antes de ejecutar un control ambiguo.')
             fresh=self.source.call('pragmatic_guided_observe',{'job_id':s['job_id']})
             self._scan(fresh)
@@ -147,17 +174,17 @@ class Live:
                 from .explorer import ante_active, idle
                 if not ante_active(before) or not idle(before) or before.get('flags',{}).get('canSpin') is not True:
                     raise ValueError('La tirada automática exige ante bet activo y juego listo.')
-            current=next((c for c in s['snapshot']['controls'] if c['id']==control_id and c['model_input']==selected['model_input']),None)
+            current=next((c for c in s['snapshot']['controls']+s['snapshot'].get('support_controls',[]) if c['id']==control_id and c['model_input']==selected['model_input']),None)
             if not current or s['snapshot']['blockers']: raise ValueError('El control cambió o está bloqueado; no se hizo clic.')
-            if automatic and (known(current)!=known(selected) or not current.get('action_id')):
-                raise ValueError('Cambió la firma de catálogo o la acción guiada.')
+            if automatic and (not decision(current)['eligible'] or decision(current)['role']!=selected_decision['role'] or known(current)!=known(selected)):
+                raise ValueError('Cambió la identidad de la decisión o la acción guiada.')
             execution_snapshot_id=s['snapshot']['id']
             # Automatic decisions use the freshly scanned collider, not the old
             # geometry. Semantic identity and the catalog rule must agree; the
             # guided adapter independently validates its fresh token at execution.
             if current.get('action_id'):
                 result=self.source.call('pragmatic_guided_act',{'job_id':s['job_id'],'token':fresh['token'],
-                    'action_id':current['action_id'],'reason':('Snapshot-Laya: explicit visually reviewed '+selected_role)[:256]})
+                    'action_id':current['action_id'],'reason':('Snapshot-Laya: '+('authorized snapshot branch ' if automatic else 'visually reviewed ')+selected_role)[:256]})
                 outcome=result.get('outcome',{})
                 after=result.get('view') or self.source.call('pragmatic_guided_observe',{'job_id':s['job_id']})
             elif selected_role in ('bet_up','bet_down','bet_menu','cancel'):
@@ -167,22 +194,27 @@ class Live:
                 after=self.source.call('pragmatic_guided_observe',{'job_id':s['job_id']})
                 outcome={'reason':'STATE_CHANGED' if after.get('state_key')!=before.get('state_key') else 'NO_CHANGE_OBSERVED','operationStarted':False}
             else: raise ValueError('El adaptador no ofrece una acción segura para este control; queda pendiente.')
-            if outcome.get('operationStarted') and selected_role in ('buy_bonus','confirm'): s['purchase_started']=True
+            if outcome.get('operationStarted') and selected_role in ('buy_bonus','confirm','probe'): s['purchase_started']=True
             self._scan(after)
             verified=evidence_effect(selected_role,before,s['view'],outcome)
-            key=self.control_key(selected,selected['classification']['role'])
+            observed_role='ante_bet' if selected_role=='probe' and before.get('wager',{}).get('betLevelIndex')==0 and isinstance(s['view'].get('wager',{}).get('betLevelIndex'),(int,float)) and s['view']['wager']['betLevelIndex']>0 else selected_role
+            key=self.control_key(selected,selected_decision['role'])
+            decision_source=selected_decision['source'] if automatic else 'operator'
             if key in s['ledger']:
-                s['ledger'][key].update(role=selected_role,status='verified' if verified else 'unverified',
+                s['ledger'][key].update(role=observed_role,status='verified' if verified else 'unverified',
                     evidence={'outcome':outcome,'before_state':before.get('state_key'),'after_state':s['view'].get('state_key'),
                         'before_wager':before.get('wager'),'after_wager':s['view'].get('wager'),'visual_reviewed':visual_reviewed,
-                        'decision_source':'catalog' if automatic else 'operator'})
+                        'decision_source':decision_source})
             s['events'].append({'control':selected['model_input'],'model':selected['classification'],'selected_role':selected_role,
+                'observed_role':observed_role,
                 'outcome':outcome,'effect_verified':verified,'time':time.time(),
-                'decision_source':'catalog' if automatic else 'operator',
+                'decision_source':decision_source,
                 'executed_hit_rect':copy.deepcopy(current.get('hit_rect')),
                 'fresh_snapshot_id':execution_snapshot_id})
             self.error=None
-            return {'effect_verified':verified,'outcome':outcome}
+            return {'effect_verified':verified,'outcome':outcome,'before_wager':before.get('wager',{}),
+                    'after_wager':s['view'].get('wager',{}),'before_operation':before.get('operation',{}),
+                    'after_operation':s['view'].get('operation',{})}
 
     def dismiss(self,ref):
         with self.lock:
@@ -204,6 +236,7 @@ class Live:
         unresolved=list(snapshot.get('unresolved',[]))+list(view.get('unresolved',[]))+list(snapshot.get('blockers',[]))
         operation=view.get('operation',{})
         if operation.get('submitted') and not operation.get('protocolComplete'): unresolved.append('protocol_pending')
+        if s['purchase_started'] and not s['purchase_complete']:unresolved.append('started_operation_not_finished')
         return completion(list(s['ledger'].values()),view.get('flags',{}),unresolved,s['observations'],s['purchase_complete'])
 
     def finish(self,incomplete=False,advance=True):
@@ -244,7 +277,7 @@ class Live:
         snapshot=copy.deepcopy(s.get('snapshot')) if s and s.get('snapshot') else None
         if snapshot:
             snapshot.pop('screenshot',None)
-            for c in snapshot['controls']: c.pop('crop_path',None)
+            for c in snapshot['controls']+snapshot.get('support_controls',[]): c.pop('crop_path',None)
         return {'message':self.message,'error':self.error,'snapshot':snapshot,
             'session':{'id':s['id'],'game_url':s['game_url'],'observations':s['observations'],'auto_close':s['auto_close'],
                 'ledger':list(s['ledger'].values()),'purchase_started':s['purchase_started'],'purchase_complete':s['purchase_complete']} if s else None,

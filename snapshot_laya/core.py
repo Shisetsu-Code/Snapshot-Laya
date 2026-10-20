@@ -3,8 +3,8 @@ import json
 import math
 import re
 
-ROLES = {'buy_bonus','ante_bet','bet_up','bet_down','bet_menu','confirm','cancel','choice','continue','spin','other','unknown'}
-TARGETS = {'buy_bonus','ante_bet','confirm','cancel','continue','choice','unknown'}
+ROLES = {'buy_bonus','ante_bet','bet_up','bet_down','bet_menu','confirm','cancel','choice','continue','spin','other','unknown','probe'}
+TARGETS = {'buy_bonus','ante_bet','confirm','cancel','continue','choice','unknown','probe'}
 NOISE = re.compile(r'(SoundButtons|Autoplay|HyperPlay|HiperPlay|GameSpeed|/Paytable/|/Settings/|MoneyAndCoinsSwitcher)',re.I)
 
 
@@ -68,6 +68,7 @@ def evidence_effect(role,before,after,outcome):
         return bool(before.get('bet_signature') and after.get('bet_signature') and before['bet_signature']!=after['bet_signature'])
     if role=='confirm': return outcome.get('operationStarted') is True
     if role=='spin': return outcome.get('operationStarted') is True
+    if role=='probe' and outcome.get('operationStarted') is True: return True
     if role in ('buy_bonus','continue','choice') and outcome.get('operationStarted') is True: return True
     return outcome.get('reason')=='STATE_CHANGED' and before.get('state_key')!=after.get('state_key')
 

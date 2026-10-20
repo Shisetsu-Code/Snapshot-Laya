@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import re
 from pathlib import Path
 import time
 from .catalog import TARGET_ROLES, identity, match
@@ -56,8 +57,10 @@ class Branches:
         for c in controls:
             m = c['classification']
             role = m['role']
+            d=c.get('decision')
+            role=(d or {}).get('role',role)
             if m.get('source')=='catalog' and role in ('spin', 'other', 'bet_up', 'bet_down', 'bet_menu'): continue
-            if m.get('source') != 'catalog' or m.get('needs_review') or role not in TARGET_ROLES or not c.get('action_id'):
+            if not ((d or {}).get('eligible') or d is None and m.get('source')=='catalog' and not m.get('needs_review') and c.get('action_id')) or role not in TARGET_ROLES:
                 self.unresolved('Control requiere revisión: ' + c.get('path', c.get('name', '?')))
                 continue
             step = identity(c)
@@ -80,7 +83,7 @@ class Branches:
         return branch
 
     def done(self, branch, evidence):
-        if branch['steps'][-1]['role'] == 'ante_bet':
+        if branch['steps'][-1]['role'] == 'ante_bet' or evidence.get('observed_function')=='ante_bet':
             rounds = evidence.get('rounds', [])
             if not evidence.get('activated') or len(rounds) < self.data['rounds_required']:
                 raise ValueError('Ante bet necesita activación y tiradas completas.')
@@ -91,8 +94,11 @@ class Branches:
         self.save()
 
     def complete(self):
-        return bool(self.data and self.data['branches'] and not self.data['unresolved'] and
-                    all(b['status'] == 'verified' for b in self.data['branches']))
+        if not self.data or not self.data['branches'] or self.data['unresolved']:return False
+        for b in self.data['branches']:
+            if b['status']=='verified':continue
+            if b['status']!='expanded' or not any(len(child['steps'])>len(b['steps']) and child['steps'][:len(b['steps'])]==b['steps'] for child in self.data['branches']):return False
+        return True
 
 
 class Explorer:
@@ -161,7 +167,7 @@ class Explorer:
         self.tree.save()
 
     def _execute(self, control):
-        before = [identity(c) for c in self.live.session['snapshot']['controls'] if c['classification'].get('source')=='catalog']
+        before = [identity(c) for c in self.live.session['snapshot']['controls']]
         result = self.live.act(self.live.session['snapshot']['id'], control['id'], automatic=True)
         self.evidence.setdefault('actions', []).append({'control': identity(control), 'before_controls': before, **result})
         if self.current: self.current['evidence']=copy.deepcopy(self.evidence)
@@ -200,7 +206,7 @@ class Explorer:
             self.tree.save(); return
         unresolved=list(snap.get('unresolved',[]))+list(view.get('unresolved',[]))
         if unresolved:
-            baseline_paths={step['path'] for branch in self.tree.data['branches'] for step in branch['steps'] if step['role']=='buy_bonus'}
+            baseline_paths={step['path'] for branch in self.tree.data['branches'] for step in branch['steps'] if step['role']=='buy_bonus' or step['role']=='probe' and re.search(r'(Purchase|BuyFeature)',step['path'],re.I)}
             deferred=[]; blocking=[]
             for item in unresolved:
                 if self.phase in ('purchase','ante') and not idle(view) and isinstance(item,dict) and item.get('reason')=='NO_VERIFIED_VISIBLE_DRAWING' and item.get('path') in baseline_paths:
@@ -226,7 +232,7 @@ class Explorer:
             choices = [c for c in controls if match(c, step)]
             if len(choices) != 1:
                 self.wait_count += 1
-                if self.wait_count < 5: return
+                if self.wait_count < 5 or not idle(view): return
                 raise ValueError('No se pudo localizar una única acción del camino: '+step['path'])
             self.wait_count = 0
             c = choices[0]
@@ -242,9 +248,10 @@ class Explorer:
             self.tree.save()
             if self.position < len(self.current['steps']): return
             role = step['role']
-            if role == 'ante_bet':
+            activated=(result.get('before_wager',{}).get('betLevelIndex')==0 and ante_active(after))
+            if role == 'ante_bet' or role=='probe' and activated:
                 if not ante_active(after): raise ValueError('No se comprobó ante bet activado.')
-                self.evidence.update(activated=True, rounds=[], ante_level=after['wager']['betLevelIndex'])
+                self.evidence.update(activated=True, rounds=[], ante_level=after['wager']['betLevelIndex'],observed_function='ante_bet')
                 self.phase = 'ante'
             elif result['outcome'].get('operationStarted'):
                 self.phase = 'purchase'
@@ -256,6 +263,16 @@ class Explorer:
                 self.evidence['returned'] = True
                 self._done()
             else:
+                earlier=[a['control'] for a in self.evidence.get('actions',[])[:-1]]
+                returned=self.live.session['snapshot']['controls']
+                if role=='probe' and any(any(match(c,ancestor) for c in returned) for ancestor in earlier):
+                    self.evidence.update(returned=True,observed_function='return_to_ancestor')
+                    if self.live.session.get('purchase_started') and not self.live.session['purchase_complete']:
+                        self.phase='purchase'
+                    else:
+                        if self.live.session['purchase_complete']:self.evidence['purchase_complete']=True
+                        self._done()
+                    return
                 previous_controls=self.evidence['actions'][-1]['before_controls']
                 newly_shown=[c for c in self.live.session['snapshot']['controls'] if identity(c) not in previous_controls]
                 discovered = self.tree.discover(self.current['steps'], newly_shown)
@@ -273,8 +290,21 @@ class Explorer:
                 if path in self.evidence.get('continued_paths',[]): return
                 self.evidence.setdefault('continued_paths',[]).append(path)
                 self._execute(continuations[0]); return
-            unknown = [c for c in controls if c['classification'].get('source') != 'catalog']
-            if unknown: raise ValueError('Hay un control desconocido durante la ronda; revisar su función.')
+            if self.phase=='purchase' and idle(view) and s['purchase_complete']:
+                self.evidence['purchase_complete']=True
+                self._done();return
+            unknown = [c for c in controls if c['classification'].get('source') != 'catalog' and not c.get('decision',{}).get('eligible')]
+            if unknown: raise ValueError('Hay un control sin acción guiada durante la ronda; revisar su función.')
+            choices=[c for c in controls if c.get('decision',{}).get('eligible') and c['decision']['role'] in ('probe','choice','confirm','cancel')]
+            if choices:
+                if self.phase=='ante':raise ValueError('La tirada de ante bet abrió opciones; falta completar sus dos rondas.')
+                prefix=[a['control'] for a in self.evidence.get('actions',[])]
+                count=self.tree.discover(prefix,choices)
+                if not count:raise ValueError('Se repitió una decisión sin una transición comprobada.')
+                self.evidence['children_discovered']=count
+                self._close()
+                self.current.update(status='expanded',evidence=copy.deepcopy(self.evidence))
+                self.tree.save();self.phase='next';self.deadline=time.monotonic()+300;return
             if not idle(view): return
             operation = view.get('operation', {})
             if self.phase == 'purchase':
@@ -294,7 +324,7 @@ class Explorer:
                             row['ante_rounds_complete'] = copy.deepcopy(self.evidence['rounds'])
                     self._done(); return
             if not ante_active(view): raise ValueError('Ante bet no está activo antes de girar.')
-            spin = [c for c in controls if c['classification'].get('rule') == 'normal-spin-support']
+            spin = [c for c in snap.get('support_controls',[])+controls if c['classification'].get('rule') == 'normal-spin-support']
             if len(spin) != 1: raise ValueError('No hay una única tirada normal disponible.')
             # Record active ante BEFORE clicking and require a new operation-start acknowledgement.
             level = view['wager']['betLevelIndex']

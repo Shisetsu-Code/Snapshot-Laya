@@ -33,6 +33,56 @@ class LiveTests(unittest.TestCase):
         self.live.enqueue(['https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/'])
     def tearDown(self): self.tmp.cleanup()
     def test_classification_does_not_validate(self): self.assertFalse(self.live.validation()['validated'])
+    def test_common_interface_is_not_model_input_or_branch(self):
+        class RejectModel:
+            def classify(self,c):raise AssertionError('Known common interface reached model: '+c['path'])
+        live=Live(self.source,RejectModel(),self.tmp.name)
+        live.enqueue(['https://www.pragmaticplay.com/en/games/demo/'])
+        self.assertEqual({c['name'] for c in live.session['snapshot']['controls']},{'OptionButton','Level0Button'})
+        self.assertEqual([c['name'] for c in live.session['snapshot']['support_controls']],['StartSpin_Button'])
+        self.assertEqual(len(live.session['snapshot']['ignored_controls']),2)
+    def test_novel_drawn_button_executes_without_catalog_or_model_certainty(self):
+        c=copy.deepcopy(RAW['controls'][4]);c.update(name='ButtonOpt0',path='GameRoot/Game/FeaturePurchase/FSPurchaseWindow/Buttons/ButtonOpt0',labels=[],fingerprint='novel')
+        original=self.source.call; clicks=[]
+        def call(name,args):
+            if name=='pragmatic_drawn_buttons':return dict(copy.deepcopy(RAW),controls=[copy.deepcopy(c)])
+            if name=='pragmatic_guided_observe':return {'token':'fresh-novel','state_key':'one','flags':{},'actions':[{'fingerprint':'novel','action_id':'b0'}],'wager':{'betLevelIndex':0}}
+            if name=='pragmatic_guided_act':
+                clicks.append(args)
+                self.assertEqual(args['token'],'fresh-novel')
+                return {'outcome':{'reason':'OPERATION_STARTED','operationStarted':True},'view':{'state_key':'two','flags':{},'wager':{'betLevelIndex':0},'operation':{'submitted':True,'protocolComplete':False}}}
+            return original(name,args)
+        self.source.call=call
+        self.live.observe()
+        target=self.live.session['snapshot']['controls'][0]
+        self.assertTrue(target['classification']['needs_review'])
+        self.assertEqual(target['decision']['role'],'probe')
+        result=self.live.act(self.live.session['snapshot']['id'],target['id'],automatic=True)
+        self.assertTrue(result['effect_verified'])
+        self.assertEqual(len(clicks),1)
+        self.assertTrue(self.live.session['purchase_started'])
+        self.assertFalse(self.live.validation()['validated'])
+    def test_age_notice_behind_fullscreen_is_isolated_but_inside_notice_blocks(self):
+        original=self.source.call
+        age={'visible':True,'name':'Yes, I am 18 years or older','ref':'age','frame_id':'top','role':'link'}
+        inside=[False]
+        def call(name,args):
+            if name=='hardfire_find':
+                css=args['css']
+                if css=='.game-fullscreen.fullscreen[data-fullscreen]':
+                    return {'elements':[{'frame_id':'top','rect':{'x':0,'y':0,**RAW['image_size']}}]}
+                if css=='.game-fullscreen.fullscreen [data-age-check-confirm]':return {'elements':[age] if inside[0] else []}
+                return {'elements':[age]}
+            return original(name,args)
+        self.source.call=call
+        self.live._scan({'flags':{'canSpin':True},'state_key':'fullscreen','actions':[]})
+        self.assertFalse(self.live.session['snapshot']['blockers'])
+        self.assertTrue(self.live.session['snapshot']['controls'])
+        self.assertTrue(self.live.session['snapshot']['ignored_page_controls'])
+        inside[0]=True
+        self.live._scan({'flags':{'canSpin':True},'state_key':'fullscreen','actions':[]})
+        self.assertTrue(self.live.session['snapshot']['blockers'])
+        self.assertFalse(self.live.session['snapshot']['controls'])
     def test_hidden_popup_does_not_replace_visible_modal(self):
         original=self.source.call
         def call(name,args):
@@ -53,21 +103,21 @@ class LiveTests(unittest.TestCase):
         self.assertEqual(len(self.source.calls),before)
     def test_normal_spin_maps_explicit_guided_action_without_fingerprint(self):
         self.live._scan({'actions':[{'kind':'spin','action_id':'spin_normal'}],'flags':{},'state_key':'one'})
-        spin=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='StartSpin_Button')
+        spin=next(c for c in self.live.session['snapshot']['support_controls'] if c['name']=='StartSpin_Button')
         self.assertEqual(spin['action_id'],'spin_normal')
     def test_auto_spin_is_blocked_when_ante_is_off(self):
         view={'actions':[{'kind':'spin','action_id':'spin_normal'}],'flags':{'canSpin':True},'wager':{'betLevelIndex':0},'state_key':'one','token':'fresh'}
         original=self.source.call
         self.source.call=lambda name,args: copy.deepcopy(view) if name=='pragmatic_guided_observe' else original(name,args)
         self.live._scan(copy.deepcopy(view))
-        spin=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='StartSpin_Button')
+        spin=next(c for c in self.live.session['snapshot']['support_controls'] if c['name']=='StartSpin_Button')
         with self.assertRaisesRegex(ValueError,'ante bet activo'):
             self.live.act(self.live.session['snapshot']['id'],spin['id'],automatic=True)
         self.assertNotIn('pragmatic_guided_act',self.source.calls)
     def test_auto_unknown_is_blocked(self):
         c=self.live.session['snapshot']['controls'][0]
         c['classification']['source']='laya'
-        with self.assertRaisesRegex(ValueError,'catálogo'):
+        with self.assertRaisesRegex(ValueError,'acción guiada'):
             self.live.act(self.live.session['snapshot']['id'],c['id'],automatic=True)
     def test_auto_resolves_pulsing_geometry_with_fresh_guided_token(self):
         c=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='Level0Button')
