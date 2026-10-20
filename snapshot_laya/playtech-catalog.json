@@ -1,0 +1,3691 @@
+{
+  "provider": "playtech",
+  "source": "https://www.playtechone.com/",
+  "captured_at": "2026-10-18T18:00:00-03:00",
+  "coverage": "official_slots_category",
+  "imported_from": "Tester-Spin official Slots snapshot",
+  "games": [
+    {
+      "name": "Boom™",
+      "symbol": "gpas_boom_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild West Wilds!™",
+      "symbol": "gpas_wwd_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Eternal Lady™",
+      "symbol": "gpas_elady_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fishin' Bonanza™",
+      "symbol": "gpas_ffever_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Oink Oink Oink: Astrosnouts™",
+      "symbol": "gpas_oooas_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Goal Goal Goal Mines™ NJP",
+      "symbol": "gpas_goalmsnjp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lucky Gift: Cash Collect™",
+      "symbol": "gpas_lgcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Solar Eclipse: Desert Treasure™",
+      "symbol": "gpas_sedt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Money Jackpot™ Gold!",
+      "symbol": "gpas_trpmjpg_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Apollo Power™",
+      "symbol": "gpas_appower_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Divine 9™",
+      "symbol": "gpas_divine_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Nigel of Ra™",
+      "symbol": "gpas_mmyhm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bear Buzz™",
+      "symbol": "gpas_bbuzz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Tsai Shen's Gift™",
+      "symbol": "gpas_tsgift_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: Dragon Bonanza™",
+      "symbol": "gpas_goldhit3_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Chilli Xtreme™ PowerPlay Jackpot",
+      "symbol": "gpas_cxtremepp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Golden Macaque™",
+      "symbol": "gpas_gmacaque_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fruity Showers™",
+      "symbol": "gpas_fcascade_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Devil Wilds™",
+      "symbol": "gpas_devwilds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ways of the Genie Thundershots™",
+      "symbol": "gpas_wotgenie_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Sinbad’s Riches™",
+      "symbol": "gpas_ctrplfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bai Shi",
+      "symbol": "bs",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "White King™",
+      "symbol": "gpas_wking_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Power Zones™ Thunder Birds",
+      "symbol": "gpas_tbirds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Christmas Jackpot Bells",
+      "symbol": "cbells",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Qin's Empire: Caishen's Temple™",
+      "symbol": "gpas_ctemple_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Epic Ape 2™",
+      "symbol": "gpas_eape2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Egyptian Emeralds",
+      "symbol": "gpas_eemeralds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rooster's Farm Riches™",
+      "symbol": "gpas_rstfr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Dogs™",
+      "symbol": "gpas_adogs_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Oink Oink Oink: Pharaohs™",
+      "symbol": "gpas_ooop_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Goal Goal Goal: Cash Collect™",
+      "symbol": "gpas_wcupcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Frankie Dettori's™ Magic Seven",
+      "symbol": "fdt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Casino Charms™",
+      "symbol": "gpas_cascharms_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jungle Giants™",
+      "symbol": "gpas_jgiant_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rogues Draw™",
+      "symbol": "gpas_rogue_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods Norse: Ways of Thunder",
+      "symbol": "gpas_aognwot_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Football Carnival",
+      "symbol": "gtsfc",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Forest Prince",
+      "symbol": "gpas_fprince_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Galactic Streak",
+      "symbol": "galst",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Veils of Venice™",
+      "symbol": "gpas_venemasks_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wheels of Flame™",
+      "symbol": "gpas_wofire_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Crocodile Blitz™",
+      "symbol": "gpas_cblitzfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods Norse: King of Asgard™",
+      "symbol": "gpas_aogkasgard_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "King Blitz™",
+      "symbol": "gpas_bprog_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tip Top Totem™ PowerPlay Jackpot",
+      "symbol": "gpas_tttotemspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Leprechaun's Luck: Mega Cash Collect™ A1",
+      "symbol": "gpas_llmcca1_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon: White King™",
+      "symbol": "gpas_fmwking_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rhino Blitz™",
+      "symbol": "gpas_rslot_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Funky Fruits",
+      "symbol": "fnfrj",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Deadliest Catch™",
+      "symbol": "gpas_deadctch_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Axoloco™",
+      "symbol": "gpas_mfbax_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze™: Tundra Wolf™",
+      "symbol": "gpas_twolf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mayan Blocks™",
+      "symbol": "gpas_mblocks_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fluffy Favourites™",
+      "symbol": "gpas_fluffyf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Monkey Mania 2™",
+      "symbol": "gpas_mmania_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Stellar Diamonds™",
+      "symbol": "gpas_stlrdm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jungle trouble",
+      "symbol": "ashjut",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Thai Paradise",
+      "symbol": "tpd2",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Midnight Wilds",
+      "symbol": "gpas_mwilds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: O'Reilly's Charms™ FB",
+      "symbol": "gpas_orwifefb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Eye of Anubis™",
+      "symbol": "gpas_sscarab_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Breaking Bad™: Cash Collect & Link™",
+      "symbol": "gpas_brkbad_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Oktober Cash™",
+      "symbol": "gpas_okco_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pride of Persia: Empire Treasures™",
+      "symbol": "gpas_etpop_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Treasures of the Lamps",
+      "symbol": "totl",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: 3 Wizards™",
+      "symbol": "gpas_3wizards_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Joker Rush™",
+      "symbol": "gpas_jrush_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Plenty O'Fortune™",
+      "symbol": "gpas_pffortune_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cats Collect™",
+      "symbol": "gpas_caco_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Roberto Carlos Sporting Legends™",
+      "symbol": "gpas_rcarlos_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Grizzly Blitz™",
+      "symbol": "gpas_grzbz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sweet Party",
+      "symbol": "cnpr",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Toucan Mania",
+      "symbol": "gpas_tmania_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pharaoh's Secrets",
+      "symbol": "pst",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon White Thunder™",
+      "symbol": "gpas_fmwtdr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hot Gems Xtreme",
+      "symbol": "gpas_hgextreme_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Book of Kings™ PowerPlay Jackpot",
+      "symbol": "gpas_bokingpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Yun Cong Long",
+      "symbol": "yclong",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pigeons From Space!™",
+      "symbol": "gpas_pigeonfs_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Khonsu God of Moon™ PowerPlay Jackpot",
+      "symbol": "gpas_kgomoonpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Feng Shui Flip™",
+      "symbol": "gpas_fsflip_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Macabra Linx™ PowerPlay Jackpot",
+      "symbol": "gpas_mcblnixpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lil Sphinx™",
+      "symbol": "gpas_jokerf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Flaming Bars™",
+      "symbol": "gpas_fbars_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire 4: Cash Collect Quattro™",
+      "symbol": "gpas_f4ccd_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Absolutely Mammoth™ PowerPlay Jackpot",
+      "symbol": "gpas_amammothpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Epic Fish: Net of Fortune™",
+      "symbol": "gpas_efnof_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: King of Olympus™ Fire Blaze Xtreme",
+      "symbol": "gpas_aogkofbx_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jackpot Bells",
+      "symbol": "jbells",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Funky Monkey Jackpot",
+      "symbol": "fmjp",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: Shrine of Anubis™",
+      "symbol": "gpas_goldhit2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: The Khan™",
+      "symbol": "gpas_mfbkhan_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Football Rules",
+      "symbol": "fbr",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Neptunes Kingdom",
+      "symbol": "nk",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gem Splash: Rainbows Gift™",
+      "symbol": "gpas_rgift_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Book of Sakura™",
+      "symbol": "gpas_boskr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Everybody's Jackpot",
+      "symbol": "evj",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Piggies and the Bank: Cash Collect & Link™",
+      "symbol": "gpas_patbccl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Zhao Cai Jin Bao",
+      "symbol": "zcjb",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Curse of Anubis™",
+      "symbol": "gpas_soanubis_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Piggy Mania™",
+      "symbol": "gpas_3reel_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Esmeralda",
+      "symbol": "esm",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Adventure Trail™",
+      "symbol": "gpas_atrail_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Joker Spin & Roll™",
+      "symbol": "gpas_jdice_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Oink Oink Oink™",
+      "symbol": "gpas_fboink_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Walking Dead 2™",
+      "symbol": "gpas_wdead2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Book of Kings 2™ PowerPlay Jackpot",
+      "symbol": "gpas_bokings2pp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild Lava™",
+      "symbol": "gpas_wlava_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Panther Moon™",
+      "symbol": "gpas_pmoon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Circuit Shock™",
+      "symbol": "gpas_cish_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods™ King of Olympus Megaways™",
+      "symbol": "gpas_mgaogkol_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hainan Ice™",
+      "symbol": "gpas_hice_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sahara Riches MegaWays™: Cash Collect™",
+      "symbol": "gpas_mgccsahara_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tree Wishes™",
+      "symbol": "gpas_trwish_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze Golden: Buccaneer Bells™",
+      "symbol": "gpas_fbgbb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Taco Libre Jackpot: Cash Collect Max™",
+      "symbol": "gpas_tcjpcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tiger Turtle Dragon Phoenix™",
+      "symbol": "gpas_tigertdp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lucky Emeralds™",
+      "symbol": "gpas_lemeralds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hit Bar™",
+      "symbol": "gpas_fmhitbar_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Leprechaun's Luck™",
+      "symbol": "gpas_gtriollbf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Leprechaun’s Luck: Cash Collect: Megaways™ PowerPlay Jackpot",
+      "symbol": "gpas_lluckmccpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Great Genie™",
+      "symbol": "gpas_gegenie_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Captain Eye™",
+      "symbol": "gpas_cpteye_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Great Blue Jackpot™",
+      "symbol": "gpas_gbluejp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Glorious Guardians™",
+      "symbol": "gpas_gguardians_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fluffy Fishin'™",
+      "symbol": "gpas_flfish_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Miss Fortune",
+      "symbol": "mfrt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Dragon: Nian Nian You Yu",
+      "symbol": "nian",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fortune Fortune Thundershots™",
+      "symbol": "gpas_ffortune_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Double Heat: Crown™",
+      "symbol": "gpas_diamdhrbf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "4 Crazy Cluckers™",
+      "symbol": "gpas_3chken_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz™ Megaways™",
+      "symbol": "gpas_bbmways_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cougar Blitz™",
+      "symbol": "gpas_cgrbz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Grand Junction: Mountain Express™",
+      "symbol": "gpas_mountexp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gates of Camelot™",
+      "symbol": "gpas_goc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Azteca: Cash Collect™",
+      "symbol": "gpas_aztecwfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Samurai Fury™",
+      "symbol": "gpas_samufur_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lunar Link: Sky King™",
+      "symbol": "gpas_llsking_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sweet N Juicy™",
+      "symbol": "gpas_swnj_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Dragon Spark™",
+      "symbol": "gpas_dsparks_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Walking Dead: The Ones Who Live™ Game",
+      "symbol": "gpas_wdeadowl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Football! Cash Collect™",
+      "symbol": "gpas_focashco_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Super Stepper™",
+      "symbol": "gpas_sstepper_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise™:Sands of Fury",
+      "symbol": "gpas_krsofury_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Epic Ape: Blitz Cash Collect™",
+      "symbol": "gpas_epacc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Maji Wilds",
+      "symbol": "mwilds",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ways of the Phoenix",
+      "symbol": "wotp",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Heroes Arrow™",
+      "symbol": "gpas_harrow_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Anaconda Uncoiled™",
+      "symbol": "gpas_auncoil_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Breach the Vault™",
+      "symbol": "gpas_bvault_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz II™",
+      "symbol": "gpas_bblitz2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hot Crown Deluxe™",
+      "symbol": "gpas_hcdelux_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Panther Pays™ PowerPlay Jackpot",
+      "symbol": "gpas_ppayspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Dolphin Reef™",
+      "symbol": "gpas_dreef_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cash Fortress™",
+      "symbol": "gpas_cfts_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lockdown Loot™",
+      "symbol": "gpas_pbreak_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Aztec Expedition™",
+      "symbol": "gpas_aexpedition_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Egyptian Emeralds™ PowerPlay Jackpot",
+      "symbol": "gpas_eemeraldspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Jokeress 10000™",
+      "symbol": "gpas_js10k_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Desert Treasure",
+      "symbol": "mobdt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Grand Junction: Golden Guns™",
+      "symbol": "gpas_ggun_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Vault of the Deep™",
+      "symbol": "gpas_ftv2vd_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Anaconda Wild",
+      "symbol": "anwild",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "81 Gold Cascade™",
+      "symbol": "gpas_eigoldcd_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Leprechaun's Luck Race Bonanza™",
+      "symbol": "gpas_hoga_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fish Trio™",
+      "symbol": "gpas_phapo_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Dragon Champions™",
+      "symbol": "gpas_dragonc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bermuda Triangle",
+      "symbol": "bt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lil Demon: Mega Cash Collect™",
+      "symbol": "gpas_ldmcashc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Chilli Xtreme™",
+      "symbol": "gpas_cxtreme_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Torrente",
+      "symbol": "tor",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Heart of the Jungle",
+      "symbol": "ashhotj",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Clover Flip™",
+      "symbol": "gpas_cflip_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Amazon WIld",
+      "symbol": "ashamw",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Ruler of the Seas",
+      "symbol": "gpas_aogrotsea_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wizzy Trix™",
+      "symbol": "gpas_witr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Onça Mania™",
+      "symbol": "gpas_ocmn_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Better Wilds™ PowerPlay Jackpot",
+      "symbol": "gpas_betwildspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods™ God of Storms 3™",
+      "symbol": "gpas_agstorm3_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Funky Monkey",
+      "symbol": "fm",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Blazing Bells™",
+      "symbol": "gpas_bbells_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gaelic Luck™",
+      "symbol": "gpas_gluck_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bee Frenzy™",
+      "symbol": "gpas_bfrenzy_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Archer™",
+      "symbol": "gpas_archer_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Lucky Bass™",
+      "symbol": "gpas_mfbbass_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Sweetest: Cash Collect™",
+      "symbol": "gpas_sweetcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sharks Blitz™",
+      "symbol": "gpas_sharks_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Berry Berry Bonanza™",
+      "symbol": "gpas_berrybon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Winnings of Oz",
+      "symbol": "ashwnoz",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Brawler's Bar Cash Collect™",
+      "symbol": "gpas_brwcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bulls Eye Bells™",
+      "symbol": "gpas_bebells_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Golden Tour™",
+      "symbol": "gpas_goltour_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Silver Bullet",
+      "symbol": "sib",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Quad Link Red™",
+      "symbol": "gpas_quadlsr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lotto Madness™",
+      "symbol": "gpas_lotmad_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Taco Libre: Cash Collect Max™",
+      "symbol": "gpas_tccc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tip Top Totems",
+      "symbol": "gpas_tttotems_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of Egypt™",
+      "symbol": "gpas_aoegypt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: White Witch™",
+      "symbol": "gpas_fbww_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gem Heat",
+      "symbol": "gemheat",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise™: Forbidden Forest",
+      "symbol": "gpas_krfforest_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Great Ming Empire",
+      "symbol": "gtsgme",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sahara Riches: Cash Collect™",
+      "symbol": "gpas_ccsahara_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Witches: Cash Collect™",
+      "symbol": "gpas_cchfortune_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Purple Hot",
+      "symbol": "phot",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Santa Surprise™",
+      "symbol": "gpas_gtsanta_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "CollectOrbs: Fox’s Trail™",
+      "symbol": "gpas_coft_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild LinX™ PowerPlay Jackpot",
+      "symbol": "gpas_wlinxpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Plunder Ahoy!™",
+      "symbol": "gpas_pahoy_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Honey Gems™",
+      "symbol": "gpas_hongem_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Robocop™: Cash Collect™",
+      "symbol": "gpas_robocopcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Star Hot Reels™",
+      "symbol": "gpas_shrl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Heart of the Frontier",
+      "symbol": "ashhof",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Free the Dragon™",
+      "symbol": "gpas_ftdamsel_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Toltec Blocks™",
+      "symbol": "gpas_qctoblo_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Savage Jungle™",
+      "symbol": "gpas_sjungle_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hot Gems™ Xtreme PowerPlay Jackpot",
+      "symbol": "gpas_hgextremepp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Toro Mania™",
+      "symbol": "gpas_oxmni_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio 10000™",
+      "symbol": "gpas_gtr10k_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Furious 4™",
+      "symbol": "gpas_aogfurfour_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of The Gods Norse™ Norse Legends",
+      "symbol": "gpas_aognnl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Vacation Station Deluxe",
+      "symbol": "vcstd",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods™ Wonder Warriors™",
+      "symbol": "gpas_aogww_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Legacy of the Wild™",
+      "symbol": "gpas_lotwild_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze™ Blue Wizard™ Megaways™",
+      "symbol": "gpas_mgbwizard_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lucky Bass: Mega Cash Collect™",
+      "symbol": "gpas_lbmcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Queen of the Pyramids: Mega Cash Collect™",
+      "symbol": "gpas_queenotp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Power Zones™ Ishtar",
+      "symbol": "gpas_ishtar_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "5 Boom: Frog Frenzy™",
+      "symbol": "gpas_ffve_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Frankie Dettori's™ Magic 7 JP",
+      "symbol": "fdtjg",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mystic Mines™",
+      "symbol": "gpas_mmines_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Santa Surprise™",
+      "symbol": "gpas_santasurp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz™",
+      "symbol": "gpas_bblitz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon: Wild Track™",
+      "symbol": "gpas_wtrack_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Blue Wizard: Cash Collect & Link™",
+      "symbol": "gpas_bwizccl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Epic Fish: Marlin Madness™",
+      "symbol": "gpas_efmms_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Leprechaun’s Luck: Cash Collect: Megaways™",
+      "symbol": "gpas_lluckmcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Torrente Again",
+      "symbol": "gpas_torragain_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ronnie O'Sullivan: Sporting Legends™",
+      "symbol": "roos",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Baa, Baa, Baa™",
+      "symbol": "gpas_baba_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Animal Instinct™",
+      "symbol": "gpas_big5_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "King of the Barrels™",
+      "symbol": "gpas_kobrl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hit Bar™ PowerPlay Jackpot",
+      "symbol": "gpas_fmhitbarpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Roman Fruits™",
+      "symbol": "gpas_romfruit_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wheels of Flame™ PowerPlay Jackpot",
+      "symbol": "gpas_whlsflmppj_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lock & Hit: Red Knight™",
+      "symbol": "gpas_monreelsa1_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rabbit and the Fox™",
+      "symbol": "gpas_rbitfox_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fruit Harvest™",
+      "symbol": "gpas_fharvest_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Crystal Lotuses™",
+      "symbol": "gpas_crylo_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Azteca Bonus Lines™ PowerPlay Jackpot",
+      "symbol": "gpas_azbolipp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Stallion Strike™ PowerPlay Jackpot",
+      "symbol": "gpas_sstrikepp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mighty Hat: Mystic Tales™",
+      "symbol": "gpas_mforest_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Money Jackpot™",
+      "symbol": "gpas_reelstrk_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods Norse: Gods and Giants™",
+      "symbol": "gpas_aoggagiants_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Geisha Story",
+      "symbol": "ges",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jurassic Island",
+      "symbol": "ashjid",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fairy Gathering™: Thundershots™",
+      "symbol": "gpas_fgather_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Juego De La Oca",
+      "symbol": "jdlo",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Adventures Beyond Wonderland",
+      "symbol": "ashabw",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze Quattro: Celtic Charm™",
+      "symbol": "gpas_qccharm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hot Gems™",
+      "symbol": "gpas_hgems_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Money Jackpot™ Spicy!",
+      "symbol": "gpas_tmjspcy_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pharaoh's Treasure Deluxe",
+      "symbol": "phtd",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hit Bar: Gold™",
+      "symbol": "gpas_hitbargl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Stop: Mermaids Find™",
+      "symbol": "gpas_merfind_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Money Jackpot Bells™",
+      "symbol": "gpas_tmjpbell_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mahjong Magic™",
+      "symbol": "gpas_mhmac_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Anaconda Wild 2™ PowerPlay Jackpot",
+      "symbol": "gpas_awild2pp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Goal Goal Goal: Pachin-Goal™",
+      "symbol": "gpas_pcgoal_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hot Gems: Cash Collect™",
+      "symbol": "gpas_hotgcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Safari Heat™",
+      "symbol": "gpas_safarih_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Storms of Ice™ PowerPlay Jackpot",
+      "symbol": "gpas_soicepp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Leprechaun’s Luck: Cash Collect™",
+      "symbol": "gpas_ccluck_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Panther Pays™",
+      "symbol": "gpas_panthpays_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Piggies and the Bank™ PPJP",
+      "symbol": "gpas_engageppjp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gladiator™ Jackpot",
+      "symbol": "gpas_gladjack_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mighty Hat: Lamp of Gold™",
+      "symbol": "gpas_gwish_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Anaconda Wild 2™",
+      "symbol": "gpas_awild2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Fire Fighter™",
+      "symbol": "gpas_ffighter_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Double Digger™",
+      "symbol": "gpas_dwpfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon: White King™ PowerPlay Jackpot",
+      "symbol": "gpas_fmwkingjp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Honey Gems™ PowerPlay Jackpot",
+      "symbol": "gpas_hongempp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Loteria Don Clemente™: Cash Collect™",
+      "symbol": "gpas_lotcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Helios™",
+      "symbol": "gpas_aoggosuna1_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Joker Rush: Cash Collect™",
+      "symbol": "gpas_jrushcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Irish Click-A-Win™",
+      "symbol": "gpas_iluckcw_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Racaroon 2™",
+      "symbol": "gpas_rcn2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Gold Trio™",
+      "symbol": "gpas_aoggt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise™: Guardians of the Abyss",
+      "symbol": "gpas_gotabyss_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mighty Hat: Mine O' Mine™",
+      "symbol": "gpas_grush_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Silent Samurai: Mega Cash Collect™",
+      "symbol": "gpas_ssammct_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Blue Wizard™ PowerPlay Jackpot",
+      "symbol": "gpas_bwizardpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Djinn of Storms™ PowerPlay Jackpot",
+      "symbol": "gpas_dostormspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Solar Eclipse: Jaguar's Lair™",
+      "symbol": "gpas_jlair_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Frog's Gift™",
+      "symbol": "gpas_fgift_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gem Splash: Kings Court™",
+      "symbol": "gpas_gskc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "White King: Blitz Cash Collect™",
+      "symbol": "gpas_wkbcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Penguin Vacation",
+      "symbol": "pgv",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Roving Clover™",
+      "symbol": "gpas_mwild_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild Crusade Empire Treasures™",
+      "symbol": "gpas_wcrusade_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Oink Oink Oink™",
+      "symbol": "gpas_oink_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jurassic Island 2™",
+      "symbol": "gpas_jisland2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Legacy of the Tiger™",
+      "symbol": "gpas_lottiger_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Quad Link Count™",
+      "symbol": "gpas_scount_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Adventures In Wonderland",
+      "symbol": "ashadv",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Blue Wizard™",
+      "symbol": "gpas_bwizard_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Secrets of the Amazon",
+      "symbol": "samz",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Shots",
+      "symbol": "bigsh",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mayan Blocks™ PowerPlay Jackpot",
+      "symbol": "gpas_mblockspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Great Blue™",
+      "symbol": "gpas_gblue_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rome and Glory",
+      "symbol": "rng2",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Oriana's Orbs™",
+      "symbol": "gpas_dncftnt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lunar Link: The Legend of King Arthur™",
+      "symbol": "gpas_llkingart_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Atlantis Queen",
+      "symbol": "gtsatq",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Samba Brazil",
+      "symbol": "gtssmbr",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Lil Demon™",
+      "symbol": "gpas_gtdemon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Go Joker Go™",
+      "symbol": "gpas_jokjac_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Coin! Coin! Coin!",
+      "symbol": "ccccny",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lunar Link: Nile Moon™",
+      "symbol": "gpas_llnm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wushu Punch™",
+      "symbol": "gpas_wpunch_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "15 Diamonds™",
+      "symbol": "gpas_15dmd_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "King Richwin™",
+      "symbol": "gpas_krchw_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wolves! Cash Collect & Link™",
+      "symbol": "gpas_wolcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ready to Blow: Thundershots™",
+      "symbol": "gpas_retoblow_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Legacy of the Wilds 2™",
+      "symbol": "gpas_lotwild2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jackpot Giant™",
+      "symbol": "jpgt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Alohawaii: Cash Collect™",
+      "symbol": "gpas_alohacc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "A Night Out™",
+      "symbol": "gpas_anightout_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Highway Kings™",
+      "symbol": "gpas_highkings_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buckle Up",
+      "symbol": "bup",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buccaneer Blast™",
+      "symbol": "gpas_pblast_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Goood Heavens™",
+      "symbol": "gpas_gdhvns_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Rush™: Cash Collect™",
+      "symbol": "gpas_goldr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio Jackpot™",
+      "symbol": "gpas_gtdbonza_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Magical Stacks",
+      "symbol": "mgstk",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon: White Panda™",
+      "symbol": "gpas_wpanda_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Chinese Kitchen",
+      "symbol": "cm",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kraken Spins™",
+      "symbol": "gpas_kraken_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Captains Treasure™",
+      "symbol": "gpas_krhiddent_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "15 Stars Ablaze™",
+      "symbol": "gpas_15hom_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Halloween Fortune™",
+      "symbol": "gpas_hfortune_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Bad Wolf: Cash Collect & Link™",
+      "symbol": "gpas_bwolfccl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ocean Frenzy™",
+      "symbol": "gpas_ocfrnz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Diamond Match Deluxe™",
+      "symbol": "gpas_diamdlux_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Xuan Pu Lian Huan",
+      "symbol": "xufe",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz: Mega Merge™",
+      "symbol": "gpas_bblitzmm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Joker Rush™ PowerPlay Jackpot",
+      "symbol": "gpas_jrushpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Yu Tu Jin Cai: Cash Collect™",
+      "symbol": "gpas_rabbitcash_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods™: Wheels of Olympus",
+      "symbol": "gpas_aogwfot_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods™ God of Storms 2™",
+      "symbol": "gpas_gstorm2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Pearls Pearls Pearls™",
+      "symbol": "gpas_pppearls_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Luminous Life",
+      "symbol": "lumli",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Legion Uprising™",
+      "symbol": "gpas_krluprising_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Atlantis Cash Collect™",
+      "symbol": "gpas_ccskingofa_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Frankie Dettori Sporting Legends™",
+      "symbol": "fdtsl",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lil Greedy™",
+      "symbol": "gpas_ldragon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sinbad's Golden Voyage™",
+      "symbol": "gpas_sgvoyage_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Beach Life",
+      "symbol": "bl",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bonus Train Bandits",
+      "symbol": "gpas_btbandit_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods Norse: Book of Dwarves™",
+      "symbol": "gpas_gogold_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Grand Junction: Enchanted Inca™",
+      "symbol": "gpas_eninca_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Rich Roll: Lust for Gold!™",
+      "symbol": "gpas_rrlustforg_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz: Cash Collect™",
+      "symbol": "gpas_bufbcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tiger Claw™",
+      "symbol": "gpas_tigclaw_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Emperor of Rome™",
+      "symbol": "gpas_eofromebf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Splash: Toots Froots™",
+      "symbol": "gpas_goldstf_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio: Zones™",
+      "symbol": "gpas_gotzon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Golden Pile: Toltec Treasure™",
+      "symbol": "gpas_ttreasure_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild LinX™",
+      "symbol": "gpas_wlinx_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Breaking Bad™",
+      "symbol": "gpas_mfbbrbad_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Royal Respin Deluxe",
+      "symbol": "rrd",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Green Wizard™",
+      "symbol": "gpas_gwizard_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "King of Giza: Mega Cash Collect & Link™",
+      "symbol": "gpas_kgmccl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wheel of the Titan™",
+      "symbol": "gpas_wotrn_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Vikings Empire Treasures™",
+      "symbol": "gpas_vemptr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Triple Meow Riches™",
+      "symbol": "gpas_trimer_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Eagle: Cash Collect & Link™",
+      "symbol": "gpas_eccl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Sky Queen™",
+      "symbol": "gpas_squeen_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Blackbeard’s Hoard Cash Sacks™",
+      "symbol": "gpas_bbhcs_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Red Wizard™",
+      "symbol": "gpas_rwizard_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Amazon Wild™",
+      "symbol": "gpas_olwilds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "guest",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Khonsu God of Moon™",
+      "symbol": "gpas_kgomoon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lovefool™",
+      "symbol": "gpas_scupid_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pyramid LinX™",
+      "symbol": "gpas_plink_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Age of the Gods™",
+      "symbol": "gpas_aogaogs_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Elephant Riches™",
+      "symbol": "gpas_elphrich_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Bad Towers™",
+      "symbol": "gpas_bbt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jo Blitz™",
+      "symbol": "gpas_joblitz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ka Ching Boom",
+      "symbol": "gpas_kaching_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Merry Christmas™",
+      "symbol": "gpas_fbxmas_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: Lil Demon™",
+      "symbol": "gpas_ghitdevfba1_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Epic Ape™",
+      "symbol": "gpas_eape_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wu Long",
+      "symbol": "wlg",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Crazy 7",
+      "symbol": "c7",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Pharaoh's Daughter™",
+      "symbol": "gpas_scqueen_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Solar Eclipse: Northern Winds™",
+      "symbol": "gpas_nwinds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Jinns Moon™",
+      "symbol": "gpas_jmoon_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Vampire Princess of Darkness™",
+      "symbol": "gpas_vampirep_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Book of Oracle™",
+      "symbol": "gpas_aogbooracle_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Walking Dead™",
+      "symbol": "gpas_wdead_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: God of Storms™ Fire Blaze",
+      "symbol": "gpas_aoggosfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Racaroon 2 Jackpot™",
+      "symbol": "gpas_rcn2jp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Flaming Stallion Blitz™",
+      "symbol": "gpas_blitz10_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ultra Ace™",
+      "symbol": "gpas_uace_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Rulers of Olympus",
+      "symbol": "aogroo",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Aztec Fruits™",
+      "symbol": "gpas_azfruit_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "9 Stars Ablaze™",
+      "symbol": "gpas_9hom_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Azteca Bonus Lines™",
+      "symbol": "gpas_azboli_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cash Reveal™",
+      "symbol": "gpas_cashrl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Bad Wolf: Cash Collect & Link - Bacon Beach™",
+      "symbol": "gpas_bbcbb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bulls Eye Alice™",
+      "symbol": "gpas_bullea_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Breakout Bob™",
+      "symbol": "gpas_bbob_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Shadow Queen™",
+      "symbol": "gpas_krsqueen_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Shields of Rome",
+      "symbol": "gpas_sorome_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Pile: Orangutan!™",
+      "symbol": "gpas_gporang_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lie Yan Zuan Shi",
+      "symbol": "ght_a",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "White King II",
+      "symbol": "whk2",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Fate sisters",
+      "symbol": "ftsis",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Panther Moon: Bonus Lines™",
+      "symbol": "gpas_pmoonbl_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "New Year’s Bonanza™",
+      "symbol": "gpas_nyslot_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Dwarves and Goblins™",
+      "symbol": "gpas_mfbdag_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Racaroon™",
+      "symbol": "gpas_racrns_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Candy Roll™",
+      "symbol": "gpas_sweroll_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ugga Bugga",
+      "symbol": "ub",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fluffy Favourites: Cash Collect™",
+      "symbol": "gpas_fluffycc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Halloween Fortune 2™",
+      "symbol": "gpas_hfortune2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ready, Steady, Robo™",
+      "symbol": "gpas_rsrobo_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Panda Blitz™",
+      "symbol": "gpas_pandabz_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Extreme Fruits Ultimate Deluxe™",
+      "symbol": "gpas_extrfruits_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pixel Samurai",
+      "symbol": "pisa",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Joker Hot Reels™",
+      "symbol": "gpas_jhreels_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Queen's Mystery™",
+      "symbol": "gpas_qumy_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fei Cui Gong Zhu",
+      "symbol": "fcgz",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pumpkin Bonanza™",
+      "symbol": "gpas_pumpkinb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sun Wukong",
+      "symbol": "gtsswk",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sacred Stones",
+      "symbol": "scrdstns",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "AP McCoy Sporting Legends™",
+      "symbol": "tmccoy",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "4 Crazy Cluckers™ PowerPlay Jackpot",
+      "symbol": "gpas_fccppj_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Blazing Bells™ PowerPlay Jackpot",
+      "symbol": "gpas_bbellspp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sorcerer's Guild of Magic™",
+      "symbol": "gpas_sgomagic_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bounty of the Beanstalk",
+      "symbol": "ashbob",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Silver Bullet Bandit: Cash Collect™",
+      "symbol": "gpas_sbullet_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Maze Keeper™",
+      "symbol": "gpas_mkeeper_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Foxy Fortunes",
+      "symbol": "fxf",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Piggies and The Wolf",
+      "symbol": "paw",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Stars Awakening",
+      "symbol": "strsawk",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: God of Storms™",
+      "symbol": "gpas_aoggstorm_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Piggies and the Bank™",
+      "symbol": "gpas_engage_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Buffalo Blitz III™",
+      "symbol": "gpas_bflbz3_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Da Vinci's Vault",
+      "symbol": "dvncvnoptpp",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "20 Stars Ablaze™",
+      "symbol": "gpas_hom_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit & Link: JP Bacon & Co™",
+      "symbol": "gpas_goldh4_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Ruler of the Dead™",
+      "symbol": "gpas_aogrotu_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Ruler of the Sky™",
+      "symbol": "gpas_aogrotsk_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Retro Rush™",
+      "symbol": "gpas_rrider_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit™: O'Reilly's Riches",
+      "symbol": "gpas_bcash_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Queen of the 3 Pyramids: Cash Collect™",
+      "symbol": "gpas_qpyr3_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Diamond Rise™",
+      "symbol": "gpas_drise_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Mighty Midas™",
+      "symbol": "aogmt",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze Golden: Amazing Factory™",
+      "symbol": "gpas_afactory_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jackpot Bells 10000™",
+      "symbol": "gpas_jb10k_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gladiator Road to Rome™",
+      "symbol": "gpas_grtr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Monster Multipliers™",
+      "symbol": "gpas_sking_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Full Moon: White Panda™ PowerPlay Jackpot",
+      "symbol": "gpas_wpandapp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze: Big Circus!™",
+      "symbol": "gpas_bcircus_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild Roll™",
+      "symbol": "gpas_wlroll_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Captain's Treasure™",
+      "symbol": "gpas_captres_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Stars Ablaze™",
+      "symbol": "gpas_starsablaze_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Pyramid Valley™: Power Zones™",
+      "symbol": "gpas_pstrike_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lunar Link: Phoenix Moons™",
+      "symbol": "gpas_pmoonsll_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mr.Cashback",
+      "symbol": "mcb",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Power Zones: Legend of Hydra™",
+      "symbol": "gpas_hydra_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wild Gambler",
+      "symbol": "gtswg",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "PowerZones: Stallion Strike",
+      "symbol": "gpas_sstrike_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Epic Troy",
+      "symbol": "gpas_aogetroy_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Queen's Curse: Empire Treasures™",
+      "symbol": "gpas_tqcempt_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Tiger Stacks™",
+      "symbol": "gpas_tstacks_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Walking Dead™: Cash Collect™",
+      "symbol": "gpas_wdead3_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Racaroon Christmas™",
+      "symbol": "gpas_rach_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Bad Wolf: High Steaks™",
+      "symbol": "gpas_bbwhs_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Red Wizard: Bank It Up™",
+      "symbol": "gpas_rwizw_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Macabra Linx™",
+      "symbol": "gpas_mabralinx_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lights of Luck™",
+      "symbol": "gpas_loluck_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Book of Kings™",
+      "symbol": "gpas_boking_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lil Demon: Double Heat™",
+      "symbol": "gpas_gpotld_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Ice Cave™",
+      "symbol": "gpas_icave_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Moo Moo Moo™",
+      "symbol": "gpas_mooo_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "81 Joker Hot Reels™",
+      "symbol": "gpas_jokerhr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Irish Luck",
+      "symbol": "irl",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Mega Fire Blaze™ Wild Pistolero™",
+      "symbol": "gpas_wpisto_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fei Long Zai Tian™",
+      "symbol": "gpas_flztian_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "The Jokeress™",
+      "symbol": "gpas_ladyjj_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Bonus Bears™",
+      "symbol": "gpas_bbears_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "CollectOrbs: Wild West Wilds™",
+      "symbol": "gpas_trgems_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Spin ‘Em Round!™",
+      "symbol": "gpas_woluck_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: Glorious Griffin™",
+      "symbol": "gpas_aogggriffin_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Sahara Riches: Cash Collect Max™",
+      "symbol": "gpas_srcci_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit & Link: Tiger Jones™",
+      "symbol": "gpas_ghlink2_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Lil Demon: Blazing Lava™",
+      "symbol": "gpas_ldblava_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Trio™",
+      "symbol": "gpas_gtfb_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Absolutely Mammoth!™",
+      "symbol": "gpas_amammoth_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Chasm of Fear™",
+      "symbol": "gpas_krcofear_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cat Queen",
+      "symbol": "catqc",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: Viva Las Robot™",
+      "symbol": "gpas_ghvivalr_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Hit Bar: Gold™ PowerPlay Jackpot",
+      "symbol": "gpas_hitbarglpp_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Dragons Hall™",
+      "symbol": "gpas_dhall_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Better Wilds™",
+      "symbol": "gpas_betwilds_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gladiator: Mega Cash Collect™",
+      "symbol": "gpas_gldrmcc_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Vacation Station",
+      "symbol": "er",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Fire Blaze: Sky Queen Megaways™",
+      "symbol": "gpas_sqmways_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Big Sumo™",
+      "symbol": "gpas_bisu_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Reign of Ice",
+      "symbol": "gpas_krsroice_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Age of the Gods: King of Olympus™",
+      "symbol": "gpas_aogkol_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "1 of a Kind™",
+      "symbol": "gpas_1reeler_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Jane Jones in Book of Kings 2™",
+      "symbol": "gpas_nalight_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Kingdoms Rise: Legend of Elvenstone™",
+      "symbol": "gpas_krloestone_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Diamond Match™",
+      "symbol": "gpas_dmatch_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Streak of Luck",
+      "symbol": "sol",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Gold Hit: Lucky Granny™",
+      "symbol": "gpas_ghgranny_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Leprechaun's Luck",
+      "symbol": "ashlcl",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Cascading Cave™",
+      "symbol": "gpas_ccave_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "King of Olympus™",
+      "symbol": "gpas_korch_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Wolves! Wolves! Wolves!",
+      "symbol": "www",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Chili Eruption: Thundershots™",
+      "symbol": "gpas_ceruption_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    },
+    {
+      "name": "Capitano Galliano™",
+      "symbol": "gpas_cpgln_pop",
+      "category": "NGM2DT",
+      "demo_availability": "unavailable",
+      "game_kind": "slot"
+    }
+  ]
+}

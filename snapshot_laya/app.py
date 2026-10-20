@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from pydantic import BaseModel, Field
 from .live import Live
 from .explorer import Explorer
+from .providers import provider_status,playtech_catalog
 
 manager=Live()
 explorer=Explorer(manager)
@@ -82,7 +83,7 @@ def index(): return Path(__file__).with_name('index.html').read_text(encoding='u
 
 
 @app.get('/api/health')
-def health(): return {'app':'Snapshot-Laya','version':'0.3.1','model_loaded':manager.model.agent is not None}
+def health(): return {'app':'Snapshot-Laya','version':'0.3.2','model_loaded':manager.model.agent is not None}
 
 
 @app.post('/api/shutdown')
@@ -95,6 +96,22 @@ def shutdown():
 
 @app.get('/api/state')
 def state(): return {**manager.state(),'busy':busy,'explorer':explorer.state()}
+
+
+@app.get('/api/providers')
+def providers(): return provider_status()
+
+
+@app.get('/api/providers/playtech/catalog')
+def playtech_games(): return playtech_catalog()
+
+
+@app.get('/playtech',response_class=HTMLResponse)
+def playtech_page():
+    from html import escape
+    catalog=playtech_catalog()
+    rows=''.join('<li><a target="_blank" rel="noopener noreferrer" href="'+escape(g['demo_url'],quote=True)+'">'+escape(g['name'])+'</a></li>' for g in catalog['games'])
+    return '<!doctype html><html lang="es"><meta charset="utf-8"><title>Playtech · demos</title><style>body{font:16px/1.6 Segoe UI;background:#0c121d;color:#e7edf6;margin:30px}a{color:#7de3bd}li{padding:5px}</style><h1>Catálogo de Playtech</h1><p>'+str(len(catalog['games']))+' slots del catálogo guardado de Tester-Spin ('+escape(catalog['captured_at'][:10])+').</p><p>Enlaces demo directos con real=0. Apertura manual; la exploración automática de Playtech todavía está en preparación. La disponibilidad debe comprobarse al abrir cada juego.</p><ul>'+rows+'</ul></html>'
 
 
 class Queue(BaseModel):

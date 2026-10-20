@@ -1,0 +1,744 @@
+{
+  "date": "2026-10-20",
+  "commit": "2ac595a",
+  "mode": "session_reuse_new_five",
+  "ante_rounds_required": 2,
+  "exhaustive_game_coverage": false,
+  "games": [
+    {
+      "game": "Fruit Party",
+      "game_url": "https://www.pragmaticplay.com/en/games/fruit-party-slot/",
+      "validated_discovered_paths": true,
+      "branches_verified": 2,
+      "branches_discovered": 3,
+      "unresolved": [],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "expanded",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonYes",
+              "role": "confirm"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": true,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonYes",
+                "role": "confirm"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/FreeSpins/Content/Start/ButtonContinue",
+                "role": "continue"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/FreeSpins/Content/Result/ButtonContinue",
+                "role": "continue"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+          "labels": [
+            "BUY",
+            "FREE SPINS",
+            "$200"
+          ],
+          "role": "buy_bonus",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonYes",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonYes",
+          "labels": [],
+          "role": "confirm",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonNo",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Buttons/ButtonNo",
+          "labels": [],
+          "role": "cancel",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonContinue",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/FreeSpins/Content/Start/ButtonContinue",
+          "labels": [
+            "10"
+          ],
+          "role": "continue",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonContinue",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Reels/RA/AT/FreeSpins/Content/Result/ButtonContinue",
+          "labels": [
+            "$110.10"
+          ],
+          "role": "continue",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        }
+      ],
+      "har_files_saved": 2,
+      "sessions_closed": 2,
+      "seconds": 129.6,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "branches_expanded": 1
+    },
+    {
+      "game": "Fruit Party 2",
+      "game_url": "https://www.pragmaticplay.com/en/games/fruit-party-2/",
+      "validated_discovered_paths": true,
+      "branches_verified": 2,
+      "branches_discovered": 3,
+      "unresolved": [],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "expanded",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonYes",
+              "role": "confirm"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": true,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonYes",
+                "role": "confirm"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/FreeSpins/Content/Texts/BF/Start/ButtonContinue",
+                "role": "continue"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/FreeSpins/Content/Texts/BF/Result/ButtonContinue",
+                "role": "continue"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyButtons/RA/Option_0/BtnHolder/Button",
+          "labels": [
+            "BUY",
+            "FREE SPINS",
+            "$200"
+          ],
+          "role": "buy_bonus",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonYes",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonYes",
+          "labels": [],
+          "role": "confirm",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonNo",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonNo",
+          "labels": [],
+          "role": "cancel",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonContinue",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/FreeSpins/Content/Texts/BF/Start/ButtonContinue",
+          "labels": [
+            "10"
+          ],
+          "role": "continue",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/TumbleHistory/RA/Scroll/Buttons/PrevNext/Next/Button",
+          "labels": [],
+          "role": "other",
+          "source": "laya",
+          "confidence": 0.3652,
+          "needs_review": true
+        },
+        {
+          "name": "ButtonContinue",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/FreeSpins/Content/Texts/BF/Result/ButtonContinue",
+          "labels": [
+            "$172.20"
+          ],
+          "role": "continue",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        }
+      ],
+      "har_files_saved": 2,
+      "sessions_closed": 2,
+      "seconds": 173.3,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "branches_expanded": 1
+    },
+    {
+      "game": "Big Bass Splash",
+      "game_url": "https://www.pragmaticplay.com/en/games/big-bass-splash/",
+      "validated_discovered_paths": true,
+      "branches_verified": 2,
+      "branches_discovered": 3,
+      "unresolved": [],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "expanded",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonYes",
+              "role": "confirm"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": true,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonYes",
+                "role": "confirm"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "OptionButton",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/BuyButtons/Options/Option_0/OptionButton",
+          "labels": [
+            "BUY FREE SPINS",
+            "$200"
+          ],
+          "role": "buy_bonus",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonYes",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonYes",
+          "labels": [],
+          "role": "confirm",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonNo",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/FreeSpinsPurchase/FSPurchaseWindow/Content/AnimatedPivot/ButtonsHolder/Buttons/ButtonNo",
+          "labels": [],
+          "role": "cancel",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        }
+      ],
+      "har_files_saved": 2,
+      "sessions_closed": 2,
+      "seconds": 111.7,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "branches_expanded": 1
+    },
+    {
+      "game": "Zeus vs Hades - Gods of War",
+      "game_url": "https://www.pragmaticplay.com/en/games/zeus-vs-hades-gods-of-war/",
+      "validated_discovered_paths": false,
+      "branches_verified": 0,
+      "branches_discovered": 4,
+      "unresolved": [
+        "La acción no tuvo un efecto comprobado; no se reintenta."
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/SelectionScreen/Content/Chars/ZeusLeft/Btn/ColliderLeft/Zeus",
+              "role": "probe"
+            }
+          ],
+          "status": "unresolved",
+          "reason": "La acción no tuvo un efecto comprobado; no se reintenta.",
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/SelectionScreen/Content/Chars/ZeusLeft/Btn/ColliderLeft/Zeus",
+                "role": "probe"
+              },
+              "effect_verified": false,
+              "outcome": {
+                "reason": "QUIET_TIMEOUT",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/SelectionScreen/Content/Chars/HadesRight/Btn/ColliderRight/Hades",
+              "role": "probe"
+            }
+          ],
+          "status": "pending",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": []
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/ChooseUrGod/Content/Panel/Btns/Colliders/Zeus",
+              "role": "probe"
+            }
+          ],
+          "status": "pending",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": []
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/ChooseUrGod/Content/Panel/Btns/Colliders/Hades",
+              "role": "probe"
+            }
+          ],
+          "status": "pending",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": []
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "Zeus",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/SelectionScreen/Content/Chars/ZeusLeft/Btn/ColliderLeft/Zeus",
+          "labels": [
+            "PLAY IN OLYMPUS"
+          ],
+          "role": "other",
+          "source": "laya",
+          "confidence": 0.25,
+          "needs_review": true
+        },
+        {
+          "name": "Hades",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/SelectionScreen/Content/Chars/HadesRight/Btn/ColliderRight/Hades",
+          "labels": [
+            "PLAY IN HADES"
+          ],
+          "role": "other",
+          "source": "laya",
+          "confidence": 0.2527,
+          "needs_review": true
+        },
+        {
+          "name": "Zeus",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/ChooseUrGod/Content/Panel/Btns/Colliders/Zeus",
+          "labels": [
+            "CHOOSE\nVOLATILITY",
+            "HIGH",
+            "OLYMPUS",
+            "VERY HIGH",
+            "HADES"
+          ],
+          "role": "other",
+          "source": "laya",
+          "confidence": 0.2681,
+          "needs_review": true
+        },
+        {
+          "name": "Hades",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/BaseGame/Background/ChooseUrGod/Content/Panel/Btns/Colliders/Hades",
+          "labels": [
+            "CHOOSE\nVOLATILITY",
+            "HIGH",
+            "OLYMPUS",
+            "VERY HIGH",
+            "HADES"
+          ],
+          "role": "choice",
+          "source": "laya",
+          "confidence": 0.3773,
+          "needs_review": true
+        }
+      ],
+      "har_files_saved": 1,
+      "sessions_closed": 1,
+      "seconds": 36.2,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "branches_expanded": 0
+    },
+    {
+      "game": "Floating Dragon Hold and Spin",
+      "game_url": "https://www.pragmaticplay.com/en/games/floating-dragon-hold-and-spin/",
+      "validated_discovered_paths": false,
+      "branches_verified": 0,
+      "branches_discovered": 0,
+      "unresolved": [
+        "Tiempo de espera agotado; rama pendiente, sin repetir acciones."
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [],
+      "observed_controls": [],
+      "har_files_saved": 1,
+      "sessions_closed": 1,
+      "seconds": 306.0,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "branches_expanded": 0
+    }
+  ]
+}

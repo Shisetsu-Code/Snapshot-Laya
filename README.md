@@ -32,6 +32,42 @@ separada del efecto comprobado.
 
 ## Recorrer ramas
 
+Desde 0.3.2, un juego listo y estable sin controles objetivo guarda captura y HAR
+y termina con `no_target_controls_detected`. Esto describe la interfaz visitada:
+no certifica que el juego carezca de compras en todos sus estados. Si solo hay
+ante bet se guarda también una captura y se comprueban sus tiradas normalmente.
+Los selectores Zeus/Hades tienen una excepción de cambio solo de color ante
+`QUIET_TIMEOUT`: se registran como `selection_exception`, sin repetir el clic ni
+contarlos como una compra o efecto verificado. Otros fallos conservan el bloqueo.
+
+El catálogo de Playtech está en `/playtech` y `/api/providers/playtech/catalog`.
+Se importó la categoría oficial Slots guardada por Tester-Spin el 18/10/2026,
+con 526 juegos. Usa el lanzamiento directo de ese repositorio, con `real=0` y
+`preferedmode=offline`; la disponibilidad se comprueba al abrir cada juego.
+Amazon Wild cargó en modo «PLAYING FOR FUN». El catálogo web tiene cookies y
+verificación de edad, y su botón Play puede solicitar acceso; el lanzamiento
+directo evita depender de ese recorrido. El adaptador de extracción y exploración
+de controles de Playtech todavía no está implementado: no se reutiliza el de
+Pragmatic ni se certifican sus compras por abrir la demo.
+
+Desde 0.3.2, un juego listo y estable sin controles objetivo guarda captura y HAR
+y termina con `no_target_controls_detected`. Esto describe la interfaz visitada:
+no certifica que el juego carezca de compras en todos sus estados. Si solo hay
+ante bet se guarda también una captura y se comprueban sus tiradas normalmente.
+Los selectores Zeus/Hades tienen una excepción de cambio solo de color ante
+`QUIET_TIMEOUT`: se registran como `selection_exception`, sin repetir el clic ni
+contarlos como una compra o efecto verificado. Otros fallos conservan el bloqueo.
+
+El catálogo de Playtech está en `/playtech` y `/api/providers/playtech/catalog`.
+Se importó la categoría oficial Slots guardada por Tester-Spin el 18/10/2026,
+con 526 juegos. Usa el lanzamiento directo de ese repositorio, con `real=0` y
+`preferedmode=offline`; la disponibilidad se comprueba al abrir cada juego.
+Amazon Wild cargó en modo «PLAYING FOR FUN». El catálogo web tiene cookies y
+verificación de edad, y su botón Play puede solicitar acceso; el lanzamiento
+directo evita depender de ese recorrido. El adaptador de extracción y exploración
+de controles de Playtech todavía no está implementado: no se reutiliza el de
+Pragmatic ni se certifican sus compras por abrir la demo.
+
 El descubrimiento inicial guarda compras y ante bet y sigue una opción en la
 sesión actual. Al descubrir un menú, guarda todas las opciones y continúa por
 una sin cerrar el juego. Las opciones restantes quedan pendientes; para volver

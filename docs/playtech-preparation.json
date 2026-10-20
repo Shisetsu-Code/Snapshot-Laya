@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-20",
+  "reference_repository": "Tester-Spin",
+  "catalog_source": "tester_spin/providers/catalogs/snapshots/playtech.json",
+  "catalog_captured_at": "2026-10-18T21:00:00+00:00",
+  "catalog_entries": 526,
+  "coverage": "official_slots_category",
+  "web_catalog_observations": {
+    "url": "https://www.playtechone.com/es/view-more/casino-2026/slots/",
+    "cookies": "REJECT ALL clicked; banner disappeared",
+    "age_verification": "completed by operator instruction; personal date not persisted",
+    "catalog_play_button": "opened login form"
+  },
+  "direct_demo_check": {
+    "game": "Age of the Gods: Amazon Wild",
+    "code": "gpas_olwilds_pop",
+    "launch_url": "https://cachedownload.playtechone.com/ngmdesktop/casinoclient.html?game=gpas_olwilds_pop&preferedmode=offline&real=0",
+    "result": "loaded",
+    "visible_demo_label": "PLAYING FOR FUN",
+    "login_used": false
+  },
+  "runtime_adapter_ready": false,
+  "purchase_exploration_validated": false
+}

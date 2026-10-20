@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "snapshot-laya"
-version = "0.3.0"
+version = "0.3.2"
 description = "Live Pragmatic demo control snapshots classified by local Laya ONNX/DirectML"
 requires-python = ">=3.11"
 dependencies = ["fastapi>=0.115", "uvicorn>=0.30", "laya==0.4.12", "onnxruntime-directml>=1.24; platform_system == 'Windows'"]
@@ -13,7 +13,7 @@ dependencies = ["fastapi>=0.115", "uvicorn>=0.30", "laya==0.4.12", "onnxruntime-
 snapshot-laya = "snapshot_laya.app:main"
 
 [tool.setuptools.package-data]
-snapshot_laya = ["index.html"]
+snapshot_laya = ["index.html", "playtech-catalog.json"]
 
 [tool.setuptools.packages.find]
 include = ["snapshot_laya*"]

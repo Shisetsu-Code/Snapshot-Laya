@@ -33,6 +33,15 @@ class LiveTests(unittest.TestCase):
         self.live.enqueue(['https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/'])
     def tearDown(self): self.tmp.cleanup()
     def test_classification_does_not_validate(self): self.assertFalse(self.live.validation()['validated'])
+    def test_no_target_capture_is_copied_and_included_in_report(self):
+        image=Path(self.tmp.name)/'original.jpg';image.write_bytes(b'saved screenshot')
+        self.live.images['testimage']=image
+        self.live.session['snapshot']['image_url']='/api/images/testimage'
+        capture=self.live.capture_evidence('no_target_controls_detected')
+        image.unlink()
+        self.assertEqual(Path(capture['path']).read_bytes(),b'saved screenshot')
+        report=self.live.finish(True,advance=False)
+        self.assertEqual(report['captures'],[capture])
     def test_common_interface_is_not_model_input_or_branch(self):
         class RejectModel:
             def classify(self,c):raise AssertionError('Known common interface reached model: '+c['path'])

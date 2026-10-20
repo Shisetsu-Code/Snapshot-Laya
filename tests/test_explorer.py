@@ -2,7 +2,7 @@ import copy
 from pathlib import Path
 import tempfile
 import unittest
-from snapshot_laya.explorer import Explorer
+from snapshot_laya.explorer import Explorer, optional_zeus_selection
 
 
 def button(path, role, rule=None):
@@ -46,6 +46,49 @@ class ExplorerTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(); self.live=Demo(self.tmp.name); self.exp=Explorer(self.live)
     def tearDown(self): self.tmp.cleanup()
+    def test_color_exception_is_limited_to_zeus_mode_and_quiet_timeout(self):
+        c={'name':'Zeus','path':'GameRoot/Game/SelectionScreen/Content/Chars/ZeusLeft/Btn/Zeus'}
+        url='https://www.pragmaticplay.com/en/games/zeus-vs-hades-gods-of-war/'
+        result={'outcome':{'reason':'QUIET_TIMEOUT','operationStarted':False}}
+        self.assertTrue(optional_zeus_selection(url,c,result))
+        self.assertFalse(optional_zeus_selection(url.replace('zeus-vs-hades-gods-of-war','another'),c,result))
+        self.assertFalse(optional_zeus_selection(url,dict(c,path='GameRoot/Game/Purchase/Zeus'),result))
+        self.assertFalse(optional_zeus_selection(url,c,{'outcome':{'reason':'TOKEN_EXPIRED','operationStarted':False}}))
+    def test_ready_game_without_targets_saves_capture_and_closes(self):
+        self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
+        self.live.session['snapshot'].update(controls=[],support_controls=[button('Spin','spin','normal-spin-support')])
+        self.live.session['view']['flags']={'canSpin':True}
+        captures=[]
+        self.live.capture_evidence=lambda reason: captures.append(reason) or {'path':'evidence.jpg'}
+        for _ in range(8):self.exp.tick()
+        self.assertEqual(captures,['no_target_controls_detected'])
+        self.assertEqual(self.exp.tree.data['outcome'],'no_target_controls_detected')
+        self.assertFalse(self.exp.running)
+        self.assertFalse(self.exp.tree.complete())
+        self.assertEqual(self.live.closes,1)
+    def test_empty_loading_game_is_not_reported_as_no_purchases(self):
+        self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
+        self.live.session['snapshot']['controls']=[]
+        for _ in range(8):self.exp.tick()
+        self.assertTrue(self.exp.running)
+        self.assertEqual(self.live.closes,0)
+    def test_zeus_color_exception_is_not_retried_or_counted_as_verified(self):
+        original=self.live._state
+        path='GameRoot/Game/SelectionScreen/Content/Chars/ZeusLeft/Btn/Zeus'
+        def state(name):
+            original(name)
+            self.live.session['snapshot']['controls']=[dict(button(path,'choice'),name='Zeus')]
+        def act(*args,**kwargs):
+            self.live.clicks.append('Zeus')
+            return {'effect_verified':False,'outcome':{'operationStarted':False,'reason':'QUIET_TIMEOUT'}}
+        self.live._state=state;self.live.act=act
+        self.exp.start('https://www.pragmaticplay.com/en/games/zeus-vs-hades-gods-of-war/')
+        for _ in range(15):self.exp.tick()
+        self.assertEqual(self.live.clicks,['Zeus'])
+        self.assertFalse(self.exp.running)
+        self.assertFalse(self.exp.tree.data['unresolved'])
+        self.assertEqual(self.exp.tree.data['branches'][0]['status'],'selection_exception')
+        self.assertFalse(self.exp.tree.complete())
     def test_two_purchases_cancel_confirm_use_independent_sessions(self):
         self.exp.start('https://www.pragmaticplay.com/en/games/demo/')
         for _ in range(60):

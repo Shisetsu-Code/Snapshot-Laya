@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import threading
 import time
 import uuid
@@ -42,6 +43,21 @@ class Live:
         key=hashlib.sha256(str(p).encode()).hexdigest()
         self.images[key]=p
         return '/api/images/'+key
+
+    def capture_evidence(self,reason):
+        s=self.session
+        key=(s['snapshot'].get('image_url') or '').rsplit('/',1)[-1]
+        source=self.images.get(key)
+        if not source or not source.is_file():
+            raise ValueError('Falta una captura verificable para cerrar la búsqueda sin controles.')
+        folder=self.data_dir/'evidence';folder.mkdir(parents=True,exist_ok=True)
+        dest=folder/(s['id']+'-'+re.sub(r'[^a-z0-9_-]','_',reason.lower())+'.jpg')
+        shutil.copyfile(source,dest)
+        image_key=hashlib.sha256(str(dest).encode()).hexdigest()
+        self.images[image_key]=dest
+        evidence={'path':str(dest),'image_url':'/api/images/'+image_key,'reason':reason}
+        s.setdefault('captures',[]).append(evidence)
+        return evidence
 
     def enqueue(self,urls,auto_close=False):
         validated=[valid_demo_url(url.strip()) for url in urls if url.strip()]
@@ -254,6 +270,7 @@ class Live:
             'status':'validated_observed_scope' if check['validated'] and not incomplete else 'incomplete',
             'observations':s['observations'],'controls':list(s['ledger'].values()),'events':s['events'],
             'purchase_started':s['purchase_started'],'purchase_complete':s['purchase_complete'],
+            'captures':s.get('captures',[]),
             'final_flags':s['view'].get('flags',{}),'final_operation':s['view'].get('operation',{}),
             'seconds':round(time.time()-s['started'],1)}
         self.data_dir.mkdir(parents=True,exist_ok=True)

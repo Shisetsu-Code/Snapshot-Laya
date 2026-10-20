@@ -8,6 +8,17 @@ import time
 from .catalog import TARGET_ROLES, identity, match
 from .core import valid_demo_url
 
+
+def optional_zeus_selection(url,control,result):
+    """Operator-authorized exception, never evidence of a purchase or spin."""
+    from urllib.parse import urlsplit
+    return (urlsplit(url).path=='/en/games/zeus-vs-hades-gods-of-war/'
+            and ('/SelectionScreen/Content/Chars/' in control.get('path','')
+                 or '/ChooseUrGod/Content/Panel/Btns/Colliders/' in control.get('path',''))
+            and control.get('name') in ('Zeus','Hades')
+            and result.get('outcome',{}).get('reason')=='QUIET_TIMEOUT'
+            and result.get('outcome',{}).get('operationStarted') is False)
+
 BUSY = ('logicIsFreeSpin', 'respinInProgress', 'spinBlockingFeatureIsRunning', 'stopActive', 'lastWinIsCounting', 'waitInResultForBigWin')
 
 
@@ -115,6 +126,7 @@ class Explorer:
         self.age_dismissed = False
         self.stable_snapshot = None
         self.session_branches = []
+        self.empty_ready_observations=0
 
     @property
     def running(self): return bool(self.tree.data and self.tree.data['running'])
@@ -138,6 +150,7 @@ class Explorer:
         self.wait_count = 0
         self.age_dismissed = False
         self.stable_snapshot = None
+        self.empty_ready_observations=0
 
     def pause(self):
         if not self.running: return
@@ -214,7 +227,9 @@ class Explorer:
         if self.phase == 'next':
             self.current = self.tree.next()
             if not self.current:
-                self.tree.data.update(running=False, message='Recorrido comprobado.' if self.tree.complete() else 'Recorrido incompleto; revisar pendientes.')
+                exceptions=any(b['status']=='selection_exception' for b in self.tree.data['branches'])
+                message='Recorrido comprobado.' if self.tree.complete() else 'Recorrido terminado con excepciones de selección; ver evidencia.' if exceptions and not self.tree.data['unresolved'] else 'Recorrido incompleto; revisar pendientes.'
+                self.tree.data.update(running=False, message=message)
                 self.tree.save(); return
             self.position = 0; self.evidence = {}; self.round_pending = None
             self.phase = 'replay'; self.deadline = time.monotonic()+300
@@ -250,8 +265,18 @@ class Explorer:
             self.stable_snapshot = signature
             return
         if self.phase == 'discover':
-            if not controls: return
+            if not controls:
+                ready=idle(view) and view.get('flags',{}).get('canSpin') is True and bool(snap.get('support_controls'))
+                self.empty_ready_observations=self.empty_ready_observations+1 if ready else 0
+                if self.empty_ready_observations<3:return
+                capture=self.live.capture_evidence('no_target_controls_detected')
+                self._close()
+                self.tree.data.update(running=False,outcome='no_target_controls_detected',
+                    search_capture=capture,message='Juego listo: no se detectaron compras ni ante bet en la interfaz actual. Captura y HAR guardados.')
+                self.tree.save();return
             self.tree.discover([], controls)
+            if controls and all(c['classification'].get('source')=='catalog' and c['classification']['role']=='ante_bet' for c in controls):
+                self.tree.data['search_capture']=self.live.capture_evidence('ante_only_no_purchase_controls_detected')
             if self._continue_child([]): return
             self._close(); self.phase = 'next'; return
         if self.phase == 'replay':
@@ -269,6 +294,17 @@ class Explorer:
             result = self._execute(c)
             after = self.live.session['view']
             if not result['effect_verified']:
+                if optional_zeus_selection(self.tree.data['game_url'],c,result):
+                    self.evidence['exception']={'rule':'zeus_hades_color_only_selection',
+                        'effect_verified':False,'purchase_validated':False,'reason':'Selección opcional autorizada; sin transición reconocida.'}
+                    # Continue examining the newly visible interface, if any. The
+                    # exception itself stays excluded from verified coverage.
+                    previous=self.evidence['actions'][-1]['before_controls']
+                    new=[x for x in self.live.session['snapshot']['controls'] if identity(x) not in previous]
+                    count=self.tree.discover(self.current['steps'],new)
+                    self.current.update(status='selection_exception',evidence=copy.deepcopy(self.evidence))
+                    if count and self._continue_child(self.current['steps']):return
+                    self._close();self.phase='next';self.deadline=time.monotonic()+300;return
                 raise ValueError('La acción no tuvo un efecto comprobado; no se reintenta.')
             self.position += 1
             self.tree.data['message'] = 'Recorriendo: ' + ' → '.join(x['role'] for x in self.current['steps'])
