@@ -1,0 +1,1406 @@
+{
+  "date": "2026-10-20",
+  "fresh_game_sessions": true,
+  "profile": "common_ui_v1",
+  "scope": "OCR classification, manually navigated game entry and dialogs",
+  "automatic_branch_exploration": false,
+  "games": [
+    {
+      "game": "grizzly-blitz",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-retest/grizzly-blitz/base.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [],
+          "support_controls": [
+            {
+              "index": 12,
+              "text": "SPIN",
+              "normalized": "SPIN",
+              "rect": {
+                "y": 885,
+                "width": 139,
+                "height": 50,
+                "x": 1475
+              },
+              "role": "spin",
+              "reason": "normal_spin_support",
+              "click_target_verified": false
+            }
+          ],
+          "ignored_common": [
+            {
+              "index": 1,
+              "text": "TOTAL BET",
+              "normalized": "TOTAL BET",
+              "rect": {
+                "y": 873,
+                "width": 111,
+                "height": 15,
+                "x": 616
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 2,
+              "text": "COIN VALUE",
+              "normalized": "COIN VALUE",
+              "rect": {
+                "y": 874,
+                "width": 115,
+                "height": 14,
+                "x": 420
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 6,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 124,
+                "height": 10,
+                "x": 965
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 7,
+              "text": "WIN",
+              "normalized": "WIN",
+              "rect": {
+                "y": 874,
+                "width": 41,
+                "height": 16,
+                "x": 941
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "GRIZZLY BLITZT\"",
+              "normalized": "GRIZZLY BLITZT",
+              "rect": {
+                "y": 5,
+                "width": 112,
+                "height": 10,
+                "x": 7
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 3,
+              "text": "INFO €o.10",
+              "normalized": "INFO O 10",
+              "rect": {
+                "y": 892,
+                "width": 226,
+                "height": 31,
+                "x": 284
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 4,
+              "text": "€4.oo",
+              "normalized": "4 OO",
+              "rect": {
+                "y": 902,
+                "width": 125,
+                "height": 38,
+                "x": 606
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 5,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 8,
+              "text": "€o.oo",
+              "normalized": "O OO",
+              "rect": {
+                "y": 898,
+                "width": 150,
+                "height": 46,
+                "x": 884
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 9,
+              "text": "AUTO TURBO",
+              "normalized": "AUTO TURBO",
+              "rect": {
+                "y": 888,
+                "width": 216,
+                "height": 22,
+                "x": 1186
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 10,
+              "text": "PLAY MODE",
+              "normalized": "PLAY MODE",
+              "rect": {
+                "y": 912,
+                "width": 205,
+                "height": 23,
+                "x": 1190
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 11,
+              "text": "4096 WAYS",
+              "normalized": "4096 WAYS",
+              "rect": {
+                "y": 79,
+                "width": 221,
+                "height": 31,
+                "x": 1414
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 13,
+            "model_candidates": 0,
+            "ignored_common": 4,
+            "support_controls": 1
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only"
+        }
+      ],
+      "har_saved": true,
+      "owned_tab_closed": true,
+      "manual_review": "Normal UI filtered; no purchase/ante visible in reviewed base screenshot.",
+      "hars": [
+        {
+          "file": "playtech-retest/grizzly-blitz/har-capture.har",
+          "entries": 73,
+          "spins_recorded": 0
+        }
+      ]
+    },
+    {
+      "game": "buffalo-blitz-iii",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-retest/buffalo-blitz-iii/base.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [
+            {
+              "text": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+              "ocr_rect": {
+                "x": 175,
+                "y": 519,
+                "width": 212,
+                "height": 86
+              },
+              "source": "ocr_text_candidate",
+              "click_target_verified": false,
+              "model_input": {
+                "name": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+                "labels": [
+                  "Fxmn-Btr",
+                  "s.oo",
+                  "HIGHER CHANCE",
+                  "TO TRIGGER BONUS",
+                  "OFF"
+                ],
+                "sprites": [],
+                "events": [],
+                "path": "Playtech/OCR/base/text-4"
+              },
+              "classification": {
+                "role": "other",
+                "confidence": 0.2162,
+                "probabilities": {
+                  "buy_bonus": 0.0505,
+                  "ante_bet": 0.0998,
+                  "bet_up": 0.0628,
+                  "bet_down": 0.1274,
+                  "bet_menu": 0.0855,
+                  "confirm": 0.0477,
+                  "cancel": 0.0477,
+                  "choice": 0.0493,
+                  "continue": 0.0492,
+                  "spin": 0.0506,
+                  "other": 0.2162,
+                  "unknown": 0.1132
+                },
+                "needs_review": true,
+                "milliseconds": 198.4,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false,
+                "source": "laya_ocr"
+              }
+            }
+          ],
+          "support_controls": [],
+          "ignored_common": [
+            {
+              "index": 1,
+              "text": "INFO",
+              "normalized": "INFO",
+              "rect": {
+                "y": 153,
+                "width": 38,
+                "height": 12,
+                "x": 25
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 8,
+              "text": "WAYS",
+              "normalized": "WAYS",
+              "rect": {
+                "y": 901,
+                "width": 69,
+                "height": 18,
+                "x": 473
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 12,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 124,
+                "height": 10,
+                "x": 976
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 14,
+              "text": "WIN",
+              "normalized": "WIN",
+              "rect": {
+                "y": 901,
+                "width": 46,
+                "height": 18,
+                "x": 936
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 16,
+              "text": "TOTAL BET",
+              "normalized": "TOTAL BET",
+              "rect": {
+                "y": 901,
+                "width": 134,
+                "height": 18,
+                "x": 1349
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 18,
+              "text": "BET",
+              "normalized": "BET",
+              "rect": {
+                "y": 347,
+                "width": 46,
+                "height": 17,
+                "x": 1782
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 20,
+              "text": "TURBO.",
+              "normalized": "TURBO",
+              "rect": {
+                "y": 757,
+                "width": 86,
+                "height": 19,
+                "x": 1764
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "BUFALO BLITZ III\"",
+              "normalized": "BUFALO BLITZ III",
+              "rect": {
+                "y": 5,
+                "width": 133,
+                "height": 10,
+                "x": 7
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 2,
+              "text": "Fxmn-Btr",
+              "normalized": "FXMN BTR",
+              "rect": {
+                "y": 410,
+                "width": 185,
+                "height": 35,
+                "x": 188
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 3,
+              "text": "s.oo",
+              "normalized": "S OO",
+              "rect": {
+                "y": 467,
+                "width": 96,
+                "height": 32,
+                "x": 230
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 7,
+              "text": "BUYv",
+              "normalized": "BUYV",
+              "rect": {
+                "y": 829,
+                "width": 98,
+                "height": 25,
+                "x": 239
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 9,
+              "text": "4096",
+              "normalized": "4096",
+              "rect": {
+                "y": 938,
+                "width": 71,
+                "height": 23,
+                "x": 471
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 10,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 11,
+              "text": "BUFFALO GOLD",
+              "normalized": "BUFFALO GOLD",
+              "rect": {
+                "y": 291,
+                "width": 179,
+                "height": 16,
+                "x": 577
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 13,
+              "text": "BIG GRID",
+              "normalized": "BIG GRID",
+              "rect": {
+                "y": 291,
+                "width": 106,
+                "height": 17,
+                "x": 933
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 15,
+              "text": "BUFFALO CASH",
+              "normalized": "BUFFALO CASH",
+              "rect": {
+                "y": 291,
+                "width": 183,
+                "height": 17,
+                "x": 1209
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 17,
+              "text": "€5.oo",
+              "normalized": "5 OO",
+              "rect": {
+                "y": 938,
+                "width": 80,
+                "height": 23,
+                "x": 1375
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 19,
+              "text": "o»",
+              "normalized": "O",
+              "rect": {
+                "y": 681,
+                "width": 100,
+                "height": 57,
+                "x": 1756
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 21,
+            "model_candidates": 1,
+            "ignored_common": 7,
+            "support_controls": 0
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only"
+        }
+      ],
+      "har_saved": true,
+      "owned_tab_closed": true,
+      "manual_review": "BUY visible but OCR read BUYv, so purchase candidate missed. Extra Bet visible; retained caption/OFF guessed other at low confidence.",
+      "hars": [
+        {
+          "file": "playtech-retest/buffalo-blitz-iii/har-capture.har",
+          "entries": 322,
+          "spins_recorded": 0
+        }
+      ]
+    },
+    {
+      "game": "cats-collect",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-retest/cats-collect/base.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [
+            {
+              "text": "BUY FEATURE",
+              "ocr_rect": {
+                "x": 184,
+                "y": 300,
+                "width": 130,
+                "height": 60
+              },
+              "source": "ocr_text_candidate",
+              "click_target_verified": false,
+              "model_input": {
+                "name": "BUY FEATURE",
+                "labels": [
+                  "BUY",
+                  "FEATURE"
+                ],
+                "sprites": [],
+                "events": [],
+                "path": "Playtech/OCR/base/text-2"
+              },
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.5848,
+                "probabilities": {
+                  "buy_bonus": 0.5848,
+                  "ante_bet": 0.0236,
+                  "bet_up": 0.0248,
+                  "bet_down": 0.0393,
+                  "bet_menu": 0.0251,
+                  "confirm": 0.0242,
+                  "cancel": 0.0258,
+                  "choice": 0.024,
+                  "continue": 0.0236,
+                  "spin": 0.0247,
+                  "other": 0.117,
+                  "unknown": 0.063
+                },
+                "needs_review": true,
+                "milliseconds": 139.5,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false,
+                "source": "laya_ocr"
+              }
+            },
+            {
+              "text": "MORE CAT OFF",
+              "ocr_rect": {
+                "x": 191,
+                "y": 559,
+                "width": 106,
+                "height": 71
+              },
+              "source": "ocr_text_candidate",
+              "click_target_verified": false,
+              "model_input": {
+                "name": "MORE CAT OFF",
+                "labels": [
+                  "MORE CAT",
+                  "OFF"
+                ],
+                "sprites": [],
+                "events": [],
+                "path": "Playtech/OCR/base/text-4"
+              },
+              "classification": {
+                "role": "other",
+                "confidence": 0.2512,
+                "probabilities": {
+                  "buy_bonus": 0.0605,
+                  "ante_bet": 0.0595,
+                  "bet_up": 0.0579,
+                  "bet_down": 0.0732,
+                  "bet_menu": 0.058,
+                  "confirm": 0.0614,
+                  "cancel": 0.0715,
+                  "choice": 0.0616,
+                  "continue": 0.0579,
+                  "spin": 0.0595,
+                  "other": 0.2512,
+                  "unknown": 0.1277
+                },
+                "needs_review": true,
+                "milliseconds": 137.2,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false,
+                "source": "laya_ocr"
+              }
+            }
+          ],
+          "support_controls": [],
+          "ignored_common": [
+            {
+              "index": 1,
+              "text": "INF",
+              "normalized": "INF",
+              "rect": {
+                "y": 153,
+                "width": 25,
+                "height": 12,
+                "x": 25
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 7,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 125,
+                "height": 10,
+                "x": 967
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 8,
+              "text": "WIN",
+              "normalized": "WIN",
+              "rect": {
+                "y": 901,
+                "width": 46,
+                "height": 18,
+                "x": 936
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 9,
+              "text": "TURBO",
+              "normalized": "TURBO",
+              "rect": {
+                "y": 270,
+                "width": 83,
+                "height": 17,
+                "x": 1660
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 10,
+              "text": "BET",
+              "normalized": "BET",
+              "rect": {
+                "y": 282,
+                "width": 53,
+                "height": 19,
+                "x": 1816
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 13,
+              "text": "TOTAL BET",
+              "normalized": "TOTAL BET",
+              "rect": {
+                "y": 901,
+                "width": 134,
+                "height": 18,
+                "x": 1349
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "CATS COLLECTT\"",
+              "normalized": "CATS COLLECTT",
+              "rect": {
+                "y": 5,
+                "width": 118,
+                "height": 10,
+                "x": 6
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 6,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 11,
+              "text": "UNES",
+              "normalized": "UNES",
+              "rect": {
+                "y": 901,
+                "width": 70,
+                "height": 18,
+                "x": 472
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 12,
+              "text": "25",
+              "normalized": "25",
+              "rect": {
+                "y": 938,
+                "width": 34,
+                "height": 23,
+                "x": 490
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 14,
+              "text": "€5.oo",
+              "normalized": "5 OO",
+              "rect": {
+                "y": 938,
+                "width": 80,
+                "height": 23,
+                "x": 1375
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 15,
+            "model_candidates": 2,
+            "ignored_common": 6,
+            "support_controls": 0
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only"
+        }
+      ],
+      "har_saved": true,
+      "owned_tab_closed": true,
+      "manual_review": "BUY FEATURE visible and classified buy_bonus at 58.48%; Extra Bet visible but caption/OFF guessed other at low confidence.",
+      "hars": [
+        {
+          "file": "playtech-retest/cats-collect/har-capture.har",
+          "entries": 295,
+          "spins_recorded": 0
+        }
+      ]
+    },
+    {
+      "game": "roosters-farm-riches",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-retest/roosters-farm-riches/base.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [],
+          "support_controls": [],
+          "ignored_common": [
+            {
+              "index": 1,
+              "text": "BALANCE",
+              "normalized": "BALANCE",
+              "rect": {
+                "y": 883,
+                "width": 120,
+                "height": 16,
+                "x": 54
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 4,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 125,
+                "height": 10,
+                "x": 952
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 11,
+              "text": "TOTAL BET",
+              "normalized": "TOTAL BET",
+              "rect": {
+                "y": 886,
+                "width": 96,
+                "height": 12,
+                "x": 339
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "ROOSTER'S FARM RICHES\"'",
+              "normalized": "ROOSTER S FARM RICHES",
+              "rect": {
+                "y": 5,
+                "width": 193,
+                "height": 10,
+                "x": 7
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 2,
+              "text": "CI O,OOO.OO",
+              "normalized": "CI O OOO OO",
+              "rect": {
+                "y": 920,
+                "width": 183,
+                "height": 29,
+                "x": 21
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 3,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 5,
+              "text": "€200.oo",
+              "normalized": "200 OO",
+              "rect": {
+                "y": 40,
+                "width": 98,
+                "height": 21,
+                "x": 848
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 6,
+              "text": "€60.oo",
+              "normalized": "60 OO",
+              "rect": {
+                "y": 40,
+                "width": 82,
+                "height": 21,
+                "x": 1030
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 7,
+              "text": "€2,ooo.oo",
+              "normalized": "2 OOO OO",
+              "rect": {
+                "y": 40,
+                "width": 120,
+                "height": 25,
+                "x": 646
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 8,
+              "text": "'*GRAN)",
+              "normalized": "GRAN",
+              "rect": {
+                "y": 66,
+                "width": 134,
+                "height": 29,
+                "x": 627
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 9,
+              "text": "•CHI",
+              "normalized": "CHI",
+              "rect": {
+                "y": 220,
+                "width": 101,
+                "height": 46,
+                "x": 588
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 10,
+              "text": "€20.oo",
+              "normalized": "20 OO",
+              "rect": {
+                "y": 40,
+                "width": 82,
+                "height": 21,
+                "x": 1188
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 12,
+              "text": "€2.oo",
+              "normalized": "2 OO",
+              "rect": {
+                "y": 907,
+                "width": 112,
+                "height": 28,
+                "x": 329
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 13,
+            "model_candidates": 0,
+            "ignored_common": 3,
+            "support_controls": 0
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only"
+        }
+      ],
+      "har_saved": true,
+      "owned_tab_closed": true,
+      "manual_review": "Normal UI filtered; no purchase/ante visible in reviewed base screenshot. Studio logo Psiclone Games visible.",
+      "hars": [
+        {
+          "file": "playtech-retest/roosters-farm-riches/har-capture.har",
+          "entries": 337,
+          "spins_recorded": 0
+        }
+      ]
+    },
+    {
+      "game": "age-of-the-gods-gold-trio",
+      "stages": [
+        {
+          "stage": "first_attempt_loading_after_buy_click",
+          "screenshot": "playtech-retest/age-of-the-gods-gold-trio/first-attempt-base.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [],
+          "support_controls": [],
+          "ignored_common": [
+            {
+              "index": 2,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 125,
+                "height": 10,
+                "x": 1022
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "AGE OF THE GODS: GOLD TRIOTM",
+              "normalized": "AGE OF THE GODS GOLD TRIOTM",
+              "rect": {
+                "y": 5,
+                "width": 228,
+                "height": 10,
+                "x": 6
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 1,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 3,
+            "model_candidates": 0,
+            "ignored_common": 1,
+            "support_controls": 0
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only",
+          "note": "Live base UI showed BUY FEATURE; the first saved frame was taken during subsequent loading and is not valid evidence of absent controls."
+        },
+        {
+          "stage": "base-second-session",
+          "screenshot": "playtech-retest/age-of-the-gods-gold-trio/base-second-session.jpg",
+          "provider": "playtech",
+          "profile": "common_ui_v1",
+          "controls": [
+            {
+              "text": "BUY FEATURE",
+              "ocr_rect": {
+                "x": 1586,
+                "y": 770,
+                "width": 168,
+                "height": 60
+              },
+              "source": "ocr_text_candidate",
+              "click_target_verified": false,
+              "model_input": {
+                "name": "BUY FEATURE",
+                "labels": [
+                  "BUY",
+                  "FEATURE",
+                  "€5.oo"
+                ],
+                "sprites": [],
+                "events": [],
+                "path": "Playtech/OCR/base-second-session/text-22"
+              },
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.919,
+                "probabilities": {
+                  "buy_bonus": 0.919,
+                  "ante_bet": 0.0058,
+                  "bet_up": 0.0058,
+                  "bet_down": 0.0062,
+                  "bet_menu": 0.0058,
+                  "confirm": 0.006,
+                  "cancel": 0.0058,
+                  "choice": 0.0057,
+                  "continue": 0.0058,
+                  "spin": 0.0063,
+                  "other": 0.0168,
+                  "unknown": 0.011
+                },
+                "needs_review": false,
+                "milliseconds": 146.5,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false,
+                "source": "laya_ocr"
+              }
+            }
+          ],
+          "support_controls": [],
+          "ignored_common": [
+            {
+              "index": 12,
+              "text": "BALANCE",
+              "normalized": "BALANCE",
+              "rect": {
+                "y": 876,
+                "width": 91,
+                "height": 14,
+                "x": 271
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 15,
+              "text": "PLAYING FOR FUN",
+              "normalized": "PLAYING FOR FUN",
+              "rect": {
+                "y": 5,
+                "width": 124,
+                "height": 10,
+                "x": 1022
+              },
+              "reason": "known_common_interface"
+            },
+            {
+              "index": 24,
+              "text": "TOTAL BET",
+              "normalized": "TOTAL BET",
+              "rect": {
+                "y": 876,
+                "width": 102,
+                "height": 14,
+                "x": 1552
+              },
+              "reason": "known_common_interface"
+            }
+          ],
+          "unclassified": [
+            {
+              "index": 0,
+              "text": "AGE OF THE GODS: GOLD TRIOW",
+              "normalized": "AGE OF THE GODS GOLD TRIOW",
+              "rect": {
+                "y": 5,
+                "width": 227,
+                "height": 10,
+                "x": 6
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 1,
+              "text": "ULTIMAT",
+              "normalized": "ULTIMAT",
+              "rect": {
+                "y": 75,
+                "width": 111,
+                "height": 29,
+                "x": 220
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 2,
+              "text": "POWER Not",
+              "normalized": "POWER NOT",
+              "rect": {
+                "y": 86,
+                "width": 161,
+                "height": 30,
+                "x": 238
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 3,
+              "text": "Not available",
+              "normalized": "NOT AVAILABLE",
+              "rect": {
+                "y": 122,
+                "width": 142,
+                "height": 17,
+                "x": 348
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 4,
+              "text": "GRAND",
+              "normalized": "GRAND",
+              "rect": {
+                "y": 469,
+                "width": 88,
+                "height": 19,
+                "x": 220
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 5,
+              "text": "€5,ooo.oo",
+              "normalized": "5 OOO OO",
+              "rect": {
+                "y": 502,
+                "width": 201,
+                "height": 27,
+                "x": 164
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 6,
+              "text": "\"AJOR —",
+              "normalized": "AJOR",
+              "rect": {
+                "y": 544,
+                "width": 144,
+                "height": 19,
+                "x": 220
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 7,
+              "text": "€250.oo",
+              "normalized": "250 OO",
+              "rect": {
+                "y": 574,
+                "width": 199,
+                "height": 29,
+                "x": 165
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 8,
+              "text": "\"'NOR",
+              "normalized": "NOR",
+              "rect": {
+                "y": 619,
+                "width": 83,
+                "height": 19,
+                "x": 223
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 9,
+              "text": "€ 1 00,00",
+              "normalized": "1 00 00",
+              "rect": {
+                "y": 649,
+                "width": 199,
+                "height": 29,
+                "x": 165
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 10,
+              "text": "€50.oo",
+              "normalized": "50 OO",
+              "rect": {
+                "y": 724,
+                "width": 184,
+                "height": 31,
+                "x": 173
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 11,
+              "text": "Age",
+              "normalized": "AGE",
+              "rect": {
+                "y": 850,
+                "width": 38,
+                "height": 19,
+                "x": 64
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 13,
+              "text": "€10,ooo.oo",
+              "normalized": "10 OOO OO",
+              "rect": {
+                "y": 900,
+                "width": 158,
+                "height": 26,
+                "x": 238
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 14,
+              "text": "€10,ooooo",
+              "normalized": "10 OOOOO",
+              "rect": {
+                "y": 988,
+                "width": 75,
+                "height": 14,
+                "x": 5
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 16,
+              "text": "PER",
+              "normalized": "PER",
+              "rect": {
+                "y": 77,
+                "width": 57,
+                "height": 29,
+                "x": 1645
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 17,
+              "text": "Not:available.",
+              "normalized": "NOT AVAILABLE",
+              "rect": {
+                "y": 85,
+                "width": 178,
+                "height": 22,
+                "x": 1413
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 18,
+              "text": "OWER",
+              "normalized": "OWER",
+              "rect": {
+                "y": 101,
+                "width": 64,
+                "height": 17,
+                "x": 1630
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 19,
+              "text": "Notavailable POWER",
+              "normalized": "NOTAVAILABLE POWER",
+              "rect": {
+                "y": 120,
+                "width": 228,
+                "height": 22,
+                "x": 1436
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 20,
+              "text": "1,4-0",
+              "normalized": "1 4 0",
+              "rect": {
+                "y": 722,
+                "width": 67,
+                "height": 28,
+                "x": 1282
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 21,
+              "text": "CLICK SPIN TO START",
+              "normalized": "CLICK SPIN TO START",
+              "rect": {
+                "y": 897,
+                "width": 253,
+                "height": 17,
+                "x": 834
+              },
+              "reason": "not_identified_as_common_interface"
+            },
+            {
+              "index": 25,
+              "text": "€5.oo",
+              "normalized": "5 OO",
+              "rect": {
+                "y": 900,
+                "width": 78,
+                "height": 23,
+                "x": 1564
+              },
+              "reason": "not_identified_as_common_interface"
+            }
+          ],
+          "runtime_hit_targets_verified": false,
+          "stats": {
+            "ocr_lines": 26,
+            "model_candidates": 1,
+            "ignored_common": 3,
+            "support_controls": 0
+          },
+          "validated": false,
+          "scope": "filtered_ocr_classification_only"
+        }
+      ],
+      "har_saved": true,
+      "owned_tab_closed": true,
+      "attempts": 2,
+      "manual_review": "Fresh second session captured separately to avoid classifying a loading frame as an empty game.",
+      "hars": [
+        {
+          "file": "playtech-retest/age-of-the-gods-gold-trio/first-attempt-har-capture.har",
+          "entries": 161,
+          "spins_recorded": 0
+        },
+        {
+          "file": "playtech-retest/age-of-the-gods-gold-trio/har-capture.har",
+          "entries": 118,
+          "spins_recorded": 0
+        }
+      ]
+    }
+  ],
+  "complete": true,
+  "raw_hars_saved": 6,
+  "confidence_is_accuracy": false,
+  "conclusion": "Common-UI noise remains filtered, but fresh OCR is unstable (BUY -> BUYv) and ante captions are still misclassified. This is not reliable autonomous Playtech discovery.",
+  "publisher_lookup": {
+    "game": "Rooster's Farm Riches",
+    "studio": "Psiclone Games",
+    "group": "Playtech",
+    "studio_evidence": "Visible in-game Psiclone Games logo",
+    "group_source": "https://www.playtech.com/locations/united-kingdom/"
+  },
+  "total_ignored_common": 24,
+  "purchase_protocol_verified": false,
+  "purchase_execution_status": "not_verified",
+  "all_owned_tabs_closed": true
+}
