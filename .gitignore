@@ -6,3 +6,4 @@ runs/
 .env
 check_model.py
 *.har
+playtech-five/

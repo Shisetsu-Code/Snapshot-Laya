@@ -1,0 +1,637 @@
+{
+  "date": "2026-10-20",
+  "pipeline": "Windows OCR -> local Laya ONNX DirectML",
+  "scope": "visible_text_classification_experiment",
+  "automatic_control_extraction": false,
+  "verified_runtime_hit_targets": false,
+  "purchases_executed": false,
+  "games": [
+    {
+      "game": "grizzly-blitz",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-five/grizzly-blitz/base.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 12,
+          "candidates": [
+            {
+              "text": "COIN VALUE",
+              "ocr_rect": {
+                "y": 875,
+                "width": 114,
+                "height": 13,
+                "x": 420
+              },
+              "nearby_text": [
+                "COIN VALUE",
+                "€o.10",
+                "TOTAL BET",
+                "€4.oo"
+              ],
+              "classification": {
+                "role": "bet_menu",
+                "confidence": 0.732,
+                "probabilities": {
+                  "buy_bonus": 0.0108,
+                  "ante_bet": 0.0302,
+                  "bet_up": 0.0164,
+                  "bet_down": 0.0568,
+                  "bet_menu": 0.732,
+                  "confirm": 0.011,
+                  "cancel": 0.0112,
+                  "choice": 0.0108,
+                  "continue": 0.011,
+                  "spin": 0.0123,
+                  "other": 0.0436,
+                  "unknown": 0.054
+                },
+                "needs_review": true,
+                "milliseconds": 315.6,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            },
+            {
+              "text": "TOTAL BET",
+              "ocr_rect": {
+                "y": 873,
+                "width": 110,
+                "height": 15,
+                "x": 616
+              },
+              "nearby_text": [
+                "COIN VALUE",
+                "€o.10",
+                "TOTAL BET",
+                "€4.oo"
+              ],
+              "classification": {
+                "role": "bet_menu",
+                "confidence": 0.9768,
+                "probabilities": {
+                  "buy_bonus": 0.0011,
+                  "ante_bet": 0.0029,
+                  "bet_up": 0.0016,
+                  "bet_down": 0.0055,
+                  "bet_menu": 0.9768,
+                  "confirm": 0.0009,
+                  "cancel": 0.0011,
+                  "choice": 0.0009,
+                  "continue": 0.001,
+                  "spin": 0.0015,
+                  "other": 0.0032,
+                  "unknown": 0.0035
+                },
+                "needs_review": false,
+                "milliseconds": 46.4,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            },
+            {
+              "text": "SPIN",
+              "ocr_rect": {
+                "y": 886,
+                "width": 139,
+                "height": 48,
+                "x": 1475
+              },
+              "nearby_text": [
+                "TURBO",
+                "MODE",
+                "SPIN"
+              ],
+              "classification": {
+                "role": "spin",
+                "confidence": 0.9505,
+                "probabilities": {
+                  "buy_bonus": 0.0028,
+                  "ante_bet": 0.0032,
+                  "bet_up": 0.0029,
+                  "bet_down": 0.0079,
+                  "bet_menu": 0.0028,
+                  "confirm": 0.0029,
+                  "cancel": 0.0032,
+                  "choice": 0.0028,
+                  "continue": 0.0028,
+                  "spin": 0.9505,
+                  "other": 0.0101,
+                  "unknown": 0.0081
+                },
+                "needs_review": false,
+                "milliseconds": 255.7,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            }
+          ]
+        }
+      ],
+      "owned_tab_closed": true,
+      "har_saved": true,
+      "candidate_count": 3,
+      "har": {
+        "file": "playtech-five/grizzly-blitz/capture.har",
+        "entries": 51,
+        "spins_recorded": 0
+      },
+      "manual_visual_review": {
+        "game_ready": true,
+        "visible_purchase_control": false,
+        "visible_ante_control": false,
+        "note": "Base screenshot reviewed; ordinary coin value, total bet and spin controls. No game-wide absence claim."
+      },
+      "status": "capture_classified"
+    },
+    {
+      "game": "buffalo-blitz-iii",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-five/buffalo-blitz-iii/base.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 19,
+          "candidates": [
+            {
+              "text": "TO TRIGGER BONUS",
+              "ocr_rect": {
+                "y": 540,
+                "width": 211,
+                "height": 14,
+                "x": 175
+              },
+              "nearby_text": [
+                "s.oo",
+                "HIGHER CHANCE",
+                "TO TRIGGER BONUS",
+                "OFF"
+              ],
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.3081,
+                "probabilities": {
+                  "buy_bonus": 0.3081,
+                  "ante_bet": 0.0421,
+                  "bet_up": 0.0366,
+                  "bet_down": 0.0429,
+                  "bet_menu": 0.0379,
+                  "confirm": 0.0382,
+                  "cancel": 0.0358,
+                  "choice": 0.1,
+                  "continue": 0.039,
+                  "spin": 0.2069,
+                  "other": 0.0694,
+                  "unknown": 0.0429
+                },
+                "needs_review": true,
+                "milliseconds": 182.2,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            },
+            {
+              "text": "TOTAL BET",
+              "ocr_rect": {
+                "y": 901,
+                "width": 134,
+                "height": 18,
+                "x": 1349
+              },
+              "nearby_text": [
+                "TOTAL BET",
+                "€5.oo"
+              ],
+              "classification": {
+                "role": "bet_down",
+                "confidence": 0.3011,
+                "probabilities": {
+                  "buy_bonus": 0.0315,
+                  "ante_bet": 0.1392,
+                  "bet_up": 0.093,
+                  "bet_down": 0.3011,
+                  "bet_menu": 0.0378,
+                  "confirm": 0.0317,
+                  "cancel": 0.0331,
+                  "choice": 0.0313,
+                  "continue": 0.0335,
+                  "spin": 0.089,
+                  "other": 0.0925,
+                  "unknown": 0.0863
+                },
+                "needs_review": true,
+                "milliseconds": 235.1,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            }
+          ]
+        },
+        {
+          "stage": "base-alternate",
+          "screenshot": "playtech-five/buffalo-blitz-iii/base-alternate.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 22,
+          "candidates": [
+            {
+              "text": "TO TRIGGER BONUS",
+              "ocr_rect": {
+                "y": 540,
+                "width": 212,
+                "height": 14,
+                "x": 175
+              },
+              "nearby_text": [
+                "s.oo",
+                "HIGHER CHANCE",
+                "TO TRIGGER BONUS",
+                "OFF"
+              ],
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.6064,
+                "probabilities": {
+                  "buy_bonus": 0.6064,
+                  "ante_bet": 0.0392,
+                  "bet_up": 0.035,
+                  "bet_down": 0.0408,
+                  "bet_menu": 0.0669,
+                  "confirm": 0.0151,
+                  "cancel": 0.0143,
+                  "choice": 0.0796,
+                  "continue": 0.0149,
+                  "spin": 0.0473,
+                  "other": 0.0246,
+                  "unknown": 0.0157
+                },
+                "needs_review": true,
+                "milliseconds": 170.1,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false,
+              "source_stage_correction": "Saved image reviewed: base UI; no bet dialog captured."
+            },
+            {
+              "text": "BUY",
+              "ocr_rect": {
+                "y": 828,
+                "width": 85,
+                "height": 26,
+                "x": 236
+              },
+              "nearby_text": [
+                "BOX. .",
+                "BUY",
+                "WAYS",
+                "4096"
+              ],
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.9968,
+                "probabilities": {
+                  "buy_bonus": 0.9968,
+                  "ante_bet": 0.0002,
+                  "bet_up": 0.0003,
+                  "bet_down": 0.0005,
+                  "bet_menu": 0.001,
+                  "confirm": 0.0003,
+                  "cancel": 0.0001,
+                  "choice": 0.0001,
+                  "continue": 0.0001,
+                  "spin": 0.0001,
+                  "other": 0.0004,
+                  "unknown": 0.0002
+                },
+                "needs_review": false,
+                "milliseconds": 227.1,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false,
+              "source_stage_correction": "Saved image reviewed: base UI; no bet dialog captured."
+            },
+            {
+              "text": "TOTAL BET",
+              "ocr_rect": {
+                "y": 901,
+                "width": 134,
+                "height": 18,
+                "x": 1349
+              },
+              "nearby_text": [
+                "TOTAL BET",
+                "€5.oo"
+              ],
+              "classification": {
+                "role": "ante_bet",
+                "confidence": 0.3583,
+                "probabilities": {
+                  "buy_bonus": 0.0018,
+                  "ante_bet": 0.3583,
+                  "bet_up": 0.2963,
+                  "bet_down": 0.2918,
+                  "bet_menu": 0.0343,
+                  "confirm": 0.0018,
+                  "cancel": 0.0019,
+                  "choice": 0.0019,
+                  "continue": 0.0019,
+                  "spin": 0.002,
+                  "other": 0.004,
+                  "unknown": 0.0041
+                },
+                "needs_review": true,
+                "milliseconds": 220.5,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false,
+              "source_stage_correction": "Saved image reviewed: base UI; no bet dialog captured."
+            }
+          ]
+        }
+      ],
+      "owned_tab_closed": true,
+      "har_saved": true,
+      "candidate_count": 5,
+      "har": {
+        "file": "playtech-five/buffalo-blitz-iii/capture.har",
+        "entries": 297,
+        "spins_recorded": 0
+      },
+      "manual_visual_review": {
+        "game_ready": true,
+        "visible_purchase_control": true,
+        "visible_ante_control": true,
+        "note": "Lucky Box BUY and Extra Bet OFF visible. OCR corrupted Extra Bet to Fxmn-Btr. TOTAL BET incorrectly guessed ante_bet at low confidence."
+      },
+      "status": "capture_classified"
+    },
+    {
+      "game": "cats-collect",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-five/cats-collect/base.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 16,
+          "candidates": [
+            {
+              "text": "BUY",
+              "ocr_rect": {
+                "y": 278,
+                "width": 61,
+                "height": 27,
+                "x": 225
+              },
+              "nearby_text": [
+                "BUY",
+                "FEATURE"
+              ],
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.3069,
+                "probabilities": {
+                  "buy_bonus": 0.3069,
+                  "ante_bet": 0.0335,
+                  "bet_up": 0.0348,
+                  "bet_down": 0.064,
+                  "bet_menu": 0.0345,
+                  "confirm": 0.0326,
+                  "cancel": 0.043,
+                  "choice": 0.0348,
+                  "continue": 0.0332,
+                  "spin": 0.0363,
+                  "other": 0.1513,
+                  "unknown": 0.195
+                },
+                "needs_review": true,
+                "milliseconds": 228.8,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            },
+            {
+              "text": "FEATURE",
+              "ocr_rect": {
+                "y": 306,
+                "width": 131,
+                "height": 31,
+                "x": 189
+              },
+              "nearby_text": [
+                "BUY",
+                "FEATURE"
+              ],
+              "classification": {
+                "role": "buy_bonus",
+                "confidence": 0.8963,
+                "probabilities": {
+                  "buy_bonus": 0.8963,
+                  "ante_bet": 0.0037,
+                  "bet_up": 0.004,
+                  "bet_down": 0.0062,
+                  "bet_menu": 0.005,
+                  "confirm": 0.0279,
+                  "cancel": 0.0038,
+                  "choice": 0.009,
+                  "continue": 0.0037,
+                  "spin": 0.0045,
+                  "other": 0.0178,
+                  "unknown": 0.018
+                },
+                "needs_review": false,
+                "milliseconds": 221.4,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            },
+            {
+              "text": "TOTAL BET",
+              "ocr_rect": {
+                "y": 913,
+                "width": 135,
+                "height": 22,
+                "x": 1336
+              },
+              "nearby_text": [
+                "TOTAL BET",
+                "€5.oo"
+              ],
+              "classification": {
+                "role": "bet_down",
+                "confidence": 0.2965,
+                "probabilities": {
+                  "buy_bonus": 0.0318,
+                  "ante_bet": 0.1391,
+                  "bet_up": 0.088,
+                  "bet_down": 0.2965,
+                  "bet_menu": 0.037,
+                  "confirm": 0.032,
+                  "cancel": 0.0336,
+                  "choice": 0.0316,
+                  "continue": 0.0337,
+                  "spin": 0.0942,
+                  "other": 0.0948,
+                  "unknown": 0.0876
+                },
+                "needs_review": true,
+                "milliseconds": 216.9,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            }
+          ]
+        }
+      ],
+      "owned_tab_closed": true,
+      "har_saved": true,
+      "candidate_count": 3,
+      "har": {
+        "file": "playtech-five/cats-collect/capture.har",
+        "entries": 265,
+        "spins_recorded": 0
+      },
+      "manual_visual_review": {
+        "game_ready": true,
+        "visible_purchase_control": true,
+        "visible_ante_control": true,
+        "note": "BUY FEATURE and EXTRA BET OFF visible. OCR split BUY and FEATURE; ante label did not reach classifier."
+      },
+      "status": "capture_classified"
+    },
+    {
+      "game": "roosters-farm-riches",
+      "stages": [
+        {
+          "stage": "base",
+          "screenshot": "playtech-five/roosters-farm-riches/base.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 12,
+          "candidates": [
+            {
+              "text": "TOTAL BET",
+              "ocr_rect": {
+                "y": 886,
+                "width": 96,
+                "height": 12,
+                "x": 339
+              },
+              "nearby_text": [
+                "TOTAL BET",
+                "€2.oo"
+              ],
+              "classification": {
+                "role": "bet_down",
+                "confidence": 0.2492,
+                "probabilities": {
+                  "buy_bonus": 0.0357,
+                  "ante_bet": 0.1209,
+                  "bet_up": 0.0858,
+                  "bet_down": 0.2492,
+                  "bet_menu": 0.0392,
+                  "confirm": 0.0361,
+                  "cancel": 0.0385,
+                  "choice": 0.0356,
+                  "continue": 0.0379,
+                  "spin": 0.119,
+                  "other": 0.1088,
+                  "unknown": 0.0933
+                },
+                "needs_review": true,
+                "milliseconds": 276.3,
+                "backend": "ONNX / DirectML",
+                "cached": false,
+                "calibrated_for_game": false
+              },
+              "click_target_verified": false
+            }
+          ]
+        }
+      ],
+      "owned_tab_closed": true,
+      "har_saved": true,
+      "candidate_count": 1,
+      "har": {
+        "file": "playtech-five/roosters-farm-riches/capture.har",
+        "entries": 290,
+        "spins_recorded": 0
+      },
+      "manual_visual_review": {
+        "game_ready": true,
+        "visible_purchase_control": false,
+        "visible_ante_control": false,
+        "note": "Base screenshot reviewed; normal stake and spin icons visible. No game-wide absence claim."
+      },
+      "status": "capture_classified"
+    },
+    {
+      "game": "age-of-the-gods-gold-trio",
+      "stages": [
+        {
+          "stage": "loading",
+          "screenshot": "playtech-five/age-of-the-gods-gold-trio/loading.jpg",
+          "ocr_language": "es-ES",
+          "ocr_lines": 6,
+          "candidates": []
+        }
+      ],
+      "owned_tab_closed": true,
+      "har_saved": true,
+      "candidate_count": 0,
+      "har": {
+        "file": "playtech-five/age-of-the-gods-gold-trio/capture.har",
+        "entries": 137,
+        "spins_recorded": 0
+      },
+      "manual_visual_review": {
+        "game_ready": false,
+        "visible_purchase_control": null,
+        "visible_ante_control": null,
+        "note": "Loading overlay/spinner remained over intro. This is a loading failure, not a game without purchases."
+      },
+      "status": "loading_blocked"
+    }
+  ],
+  "pragmatic_at_start": {
+    "game_url": "https://www.pragmaticplay.com/en/games/buffalo-king-megaways/",
+    "running": true,
+    "phase": "replay"
+  },
+  "pragmatic_at_last_update": {
+    "game_url": "https://www.pragmaticplay.com/en/games/buffalo-king-megaways/",
+    "running": true,
+    "phase": "next"
+  },
+  "complete": true,
+  "attempted_games": 5,
+  "ready_games": 4,
+  "loading_failures": 1,
+  "navigation_actor": "agent using current screenshots; only intro/settings navigation",
+  "classification_actor": "local Laya ONNX/DirectML with automatic Windows OCR text",
+  "pragmatic_navigation_actor": "existing autonomous explorer; not stopped or restarted",
+  "confidence_is_accuracy": false,
+  "full_playtech_branch_exploration": false,
+  "reliable_ante_detection": false,
+  "raw_hars_saved": 5,
+  "conclusion": "Parallel diagnostic capture/classification worked. OCR lost ante labels and Laya confused low-context ordinary bet text; runtime/scene extraction remains necessary for autonomous control traversal."
+}
