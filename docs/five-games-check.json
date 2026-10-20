@@ -1,0 +1,868 @@
+{
+  "date": "2026-10-20",
+  "commit": "2a564e6",
+  "mode": "unchanged_catalog_baseline",
+  "ante_rounds_required": 2,
+  "exhaustive_game_coverage": false,
+  "games": [
+    {
+      "game": "Sweet Bonanza 1000",
+      "game_url": "https://www.pragmaticplay.com/en/games/sweet-bonanza-1000/",
+      "validated_discovered_paths": false,
+      "branches_verified": 5,
+      "branches_discovered": 5,
+      "unresolved": [
+        "Control requiere revisiÃ³n: GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonOpt0",
+        "Control requiere revisiÃ³n: GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow_opt1/content/Buttons/ButtonOpt1"
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton/content/Collider",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton_opt1/content/Collider",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton_opt1/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_AnteBet_v2/AnteBet/BetLevelButtons/ButtonColliders/AnteToggle",
+              "role": "ante_bet"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            },
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            }
+          ],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_AnteBet_v2/AnteBet/BetLevelButtons/ButtonColliders/AnteToggle",
+                "role": "ante_bet"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton/content/Collider",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton_opt1/content/Collider",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow_opt1/content/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseButton_opt1/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow_opt1/content/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "ButtonNo",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow_opt1/content/Buttons/ButtonNo",
+          "labels": [],
+          "role": "cancel",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonOpt1",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/SWBO_BuyFeatureV2/FeaturePurchase/FSPurchaseWindow_opt1/content/Buttons/ButtonOpt1",
+          "labels": [],
+          "role": "other",
+          "source": "laya",
+          "confidence": 0.3285,
+          "needs_review": true
+        }
+      ],
+      "har_files_saved": 6,
+      "sessions_closed": 6,
+      "seconds": 216.9,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "manual_review": [
+        {
+          "name": "ButtonOpt0",
+          "actual_function": "confirm",
+          "purchase": "10 free spins",
+          "demo_cost": 200,
+          "evidence": "saved session screenshot"
+        },
+        {
+          "name": "ButtonOpt1",
+          "actual_function": "confirm",
+          "purchase": "10 super free spins; minimum multiplier 20x",
+          "demo_cost": 1000,
+          "evidence": "saved session screenshot"
+        }
+      ]
+    },
+    {
+      "game": "Wild West Gold Megaways",
+      "game_url": "https://www.pragmaticplay.com/en/games/wild-west-gold-megaways/",
+      "validated_discovered_paths": false,
+      "branches_verified": 3,
+      "branches_discovered": 4,
+      "unresolved": [
+        "Hay un control desconocido durante la ronda; revisar su funciÃ³n."
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+              "role": "buy_bonus"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/AnteBet/BetLevel/Content/Levels/AnteToggleand1/AnteToggle",
+              "role": "ante_bet"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            },
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            }
+          ],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/AnteBet/BetLevel/Content/Levels/AnteToggleand1/AnteToggle",
+                "role": "ante_bet"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+              "role": "cancel"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": true,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+                "role": "cancel"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            }
+          ]
+        },
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+              "role": "buy_bonus"
+            },
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonYes",
+              "role": "confirm"
+            }
+          ],
+          "status": "unresolved",
+          "reason": "Hay un control desconocido durante la ronda; revisar su funciÃ³n.",
+          "rounds": [],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+                "role": "buy_bonus"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonYes",
+                "role": "confirm"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "StartSpin_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+          "labels": [],
+          "role": "spin",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetUp_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetDown_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Collider",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseButton/content/Collider",
+          "labels": [
+            "BUY\nFREE\nSPINS",
+            "$200"
+          ],
+          "role": "buy_bonus",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Level0Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/AnteBet/BetLevel/Content/Levels/Level_0and1/Level0Button",
+          "labels": [
+            "BET",
+            "DOUBLE",
+            "CHANCE TO\nWIN FEATURE",
+            "$2.50",
+            "OFF"
+          ],
+          "role": "ante_bet",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Level1Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/AnteBet/BetLevel/Content/Levels/Level_0and1/Level1Button",
+          "labels": [
+            "BET",
+            "DOUBLE",
+            "CHANCE TO\nWIN FEATURE",
+            "$2.50",
+            "ON"
+          ],
+          "role": "ante_bet",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonNo",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonNo",
+          "labels": [
+            "BUY\nFREE SPINS",
+            "$200"
+          ],
+          "role": "cancel",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonYes",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GameFeatures/FeaturePurchase/FSPurchaseWindow/content/Buttons/ButtonYes",
+          "labels": [
+            "BUY\nFREE SPINS",
+            "$200"
+          ],
+          "role": "confirm",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "StopSpin_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StopSpin_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Collider",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StopSpin_Button/Collider",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "CloseButton",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Main/FSWindows/FSStartWindow/content/CloseButton",
+          "labels": [
+            "CONGRATULATIONS",
+            "YOU HAVE WON",
+            "7",
+            "FREE SPINS",
+            "PRESS ANYWHERE TO CONTINUE"
+          ],
+          "role": "continue",
+          "source": "laya",
+          "confidence": 0.7466,
+          "needs_review": true
+        }
+      ],
+      "har_files_saved": 5,
+      "sessions_closed": 5,
+      "seconds": 191.8,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false
+    },
+    {
+      "game": "Big Bass Bonanza 1000",
+      "game_url": "https://www.pragmaticplay.com/en/games/big-bass-bonanza-1000/",
+      "validated_discovered_paths": false,
+      "branches_verified": 1,
+      "branches_discovered": 1,
+      "unresolved": [
+        "Control requiere revisiÃ³n: GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/FeaturePurchase/FSPurchaseMainButton/ContentHolder/content/Collider",
+        "Control requiere revisiÃ³n: GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/FeaturePurchase/FSPurchaseMainButton/ContentHolder/content_Super/Collider"
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [
+        {
+          "steps": [
+            {
+              "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/AnteBet/BetLevelButtons/ButtonColliders/AnteToggle",
+              "role": "ante_bet"
+            }
+          ],
+          "status": "verified",
+          "reason": null,
+          "rounds": [
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            },
+            {
+              "started": true,
+              "normal": true,
+              "ante_before": 1,
+              "protocol_complete": true,
+              "ante_after": 1
+            }
+          ],
+          "purchase_complete": false,
+          "returned": false,
+          "actions": [
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/AnteBet/BetLevelButtons/ButtonColliders/AnteToggle",
+                "role": "ante_bet"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "STATE_CHANGED",
+                "operationStarted": false
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            },
+            {
+              "control": {
+                "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+                "role": "spin"
+              },
+              "effect_verified": true,
+              "outcome": {
+                "reason": "OPERATION_STARTED",
+                "operationStarted": true
+              }
+            }
+          ]
+        }
+      ],
+      "observed_controls": [
+        {
+          "name": "StartSpin_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+          "labels": [],
+          "role": "spin",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetUp_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetDown_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Level0Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/AnteBet/BetLevelButtons/ButtonColliders/Level0Button",
+          "labels": [
+            "BET",
+            "HIGHER",
+            "CHANCE TO\nWIN FEATURE",
+            "$3.00",
+            "OFF"
+          ],
+          "role": "ante_bet",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Collider",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/FeaturePurchase/FSPurchaseMainButton/ContentHolder/content/Collider",
+          "labels": [
+            "BUY",
+            "FREE SPINS",
+            "$200.00"
+          ],
+          "role": "buy_bonus",
+          "source": "laya",
+          "confidence": 0.8206,
+          "needs_review": false
+        },
+        {
+          "name": "Collider",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/FeaturePurchase/FSPurchaseMainButton/ContentHolder/content_Super/Collider",
+          "labels": [
+            "BUY",
+            "SUPER",
+            "FREE SPINS",
+            "$900.00"
+          ],
+          "role": "buy_bonus",
+          "source": "laya",
+          "confidence": 0.7018,
+          "needs_review": true
+        },
+        {
+          "name": "Level1Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/GamePivot/Reels/ThePivot/ReelsManager/GameFeatures/AnteBet/BetLevelButtons/ButtonColliders/Level1Button",
+          "labels": [
+            "BET",
+            "HIGHER",
+            "CHANCE TO\nWIN FEATURE",
+            "$3.00",
+            "ON"
+          ],
+          "role": "ante_bet",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "StopSpin_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StopSpin_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "Collider",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StopSpin_Button/Collider",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        }
+      ],
+      "har_files_saved": 2,
+      "sessions_closed": 2,
+      "seconds": 72.3,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false
+    },
+    {
+      "game": "The Dog House Multihold",
+      "game_url": "https://www.pragmaticplay.com/en/games/the-dog-house-multihold/",
+      "validated_discovered_paths": false,
+      "branches_verified": 0,
+      "branches_discovered": 0,
+      "unresolved": [
+        "Control requiere revisiÃ³n: GameRoot/UI Root/XTRoot/Root/Game/BuyFeature_ROG/ContentBuyFeature/Button/ButtonCollider/Desktop/ButtonCollider"
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [],
+      "observed_controls": [
+        {
+          "name": "StartSpin_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+          "labels": [],
+          "role": "spin",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetUp_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetUp_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "BetDown_Button",
+          "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/BetButtons/BetDown_Button",
+          "labels": [],
+          "role": "other",
+          "source": "catalog",
+          "confidence": null,
+          "needs_review": false
+        },
+        {
+          "name": "ButtonCollider",
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/BuyFeature_ROG/ContentBuyFeature/Button/ButtonCollider/Desktop/ButtonCollider",
+          "labels": [
+            "Buy Free Spins",
+            "$200"
+          ],
+          "role": "buy_bonus",
+          "source": "laya",
+          "confidence": 0.9935,
+          "needs_review": false
+        }
+      ],
+      "har_files_saved": 1,
+      "sessions_closed": 1,
+      "seconds": 24.1,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false
+    },
+    {
+      "game": "Starlight Princess 1000",
+      "game_url": "https://www.pragmaticplay.com/en/games/starlight-princess-1000/",
+      "validated_discovered_paths": false,
+      "branches_verified": 0,
+      "branches_discovered": 0,
+      "unresolved": [
+        "{\"error\":\"not_actionable: hidden, disabled, covered or not editable\",\"code\":\"not_actionable\"}"
+      ],
+      "extractor_diagnostics": [],
+      "application_error": null,
+      "branches": [],
+      "observed_controls": [],
+      "har_files_saved": 2,
+      "sessions_closed": 2,
+      "seconds": 15.2,
+      "all_owned_sessions_closed": true,
+      "limit_reached": false,
+      "previous_attempts": [
+        {
+          "game": "Starlight Princess 1000",
+          "game_url": "https://www.pragmaticplay.com/en/games/starlight-princess-1000/",
+          "validated_discovered_paths": false,
+          "branches_verified": 0,
+          "branches_discovered": 0,
+          "unresolved": [
+            "{\"error\":\"not_actionable: hidden, disabled, covered or not editable\",\"code\":\"not_actionable\"}"
+          ],
+          "extractor_diagnostics": [],
+          "application_error": null,
+          "branches": [],
+          "observed_controls": [],
+          "har_files_saved": 1,
+          "sessions_closed": 1,
+          "seconds": 17.1,
+          "all_owned_sessions_closed": true,
+          "limit_reached": false
+        }
+      ],
+      "attempt_count": 2
+    }
+  ],
+  "note": "Baseline before rendered-button exploration. Counts refer to known discovered paths, not detector accuracy."
+}
