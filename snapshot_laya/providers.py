@@ -29,6 +29,7 @@ def provider_status():
     return [{'provider':'pragmatic','runtime_adapter_ready':True},
             {'provider':'playtech','catalog_url':PLAYTECH_CATALOG,'runtime_adapter_ready':False,
              'stage':'catalog_and_direct_demo_preparation','launch_mode':'direct_offline_real_0',
+             'common_ui_profile':'common_ui_v1','ocr_analysis':'/api/providers/playtech/analyze',
              'cookies':'REJECT ALL','age':'operator_supplied_only'}]
 
 

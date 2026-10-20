@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 from .live import Live
 from .explorer import Explorer
 from .providers import provider_status,playtech_catalog
+from .playtech_ui import filter_playtech_ocr,analyze_playtech_ocr
 
 manager=Live()
 explorer=Explorer(manager)
@@ -83,7 +84,7 @@ def index(): return Path(__file__).with_name('index.html').read_text(encoding='u
 
 
 @app.get('/api/health')
-def health(): return {'app':'Snapshot-Laya','version':'0.3.2','model_loaded':manager.model.agent is not None}
+def health(): return {'app':'Snapshot-Laya','version':'0.3.3','model_loaded':manager.model.agent is not None}
 
 
 @app.post('/api/shutdown')
@@ -128,6 +129,26 @@ class Act(BaseModel):
 
 class Dismiss(BaseModel): ref:str
 class Finish(BaseModel): incomplete:bool=False
+
+
+class PlaytechOCR(BaseModel):
+    snapshot:dict
+    stage:str=Field(default='base',max_length=80)
+    game_name:str=Field(default='',max_length=160)
+
+
+@app.post('/api/providers/playtech/filter')
+def playtech_filter(body:PlaytechOCR):
+    try:return filter_playtech_ocr(body.snapshot,body.stage,body.game_name)
+    except ValueError as exc:raise HTTPException(400,str(exc)) from exc
+
+
+@app.post('/api/providers/playtech/analyze')
+def playtech_analyze(body:PlaytechOCR):
+    # Laya's lock shares the existing model with Pragmatic. This endpoint is
+    # read-only classification and never invokes a browser action.
+    try:return analyze_playtech_ocr(body.snapshot,manager.model,body.stage,body.game_name)
+    except ValueError as exc:raise HTTPException(400,str(exc)) from exc
 
 
 @app.post('/api/queue')

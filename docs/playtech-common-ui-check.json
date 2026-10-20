@@ -1,0 +1,1296 @@
+{
+  "date": "2026-10-20",
+  "profile": "common_ui_v1",
+  "scope": "same_saved_playtech_ocr_captures",
+  "baseline_model_candidates": 12,
+  "filtered_model_candidates": 5,
+  "reduction_percent": 58.3,
+  "ignored_common_labels": 30,
+  "same_model_service_as_pragmatic": true,
+  "runtime_adapter_ready": false,
+  "classifier_confidence_is_accuracy": false,
+  "captures": [
+    {
+      "game": "age-of-the-gods-gold-trio",
+      "stage": "loading",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [],
+      "support_controls": [],
+      "ignored_common": [
+        {
+          "index": 3,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 124,
+            "height": 10,
+            "x": 1022
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 0,
+          "text": "AGE OF THE GODS: GOLD TRIOW",
+          "normalized": "AGE OF THE GODS GOLD TRIOW",
+          "rect": {
+            "y": 5,
+            "width": 227,
+            "height": 10,
+            "x": 6
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 1,
+          "text": "cr succtss -",
+          "normalized": "CR SUCCTSS",
+          "rect": {
+            "y": 954,
+            "width": 51,
+            "height": 6,
+            "x": 257
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 2,
+          "text": "€10,ooooo",
+          "normalized": "10 OOOOO",
+          "rect": {
+            "y": 988,
+            "width": 75,
+            "height": 14,
+            "x": 5
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 4,
+          "text": "GOLDWTP!O",
+          "normalized": "GOLDWTP O",
+          "rect": {
+            "y": 821,
+            "width": 575,
+            "height": 77,
+            "x": 659
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 5,
+          "text": "3ASH",
+          "normalized": "3ASH",
+          "rect": {
+            "y": 931,
+            "width": 87,
+            "height": 28,
+            "x": 1724
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 6,
+        "model_candidates": 0,
+        "ignored_common": 1,
+        "support_controls": 0
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    },
+    {
+      "game": "buffalo-blitz-iii",
+      "stage": "base-alternate",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [
+        {
+          "text": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+          "ocr_rect": {
+            "x": 175,
+            "y": 519,
+            "width": 212,
+            "height": 86
+          },
+          "source": "ocr_text_candidate",
+          "click_target_verified": false,
+          "model_input": {
+            "name": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+            "labels": [
+              "Fxmn-Btr",
+              "s.oo",
+              "HIGHER CHANCE",
+              "TO TRIGGER BONUS",
+              "OFF"
+            ],
+            "sprites": [],
+            "events": [],
+            "path": "Playtech/OCR/base-alternate/text-4"
+          },
+          "classification": {
+            "role": "other",
+            "confidence": 0.2418,
+            "probabilities": {
+              "buy_bonus": 0.0537,
+              "ante_bet": 0.0884,
+              "bet_up": 0.0583,
+              "bet_down": 0.1016,
+              "bet_menu": 0.0642,
+              "confirm": 0.0522,
+              "cancel": 0.0524,
+              "choice": 0.0536,
+              "continue": 0.0531,
+              "spin": 0.0552,
+              "other": 0.2418,
+              "unknown": 0.1255
+            },
+            "needs_review": true,
+            "milliseconds": 245.9,
+            "backend": "ONNX / DirectML",
+            "cached": false,
+            "calibrated_for_game": false,
+            "source": "laya_ocr"
+          }
+        },
+        {
+          "text": "BUY",
+          "ocr_rect": {
+            "x": 236,
+            "y": 828,
+            "width": 85,
+            "height": 26
+          },
+          "source": "ocr_text_candidate",
+          "click_target_verified": false,
+          "model_input": {
+            "name": "BUY",
+            "labels": [
+              "BOX. .",
+              "BUY",
+              "4096"
+            ],
+            "sprites": [],
+            "events": [],
+            "path": "Playtech/OCR/base-alternate/text-8"
+          },
+          "classification": {
+            "role": "buy_bonus",
+            "confidence": 0.9927,
+            "probabilities": {
+              "buy_bonus": 0.9927,
+              "ante_bet": 0.0004,
+              "bet_up": 0.0004,
+              "bet_down": 0.0005,
+              "bet_menu": 0.0008,
+              "confirm": 0.0012,
+              "cancel": 0.0004,
+              "choice": 0.0004,
+              "continue": 0.0004,
+              "spin": 0.0005,
+              "other": 0.0015,
+              "unknown": 0.001
+            },
+            "needs_review": false,
+            "milliseconds": 183.2,
+            "backend": "ONNX / DirectML",
+            "cached": false,
+            "calibrated_for_game": false,
+            "source": "laya_ocr"
+          }
+        }
+      ],
+      "support_controls": [],
+      "ignored_common": [
+        {
+          "index": 1,
+          "text": "INFO",
+          "normalized": "INFO",
+          "rect": {
+            "y": 153,
+            "width": 38,
+            "height": 12,
+            "x": 25
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 9,
+          "text": "WAYS",
+          "normalized": "WAYS",
+          "rect": {
+            "y": 901,
+            "width": 69,
+            "height": 18,
+            "x": 473
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 13,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 124,
+            "height": 10,
+            "x": 976
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 15,
+          "text": "WIN",
+          "normalized": "WIN",
+          "rect": {
+            "y": 901,
+            "width": 46,
+            "height": 18,
+            "x": 936
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 17,
+          "text": "TOTAL BET",
+          "normalized": "TOTAL BET",
+          "rect": {
+            "y": 901,
+            "width": 134,
+            "height": 18,
+            "x": 1349
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 19,
+          "text": "BET",
+          "normalized": "BET",
+          "rect": {
+            "y": 347,
+            "width": 46,
+            "height": 17,
+            "x": 1782
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 21,
+          "text": "TURBO.",
+          "normalized": "TURBO",
+          "rect": {
+            "y": 757,
+            "width": 86,
+            "height": 19,
+            "x": 1764
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 0,
+          "text": "BUFALO BLITZ III\"",
+          "normalized": "BUFALO BLITZ III",
+          "rect": {
+            "y": 5,
+            "width": 133,
+            "height": 10,
+            "x": 7
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 2,
+          "text": "Fxmn-Btr",
+          "normalized": "FXMN BTR",
+          "rect": {
+            "y": 410,
+            "width": 185,
+            "height": 35,
+            "x": 188
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 3,
+          "text": "s.oo",
+          "normalized": "S OO",
+          "rect": {
+            "y": 467,
+            "width": 96,
+            "height": 32,
+            "x": 230
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 7,
+          "text": "BOX. .",
+          "normalized": "BOX",
+          "rect": {
+            "y": 790,
+            "width": 102,
+            "height": 25,
+            "x": 301
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 10,
+          "text": "4096",
+          "normalized": "4096",
+          "rect": {
+            "y": 938,
+            "width": 71,
+            "height": 23,
+            "x": 471
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 11,
+          "text": "€10,ooooo",
+          "normalized": "10 OOOOO",
+          "rect": {
+            "y": 988,
+            "width": 75,
+            "height": 14,
+            "x": 5
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 12,
+          "text": "BUFFALO GOLD",
+          "normalized": "BUFFALO GOLD",
+          "rect": {
+            "y": 291,
+            "width": 179,
+            "height": 16,
+            "x": 577
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 14,
+          "text": "BIG GRID",
+          "normalized": "BIG GRID",
+          "rect": {
+            "y": 291,
+            "width": 106,
+            "height": 17,
+            "x": 933
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 16,
+          "text": "BUFFALO CASH",
+          "normalized": "BUFFALO CASH",
+          "rect": {
+            "y": 291,
+            "width": 183,
+            "height": 17,
+            "x": 1209
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 18,
+          "text": "€5.oo",
+          "normalized": "5 OO",
+          "rect": {
+            "y": 938,
+            "width": 80,
+            "height": 23,
+            "x": 1375
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 20,
+          "text": "o»",
+          "normalized": "O",
+          "rect": {
+            "y": 681,
+            "width": 100,
+            "height": 57,
+            "x": 1756
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 22,
+        "model_candidates": 2,
+        "ignored_common": 7,
+        "support_controls": 0
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    },
+    {
+      "game": "buffalo-blitz-iii",
+      "stage": "base",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [
+        {
+          "text": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+          "ocr_rect": {
+            "x": 175,
+            "y": 519,
+            "width": 211,
+            "height": 86
+          },
+          "source": "ocr_text_candidate",
+          "click_target_verified": false,
+          "model_input": {
+            "name": "HIGHER CHANCE TO TRIGGER BONUS OFF",
+            "labels": [
+              "s.oo",
+              "HIGHER CHANCE",
+              "TO TRIGGER BONUS",
+              "OFF"
+            ],
+            "sprites": [],
+            "events": [],
+            "path": "Playtech/OCR/base/text-3"
+          },
+          "classification": {
+            "role": "other",
+            "confidence": 0.1988,
+            "probabilities": {
+              "buy_bonus": 0.0584,
+              "ante_bet": 0.1023,
+              "bet_up": 0.0619,
+              "bet_down": 0.0853,
+              "bet_menu": 0.0788,
+              "confirm": 0.0584,
+              "cancel": 0.0584,
+              "choice": 0.0603,
+              "continue": 0.0592,
+              "spin": 0.0624,
+              "other": 0.1988,
+              "unknown": 0.1158
+            },
+            "needs_review": true,
+            "milliseconds": 199.1,
+            "backend": "ONNX / DirectML",
+            "cached": false,
+            "calibrated_for_game": false,
+            "source": "laya_ocr"
+          }
+        }
+      ],
+      "support_controls": [],
+      "ignored_common": [
+        {
+          "index": 1,
+          "text": "INFO",
+          "normalized": "INFO",
+          "rect": {
+            "y": 153,
+            "width": 38,
+            "height": 12,
+            "x": 25
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 9,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 124,
+            "height": 10,
+            "x": 976
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 11,
+          "text": "WIN",
+          "normalized": "WIN",
+          "rect": {
+            "y": 901,
+            "width": 46,
+            "height": 18,
+            "x": 936
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 12,
+          "text": "WAYS",
+          "normalized": "WAYS",
+          "rect": {
+            "y": 901,
+            "width": 69,
+            "height": 18,
+            "x": 473
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 15,
+          "text": "TOTAL BET",
+          "normalized": "TOTAL BET",
+          "rect": {
+            "y": 901,
+            "width": 134,
+            "height": 18,
+            "x": 1349
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 17,
+          "text": "BET",
+          "normalized": "BET",
+          "rect": {
+            "y": 347,
+            "width": 46,
+            "height": 17,
+            "x": 1782
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 0,
+          "text": "BUFFALO BLITZ III\"",
+          "normalized": "BUFFALO BLITZ III",
+          "rect": {
+            "y": 5,
+            "width": 133,
+            "height": 10,
+            "x": 7
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 2,
+          "text": "s.oo",
+          "normalized": "S OO",
+          "rect": {
+            "y": 468,
+            "width": 96,
+            "height": 31,
+            "x": 230
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 6,
+          "text": "'LUCKY",
+          "normalized": "LUCKY",
+          "rect": {
+            "y": 792,
+            "width": 102,
+            "height": 19,
+            "x": 193
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 7,
+          "text": "€10,ooooo",
+          "normalized": "10 OOOOO",
+          "rect": {
+            "y": 988,
+            "width": 75,
+            "height": 14,
+            "x": 5
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 8,
+          "text": "BUFFALO GOLD",
+          "normalized": "BUFFALO GOLD",
+          "rect": {
+            "y": 291,
+            "width": 179,
+            "height": 16,
+            "x": 577
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 10,
+          "text": "BIG GRID",
+          "normalized": "BIG GRID",
+          "rect": {
+            "y": 291,
+            "width": 106,
+            "height": 16,
+            "x": 933
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 13,
+          "text": "4096",
+          "normalized": "4096",
+          "rect": {
+            "y": 938,
+            "width": 71,
+            "height": 23,
+            "x": 471
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 14,
+          "text": "BUFFALO CASH",
+          "normalized": "BUFFALO CASH",
+          "rect": {
+            "y": 291,
+            "width": 183,
+            "height": 16,
+            "x": 1209
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 16,
+          "text": "€5.oo",
+          "normalized": "5 OO",
+          "rect": {
+            "y": 938,
+            "width": 80,
+            "height": 23,
+            "x": 1375
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 18,
+          "text": "Z e-tURBO",
+          "normalized": "Z E TURBO",
+          "rect": {
+            "y": 750,
+            "width": 150,
+            "height": 31,
+            "x": 1694
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 19,
+        "model_candidates": 1,
+        "ignored_common": 6,
+        "support_controls": 0
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    },
+    {
+      "game": "cats-collect",
+      "stage": "base",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [
+        {
+          "text": "BUY FEATURE",
+          "ocr_rect": {
+            "x": 189,
+            "y": 278,
+            "width": 131,
+            "height": 59
+          },
+          "source": "ocr_text_candidate",
+          "click_target_verified": false,
+          "model_input": {
+            "name": "BUY FEATURE",
+            "labels": [
+              "BUY",
+              "FEATURE"
+            ],
+            "sprites": [],
+            "events": [],
+            "path": "Playtech/OCR/base/text-1"
+          },
+          "classification": {
+            "role": "buy_bonus",
+            "confidence": 0.5277,
+            "probabilities": {
+              "buy_bonus": 0.5277,
+              "ante_bet": 0.0291,
+              "bet_up": 0.0302,
+              "bet_down": 0.046,
+              "bet_menu": 0.0301,
+              "confirm": 0.0295,
+              "cancel": 0.0313,
+              "choice": 0.0294,
+              "continue": 0.029,
+              "spin": 0.0303,
+              "other": 0.1086,
+              "unknown": 0.0786
+            },
+            "needs_review": true,
+            "milliseconds": 150.7,
+            "backend": "ONNX / DirectML",
+            "cached": false,
+            "calibrated_for_game": false,
+            "source": "laya_ocr"
+          }
+        },
+        {
+          "text": "MORE CAT OFF",
+          "ocr_rect": {
+            "x": 189,
+            "y": 535,
+            "width": 105,
+            "height": 74
+          },
+          "source": "ocr_text_candidate",
+          "click_target_verified": false,
+          "model_input": {
+            "name": "MORE CAT OFF",
+            "labels": [
+              "MORE CAT",
+              "OFF"
+            ],
+            "sprites": [],
+            "events": [],
+            "path": "Playtech/OCR/base/text-3"
+          },
+          "classification": {
+            "role": "other",
+            "confidence": 0.2554,
+            "probabilities": {
+              "buy_bonus": 0.06,
+              "ante_bet": 0.0588,
+              "bet_up": 0.0571,
+              "bet_down": 0.0722,
+              "bet_menu": 0.0573,
+              "confirm": 0.0609,
+              "cancel": 0.0711,
+              "choice": 0.0613,
+              "continue": 0.0573,
+              "spin": 0.0587,
+              "other": 0.2554,
+              "unknown": 0.13
+            },
+            "needs_review": true,
+            "milliseconds": 168.9,
+            "backend": "ONNX / DirectML",
+            "cached": false,
+            "calibrated_for_game": false,
+            "source": "laya_ocr"
+          }
+        }
+      ],
+      "support_controls": [],
+      "ignored_common": [
+        {
+          "index": 0,
+          "text": "INF",
+          "normalized": "INF",
+          "rect": {
+            "y": 124,
+            "width": 26,
+            "height": 12,
+            "x": 36
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 6,
+          "text": "LINES",
+          "normalized": "LINES",
+          "rect": {
+            "y": 885,
+            "width": 71,
+            "height": 21,
+            "x": 459
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 9,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 125,
+            "height": 14,
+            "x": 983
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 10,
+          "text": "WIN",
+          "normalized": "WIN",
+          "rect": {
+            "y": 900,
+            "width": 47,
+            "height": 20,
+            "x": 923
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 11,
+          "text": "TURBO",
+          "normalized": "TURBO",
+          "rect": {
+            "y": 292,
+            "width": 83,
+            "height": 19,
+            "x": 1667
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 12,
+          "text": "BET",
+          "normalized": "BET",
+          "rect": {
+            "y": 309,
+            "width": 54,
+            "height": 21,
+            "x": 1822
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 14,
+          "text": "TOTAL BET",
+          "normalized": "TOTAL BET",
+          "rect": {
+            "y": 913,
+            "width": 135,
+            "height": 22,
+            "x": 1336
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 5,
+          "text": "COLLE\"'?",
+          "normalized": "COLLE",
+          "rect": {
+            "y": 741,
+            "width": 279,
+            "height": 80,
+            "x": 125
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 7,
+          "text": "25",
+          "normalized": "25",
+          "rect": {
+            "y": 923,
+            "width": 35,
+            "height": 24,
+            "x": 475
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 8,
+          "text": "10,00000",
+          "normalized": "10 00000",
+          "rect": {
+            "y": 958,
+            "width": 65,
+            "height": 15,
+            "x": 0
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 13,
+          "text": "qoR",
+          "normalized": "QOR",
+          "rect": {
+            "y": 419,
+            "width": 52,
+            "height": 30,
+            "x": 1718
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 15,
+          "text": "€5.oo",
+          "normalized": "5 OO",
+          "rect": {
+            "y": 951,
+            "width": 80,
+            "height": 25,
+            "x": 1361
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 16,
+        "model_candidates": 2,
+        "ignored_common": 7,
+        "support_controls": 0
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    },
+    {
+      "game": "grizzly-blitz",
+      "stage": "base",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [],
+      "support_controls": [
+        {
+          "index": 11,
+          "text": "SPIN",
+          "normalized": "SPIN",
+          "rect": {
+            "y": 886,
+            "width": 139,
+            "height": 48,
+            "x": 1475
+          },
+          "role": "spin",
+          "reason": "normal_spin_support",
+          "click_target_verified": false
+        }
+      ],
+      "ignored_common": [
+        {
+          "index": 1,
+          "text": "COIN VALUE",
+          "normalized": "COIN VALUE",
+          "rect": {
+            "y": 875,
+            "width": 114,
+            "height": 13,
+            "x": 420
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 4,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 124,
+            "height": 10,
+            "x": 965
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 5,
+          "text": "TOTAL BET",
+          "normalized": "TOTAL BET",
+          "rect": {
+            "y": 873,
+            "width": 110,
+            "height": 15,
+            "x": 616
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 7,
+          "text": "AUTO",
+          "normalized": "AUTO",
+          "rect": {
+            "y": 888,
+            "width": 70,
+            "height": 21,
+            "x": 1186
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 8,
+          "text": "TURBO",
+          "normalized": "TURBO",
+          "rect": {
+            "y": 888,
+            "width": 86,
+            "height": 20,
+            "x": 1316
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 9,
+          "text": "MODE",
+          "normalized": "MODE",
+          "rect": {
+            "y": 913,
+            "width": 70,
+            "height": 20,
+            "x": 1324
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 0,
+          "text": "GRIZZLY BLITZT\"",
+          "normalized": "GRIZZLY BLITZT",
+          "rect": {
+            "y": 5,
+            "width": 113,
+            "height": 10,
+            "x": 6
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 2,
+          "text": "€o.10",
+          "normalized": "O 10",
+          "rect": {
+            "y": 892,
+            "width": 59,
+            "height": 17,
+            "x": 451
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 3,
+          "text": "€10,ooooo",
+          "normalized": "10 OOOOO",
+          "rect": {
+            "y": 988,
+            "width": 75,
+            "height": 14,
+            "x": 5
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 6,
+          "text": "€4.oo",
+          "normalized": "4 OO",
+          "rect": {
+            "y": 902,
+            "width": 125,
+            "height": 38,
+            "x": 606
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 10,
+          "text": "4096 WAYS",
+          "normalized": "4096 WAYS",
+          "rect": {
+            "y": 80,
+            "width": 220,
+            "height": 29,
+            "x": 1415
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 12,
+        "model_candidates": 0,
+        "ignored_common": 6,
+        "support_controls": 1
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    },
+    {
+      "game": "roosters-farm-riches",
+      "stage": "base",
+      "provider": "playtech",
+      "profile": "common_ui_v1",
+      "controls": [],
+      "support_controls": [],
+      "ignored_common": [
+        {
+          "index": 1,
+          "text": "BALANCE",
+          "normalized": "BALANCE",
+          "rect": {
+            "y": 883,
+            "width": 120,
+            "height": 16,
+            "x": 54
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 4,
+          "text": "PLAYING FOR FUN",
+          "normalized": "PLAYING FOR FUN",
+          "rect": {
+            "y": 5,
+            "width": 125,
+            "height": 10,
+            "x": 952
+          },
+          "reason": "known_common_interface"
+        },
+        {
+          "index": 10,
+          "text": "TOTAL BET",
+          "normalized": "TOTAL BET",
+          "rect": {
+            "y": 886,
+            "width": 96,
+            "height": 12,
+            "x": 339
+          },
+          "reason": "known_common_interface"
+        }
+      ],
+      "unclassified": [
+        {
+          "index": 0,
+          "text": "ROOSTER'S FARM RICHES\"'",
+          "normalized": "ROOSTER S FARM RICHES",
+          "rect": {
+            "y": 5,
+            "width": 193,
+            "height": 10,
+            "x": 7
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 2,
+          "text": "CI O,OOO.OO",
+          "normalized": "CI O OOO OO",
+          "rect": {
+            "y": 920,
+            "width": 183,
+            "height": 29,
+            "x": 21
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 3,
+          "text": "€10,ooooo",
+          "normalized": "10 OOOOO",
+          "rect": {
+            "y": 988,
+            "width": 75,
+            "height": 14,
+            "x": 5
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 5,
+          "text": "€200.oo",
+          "normalized": "200 OO",
+          "rect": {
+            "y": 40,
+            "width": 98,
+            "height": 21,
+            "x": 848
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 6,
+          "text": "€60.oo",
+          "normalized": "60 OO",
+          "rect": {
+            "y": 40,
+            "width": 82,
+            "height": 21,
+            "x": 1030
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 7,
+          "text": "€2,ooo.oo",
+          "normalized": "2 OOO OO",
+          "rect": {
+            "y": 40,
+            "width": 120,
+            "height": 25,
+            "x": 646
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 8,
+          "text": ".HIC",
+          "normalized": "HIC",
+          "rect": {
+            "y": 224,
+            "width": 99,
+            "height": 42,
+            "x": 621
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 9,
+          "text": "€20.oo",
+          "normalized": "20 OO",
+          "rect": {
+            "y": 40,
+            "width": 82,
+            "height": 21,
+            "x": 1188
+          },
+          "reason": "not_identified_as_common_interface"
+        },
+        {
+          "index": 11,
+          "text": "€2.oo",
+          "normalized": "2 OO",
+          "rect": {
+            "y": 907,
+            "width": 112,
+            "height": 28,
+            "x": 329
+          },
+          "reason": "not_identified_as_common_interface"
+        }
+      ],
+      "runtime_hit_targets_verified": false,
+      "stats": {
+        "ocr_lines": 12,
+        "model_candidates": 0,
+        "ignored_common": 3,
+        "support_controls": 0
+      },
+      "validated": false,
+      "scope": "filtered_ocr_classification_only"
+    }
+  ],
+  "interpretation": {
+    "noise_reduction_is_not_accuracy": true,
+    "common_normal_bet_text_reaches_model": false,
+    "toggle_candidates_retained_but_unresolved": true,
+    "new_filter_does_not_fix_missing_ocr_labels": true,
+    "playtech_automatic_click_adapter_ready": false
+  }
+}

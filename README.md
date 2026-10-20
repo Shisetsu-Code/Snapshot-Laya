@@ -32,6 +32,20 @@ separada del efecto comprobado.
 
 ## Recorrer ramas
 
+El análisis OCR de Playtech aplica `common_ui_v1` antes de Laya: separa saldo,
+apuesta normal, moneda, win, líneas, autoplay, turbo, ayuda, sonido y cabecera.
+El giro queda en apoyo para ante bet y no se envía al clasificador. Las compras,
+extra bet, confirmaciones y continuaciones tienen prioridad sobre esas reglas.
+Los textos desconocidos se conservan aparte, sin declararlos interfaz común.
+Se unen etiquetas contiguas como BUY + FEATURE y descripciones de un mismo
+interruptor. Este filtro actúa sobre metadatos OCR, no borra zonas de la imagen.
+
+`POST /api/providers/playtech/filter` recibe `{snapshot, stage, game_name}`;
+`snapshot` contiene `width`, `height` y `lines: [{text, rect: {x,y,width,height}}]`.
+`POST /api/providers/playtech/analyze` aplica el filtro y clasifica únicamente
+los candidatos usando la misma instancia de Laya del servidor. Ninguna de estas
+rutas hace clic ni considera que una caja de texto sea un collider verificado.
+
 Desde 0.3.2, un juego listo y estable sin controles objetivo guarda captura y HAR
 y termina con `no_target_controls_detected`. Esto describe la interfaz visitada:
 no certifica que el juego carezca de compras en todos sus estados. Si solo hay
