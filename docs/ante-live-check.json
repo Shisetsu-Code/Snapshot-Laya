@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-20",
+  "game": "Gates of Olympus 1000",
+  "scope": "ante_activation_and_two_normal_rounds",
+  "branches": [
+    {
+      "roles": [
+        "ante_bet"
+      ],
+      "status": "verified",
+      "activated": true,
+      "rounds": [
+        {
+          "started": true,
+          "normal": true,
+          "ante_before": 1,
+          "protocol_complete": true,
+          "ante_after": 1
+        },
+        {
+          "started": true,
+          "normal": true,
+          "ante_before": 1,
+          "protocol_complete": true,
+          "ante_after": 1
+        }
+      ]
+    }
+  ],
+  "full_tree_validated": false,
+  "note": "Other branches are being checked separately; this evidence does not certify complete coverage."
+}

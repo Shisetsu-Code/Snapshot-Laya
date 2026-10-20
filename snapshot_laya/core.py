@@ -4,7 +4,7 @@ import math
 import re
 
 ROLES = {'buy_bonus','ante_bet','bet_up','bet_down','bet_menu','confirm','cancel','choice','continue','spin','other','unknown'}
-TARGETS = {'buy_bonus','ante_bet','bet_up','bet_down','bet_menu','confirm','choice','unknown'}
+TARGETS = {'buy_bonus','ante_bet','confirm','cancel','continue','choice','unknown'}
 NOISE = re.compile(r'(SoundButtons|Autoplay|HyperPlay|HiperPlay|GameSpeed|/Paytable/|/Settings/|MoneyAndCoinsSwitcher)',re.I)
 
 
@@ -25,6 +25,7 @@ def clean_snapshot(raw, blockers=None):
         elif rect['width']<=0 or rect['height']<=0: reason='empty_hit_rect'
         elif not (0<=rect['x']+rect['width']/2<width and 0<=rect['y']+rect['height']/2<height): reason='outside_viewport'
         elif NOISE.search(item.get('path','')): reason='unrelated_universal_ui'
+        elif item.get('name','').lower() in ('blocker','inputblocker','raycastblocker'): reason='input_blocker_not_action'
         key=(item.get('path'),tuple(numbers))
         if not reason and key in seen: reason='duplicate'
         if reason:
@@ -53,6 +54,8 @@ def completion(ledger, flags, unresolved, observations, purchase_complete=False)
         reasons.append('La ronda o el bonus sigue activo.')
     if any(c.get('role') in ('buy_bonus','confirm') for c in ledger) and not purchase_complete:
         reasons.append('Falta comprobar la finalización del protocolo de compra.')
+    if any(c.get('role')=='ante_bet' and not c.get('ante_rounds_complete') for c in ledger):
+        reasons.append('Ante bet requiere activación y tiradas normales completas con ante bet activo.')
     return {'validated':not reasons,'scope':'observed_controls_and_visited_states','reasons':reasons,
         'exhaustive_game_coverage':False}
 
@@ -64,6 +67,7 @@ def evidence_effect(role,before,after,outcome):
     if role in ('bet_up','bet_down'):
         return bool(before.get('bet_signature') and after.get('bet_signature') and before['bet_signature']!=after['bet_signature'])
     if role=='confirm': return outcome.get('operationStarted') is True
+    if role=='spin': return outcome.get('operationStarted') is True
     if role in ('buy_bonus','continue','choice') and outcome.get('operationStarted') is True: return True
     return outcome.get('reason')=='STATE_CHANGED' and before.get('state_key')!=after.get('state_key')
 

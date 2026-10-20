@@ -23,10 +23,43 @@ Abrir **Iniciar Snapshot Laya.cmd**. La aplicación escucha únicamente en
 7. **Cerrar incompleto** conserva lo encontrado sin certificarlo. Si hay otra demo
    en la cola, se abre después de guardar y cerrar la sesión actual.
 
-El cierre automático es opcional y usa el mismo criterio de validación. No hay
-clics autónomos ni repetición automática de compras: cada acción requiere una
-elección explícita sobre un control actual. La clasificación del modelo por sí
-sola no autoriza acciones.
+El modo manual conserva la revisión visual. **Explorar ramas** usa la primera URL
+y ejecuta únicamente firmas del catálogo con una acción guiada vigente. La
+clasificación de Laya por sí sola no autoriza clics automáticos.
+
+## Recorrer ramas
+
+El descubrimiento inicial guarda compras y ante bet. Cada camino pendiente abre
+una sesión demo nueva, vuelve a localizar los controles por ruta y función y
+reproduce su prefijo con snapshots nuevos. Un menú con cuatro compras genera
+cuatro caminos; las confirmaciones y cancelaciones descubiertas agregan ramas.
+Los menús se consideran explorados cuando sus siguientes decisiones se guardan;
+las ramas de confirmación exigen terminar la compra y el bonus.
+
+Ante bet requiere comprobar OFF → ON y **dos tiradas normales**, cada una con
+inicio reconocido, protocolo completo y el mismo nivel de ante bet activo antes
+y después. El botón de giro solo se usa como apoyo de esta prueba. Subir y bajar
+la apuesta regular quedan fuera del recorrido.
+
+Las continuaciones conocidas incluyen áreas de «click/tap anywhere to continue»
+cuando el extractor devuelve un collider con ese texto y contexto. Un bloqueador
+genérico no equivale a una continuación. Los controles desconocidos se muestran
+para revisión y mantienen el recorrido incompleto.
+
+El panel permite pausar y continuar. Se guardan caminos y evidencias en
+`runs/branches.json`; al reiniciar, una rama que estaba ejecutándose queda
+interrumpida y no se repite silenciosamente. Una compra sin efecto comprobado,
+un cambio de identidad o una decisión ambigua detienen el recorrido.
+Se esperan dos observaciones con los mismos controles semánticos. Las animaciones
+pueden cambiar sus rectángulos: se resuelven geometría y token nuevos antes del
+clic y se exige que coincidan identidad y firma. La revisión manual conserva su
+rechazo de cambios geométricos. Los límites son 60 ramas, profundidad 10 y 300 segundos por rama;
+alcanzarlos deja pendientes, nunca certifica cobertura completa.
+
+Cada cierre conserva el HAR crudo de HardFire, sin reproducir solicitudes. El
+informe de ramas y los HAR de las sesiones se pueden descargar desde el panel.
+Solo se resuelve automáticamente el aviso de edad conocido para este operador,
+que ya confirmó su mayoría de edad; otros avisos requieren intervención.
 
 ## Requisitos y configuración
 
@@ -56,15 +89,26 @@ DirectML instalado previamente; no exporta ni descarga modelos al arrancar.
 
 ## Qué entra al modelo
 
-Solo texto del control: etiquetas, nombre, ruta interna, sprites y eventos.
+Primero se filtran firmas conocidas de la interfaz con un catálogo versionado;
+esto no modifica los pesos de Laya. Solo los controles desconocidos se envían al
+modelo: etiquetas, nombre, ruta interna, sprites y eventos.
+El panel muestra «firma conocida» para el catálogo, sin asignarle un porcentaje
+de confianza inventado. Los porcentajes se reservan para las propuestas de Laya.
 Las coordenadas y las imágenes se conservan como evidencia, no se inventan con
 Laya. Se descartan controles sin hit target, deshabilitados, fuera de pantalla,
 duplicados y elementos comunes de sonido, autoplay, velocidad y ajustes.
 
 Los avisos DOM bloquean la clasificación. Los menús modales conocidos eliminan
 los controles de fondo. **La oclusión genérica no está verificada**: la revisión
-visual sigue siendo necesaria. Se comprueban otra vez identidad, geometría y
+visual sigue siendo necesaria para variantes nuevas. El recorrido automático se
+limita a las firmas conocidas; esto no certifica oclusión arbitraria. Se comprueban otra vez identidad, geometría y
 estado antes del clic, y se conservan los tokens de observación de HardFire.
+
+Durante un bonus se pueden diferir diagnósticos `NO_VERIFIED_VISIBLE_DRAWING`
+solo si su ruta corresponde exactamente a una compra ya descubierta en el
+fondo. Se conservan en la evidencia y no se tocan esos controles. Al volver al
+estado de reposo los diagnósticos deben desaparecer; otros controles sin resolver
+mantienen el bloqueo. El botón de detener giro es auxiliar y no se explora.
 
 ## Qué significa validado
 

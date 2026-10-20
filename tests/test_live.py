@@ -51,6 +51,47 @@ class LiveTests(unittest.TestCase):
         before=len(self.source.calls)
         with self.assertRaisesRegex(ValueError,'vencido'): self.live.act('stale','id',True)
         self.assertEqual(len(self.source.calls),before)
+    def test_normal_spin_maps_explicit_guided_action_without_fingerprint(self):
+        self.live._scan({'actions':[{'kind':'spin','action_id':'spin_normal'}],'flags':{},'state_key':'one'})
+        spin=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='StartSpin_Button')
+        self.assertEqual(spin['action_id'],'spin_normal')
+    def test_auto_spin_is_blocked_when_ante_is_off(self):
+        view={'actions':[{'kind':'spin','action_id':'spin_normal'}],'flags':{'canSpin':True},'wager':{'betLevelIndex':0},'state_key':'one','token':'fresh'}
+        original=self.source.call
+        self.source.call=lambda name,args: copy.deepcopy(view) if name=='pragmatic_guided_observe' else original(name,args)
+        self.live._scan(copy.deepcopy(view))
+        spin=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='StartSpin_Button')
+        with self.assertRaisesRegex(ValueError,'ante bet activo'):
+            self.live.act(self.live.session['snapshot']['id'],spin['id'],automatic=True)
+        self.assertNotIn('pragmatic_guided_act',self.source.calls)
+    def test_auto_unknown_is_blocked(self):
+        c=self.live.session['snapshot']['controls'][0]
+        c['classification']['source']='laya'
+        with self.assertRaisesRegex(ValueError,'catálogo'):
+            self.live.act(self.live.session['snapshot']['id'],c['id'],automatic=True)
+    def test_auto_resolves_pulsing_geometry_with_fresh_guided_token(self):
+        c=next(c for c in self.live.session['snapshot']['controls'] if c['name']=='Level0Button')
+        old_rect=copy.deepcopy(c['hit_rect'])
+        original=self.source.call
+        def call(name,args):
+            if name=='pragmatic_guided_observe':
+                return {'token':'fresh-animation','state_key':'one','flags':{},'wager':{'betLevelIndex':0},
+                        'actions':[{'fingerprint':c['fingerprint'],'action_id':'ante'}]}
+            if name=='pragmatic_drawn_buttons':
+                result=original(name,args)
+                target=next(x for x in result['controls'] if x['name']=='Level0Button')
+                target['hit_rect']['x']+=9
+                return result
+            if name=='pragmatic_guided_act':
+                self.assertEqual(args['token'],'fresh-animation')
+                after=call('pragmatic_guided_observe',{});after['wager']['betLevelIndex']=1
+                return {'outcome':{'operationStarted':False,'reason':'STATE_CHANGED'},'view':after}
+            return original(name,args)
+        self.source.call=call
+        self.live.session['snapshot']['controls'][self.live.session['snapshot']['controls'].index(c)]['action_id']='ante'
+        result=self.live.act(self.live.session['snapshot']['id'],c['id'],automatic=True)
+        self.assertTrue(result['effect_verified'])
+        self.assertEqual(self.live.session['events'][-1]['executed_hit_rect']['x'],old_rect['x']+9)
     def test_action_requires_visual_review(self):
         with self.assertRaisesRegex(ValueError,'captura'): self.live.act(self.live.session['snapshot']['id'],'id')
         self.assertNotIn('pragmatic_guided_act',self.source.calls)
@@ -70,6 +111,11 @@ class LiveTests(unittest.TestCase):
         self.assertEqual(report['status'],'incomplete')
         self.assertFalse(report['validation']['validated'])
         self.assertIsNone(self.live.session)
+    def test_saved_reports_survive_restart_without_reopening_session(self):
+        report=self.live.finish(True)
+        restored=Live(self.source,FakeModel(),self.tmp.name)
+        self.assertIsNone(restored.session)
+        self.assertEqual(restored.reports[0]['id'],report['id'])
     def test_no_public_observation_token(self):
         self.assertNotIn('token',json.dumps(self.live.state()))
     def test_shutdown_does_not_open_next_game(self):
@@ -94,7 +140,9 @@ class LiveTests(unittest.TestCase):
         result=self.live.act(self.live.session['snapshot']['id'],control['id'],True,'ante_bet')
         self.assertFalse(result['effect_verified'])
     def test_validated_finish_refreshes_active_bonus(self):
-        for row in self.live.session['ledger'].values(): row['status']='verified'
+        for row in self.live.session['ledger'].values():
+            row.update(status='verified',ante_rounds_complete=[{'protocol_complete':True}])
+        self.live.session['purchase_complete']=True
         original=self.source.call
         def call(name,args):
             result=original(name,args)

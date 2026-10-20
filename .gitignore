@@ -5,3 +5,4 @@ __pycache__/
 runs/
 .env
 check_model.py
+*.har

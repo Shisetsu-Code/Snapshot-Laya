@@ -1,0 +1,119 @@
+{
+  "game": "Sugar Rush 1000",
+  "confirmation": [
+    {
+      "labels": [],
+      "role": "spin",
+      "name": "StartSpin_Button",
+      "confidence": 0.9983
+    },
+    {
+      "labels": [],
+      "role": "bet_up",
+      "name": "BetUp_Button",
+      "confidence": 0.2571
+    },
+    {
+      "labels": [],
+      "role": "bet_down",
+      "name": "BetDown_Button",
+      "confidence": 0.4176
+    },
+    {
+      "labels": [
+        "BUY",
+        "FREE SPINS",
+        "$200.00"
+      ],
+      "role": "buy_bonus",
+      "name": "ButtonYes",
+      "confidence": 0.6406
+    },
+    {
+      "labels": [
+        "BUY",
+        "FREE SPINS",
+        "$200.00"
+      ],
+      "role": "buy_bonus",
+      "name": "ButtonNo",
+      "confidence": 0.7692
+    },
+    {
+      "labels": [
+        "BUY",
+        "FREE SPINS",
+        "$200.00"
+      ],
+      "role": "buy_bonus",
+      "name": "Blocker",
+      "confidence": 0.9075
+    },
+    {
+      "labels": [
+        "BUY\nFREE SPINS",
+        "$200.00"
+      ],
+      "role": "buy_bonus",
+      "name": "Collider",
+      "confidence": 0.3442
+    },
+    {
+      "labels": [
+        "BUY\n\nFREE SPINS",
+        "$1,000.00"
+      ],
+      "role": "buy_bonus",
+      "name": "Collider",
+      "confidence": 0.4412
+    }
+  ],
+  "purchase_executed": false,
+  "correct_target_classifications": 2,
+  "date": "2026-10-20",
+  "limitations": [
+    "Ante bet no observado en estado base",
+    "Click anywhere no observado; no evaluado",
+    "Controles detrás del modal y Blocker no filtrados correctamente"
+  ],
+  "observed_accuracy_percent": 50,
+  "base": [
+    {
+      "labels": [],
+      "role": "spin",
+      "name": "StartSpin_Button",
+      "confidence": 0.9983
+    },
+    {
+      "labels": [],
+      "role": "bet_up",
+      "name": "BetUp_Button",
+      "confidence": 0.3937
+    },
+    {
+      "labels": [],
+      "role": "bet_down",
+      "name": "BetDown_Button",
+      "confidence": 0.6126
+    },
+    {
+      "labels": [
+        "BUY\nFREE SPINS",
+        "$200.00"
+      ],
+      "role": "buy_bonus",
+      "name": "Collider",
+      "confidence": 0.3442
+    },
+    {
+      "labels": [
+        "BUY\n\nFREE SPINS",
+        "$1,000.00"
+      ],
+      "role": "buy_bonus",
+      "name": "Collider",
+      "confidence": 0.4412
+    }
+  ],
+  "expected_target_controls": 4
+}

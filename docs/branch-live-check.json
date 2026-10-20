@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-20",
+  "game_url": "https://www.pragmaticplay.com/en/games/gates-of-olympus-1000/",
+  "validated_discovered_paths": true,
+  "exhaustive_game_coverage": false,
+  "automatic_catalog_run": true,
+  "branches_verified": 4,
+  "branches": [
+    {
+      "steps": [
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+          "role": "buy_bonus"
+        }
+      ],
+      "status": "verified",
+      "har_saved": true,
+      "activated": null,
+      "rounds": [],
+      "purchase_complete": false,
+      "returned": false,
+      "actions": [
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+            "role": "buy_bonus"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        }
+      ],
+      "deferred_background": []
+    },
+    {
+      "steps": [
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BetLevel/RA/Levels/Buttons/AT/AnteToggle",
+          "role": "ante_bet"
+        }
+      ],
+      "status": "verified",
+      "har_saved": true,
+      "activated": true,
+      "rounds": [
+        {
+          "started": true,
+          "normal": true,
+          "ante_before": 1,
+          "protocol_complete": true,
+          "ante_after": 1
+        },
+        {
+          "started": true,
+          "normal": true,
+          "ante_before": 1,
+          "protocol_complete": true,
+          "ante_after": 1
+        }
+      ],
+      "purchase_complete": false,
+      "returned": false,
+      "actions": [
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BetLevel/RA/Levels/Buttons/AT/AnteToggle",
+            "role": "ante_bet"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+            "role": "spin"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/GUI/Interface/TopBar/RightGroup/SpinButtons/StartSpin_Button",
+            "role": "spin"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        }
+      ],
+      "deferred_background": []
+    },
+    {
+      "steps": [
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+          "role": "buy_bonus"
+        },
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonYes",
+          "role": "confirm"
+        }
+      ],
+      "status": "verified",
+      "har_saved": true,
+      "activated": null,
+      "rounds": [],
+      "purchase_complete": true,
+      "returned": false,
+      "actions": [
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+            "role": "buy_bonus"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonYes",
+            "role": "confirm"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/FreeSpins/Content/RA/Start/ButtonContinue",
+            "role": "continue"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "OPERATION_STARTED",
+            "operationStarted": true
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/FreeSpins/Content/RA/Result/ButtonContinue",
+            "role": "continue"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        }
+      ],
+      "deferred_background": [
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+          "reason": "NO_VERIFIED_VISIBLE_DRAWING"
+        },
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+          "reason": "NO_VERIFIED_VISIBLE_DRAWING"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+          "role": "buy_bonus"
+        },
+        {
+          "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonNo",
+          "role": "cancel"
+        }
+      ],
+      "status": "verified",
+      "har_saved": true,
+      "activated": null,
+      "rounds": [],
+      "purchase_complete": false,
+      "returned": true,
+      "actions": [
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyButtons/AT/Option_0/ButtonT/ButtonC/AT/Button",
+            "role": "buy_bonus"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        },
+        {
+          "control": {
+            "path": "GameRoot/UI Root/XTRoot/Root/Game/Playground/RA/BuyBetFeatures/BuyFeature/PurchaseManager/BuyWindow/Content/BF/Offset/Buttons/ButtonNo",
+            "role": "cancel"
+          },
+          "effect_verified": true,
+          "outcome": {
+            "reason": "STATE_CHANGED",
+            "operationStarted": false
+          }
+        }
+      ],
+      "deferred_background": []
+    }
+  ],
+  "all_owned_sessions_closed": true,
+  "tests_passed": 59
+}
